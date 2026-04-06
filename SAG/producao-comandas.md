@@ -39,10 +39,90 @@ Registro de pedido vinculado a uma mesa ou cliente. Itens são lançados na coma
 5. Escolha a forma de pagamento
 6. Confirme o pagamento — comanda é fechada
 
-### Terminal de Comandas
+---
+
+## Terminal de Comandas
+
 **Caminho:** Menu Principal > **Terminal de Comandas**
 
-Interface otimizada para garçons ou atendentes lançarem pedidos diretamente nas mesas, via tablet ou computador na área de atendimento.
+Interface dedicada para lançamento de produtos em comandas. Otimizada para garçons ou atendentes lançarem pedidos diretamente nas mesas, via tablet ou computador na área de atendimento.
+
+### Fluxo de Uso
+1. Insira o **Operador** (código de login do atendente)
+2. Insira o número da **Comanda**
+3. Insira os **Produtos** (por código, nome ou leitor de código de barras)
+
+### Tela do Terminal de Comandas
+A tela exibe:
+- **Operador** — nome do usuário logado
+- **Comanda** — número da comanda com nome da mesa (ex: "Comanda: 1 (Mesa 11)")
+- **Total** — valor total da comanda (R$)
+- **Campo Produto** — para inserção de novos itens
+- **Lista de itens** — tabela com #, Código, Descrição, Preço, Qtd, Total, Data Hora, Usuário
+
+### Atalhos do Terminal de Comandas
+| Tecla | Função |
+|---|---|
+| F1 | Cancela Item |
+| F2 | Pesquisar Produtos |
+| F3 | Comandas Abertas |
+| F4 | Limpar Comanda |
+| F7 | Imprimir Prévia |
+| F8 | Transferir Comanda |
+| F9 | Finalizar no Caixa |
+| F11 | Transferir Itens |
+| F12 | Finalizar Terminal |
+| Ctrl + D | Desconto no Item |
+| Ctrl + - | Desconto na Comanda |
+| Back | Cancela Item Selecionado |
+
+---
+
+## Tela de Comandas (Gestão)
+
+**Caminho:** Menu Principal > **Comandas**
+
+Tela para visualização e gestão de todas as comandas do sistema. Exibe:
+
+### Painel Esquerdo — Lista de Comandas
+| Coluna | Descrição |
+|---|---|
+| CMD | Número da comanda |
+| STATUS | Fechada / Aberta / Bloqueada |
+| ÚLTIMO USO | Data e hora do último lançamento |
+| TOTAL | Valor total da comanda |
+
+Filtros:
+- Tipo: Ambas / Abertas / Fechadas
+- Checkbox: Em Uso
+- Campo de pesquisa por número de comanda
+
+### Painel Direito — Detalhes da Comanda
+Ao selecionar uma comanda, exibe os itens:
+| Coluna | Descrição |
+|---|---|
+| CÓDIGO | Código do produto |
+| DESCRIÇÃO | Nome do produto |
+| QUANTIDADE | Qtd lançada |
+| TOTAL | Valor total do item |
+| DATA E HORA | Momento do lançamento |
+| OPERADOR | Quem lançou o item |
+
+### Atalhos da Tela de Comandas
+| Tecla | Função |
+|---|---|
+| F2 | Limpar Comanda (remove todos os itens) |
+| F3 | Bloquear Comanda (individual) |
+| F4 | Desbloquear Comanda (individual) |
+| F5 | Liberar Comanda |
+| F6 | Adicionar Comandas (criar novas comandas) |
+| F7 | Excluir Comandas |
+| F8 | Bloquear Comandas (em lote) |
+| F9 | Desbloquear Comandas (em lote) |
+
+Ícones por comanda:
+- Ícone de lixeira: excluir
+- Ícone de cadeado: bloquear/desbloquear
 
 ---
 
@@ -50,6 +130,36 @@ Interface otimizada para garçons ou atendentes lançarem pedidos diretamente na
 
 ### O que é o Módulo de Produção
 Controla o fluxo de preparo dos pedidos: do lançamento no caixa até a entrega ao cliente.
+
+**Caminho:** Aba **Produções** na barra superior
+
+O módulo inclui:
+| Tela | Função |
+|---|---|
+| **Receitas** | Cadastro de receitas com ingredientes e quantidades |
+| **Nova Produção** | Solicitar produção baseada em uma receita cadastrada |
+| **Consultar Produção** | Consultar produções já realizadas |
+| **Embalagens** | Cadastro de embalagens usadas na produção |
+| **Relatórios** | Relatórios de produção |
+
+### Nova Produção (Solicitar Produção Simplificada)
+1. No campo **Produto**, pesquise o produto final
+2. Selecione a **Receita** associada
+3. Selecione o **Estoque** (ex: Padrão)
+4. O campo **Qtd. Receita** é preenchido automaticamente
+5. Informe a **Qtd a Produzir**
+6. Clique em **Adicionar**
+7. O item aparece na lista de **Solicitações** (Receita + Qtd a Produzir)
+8. Clique em **Salvar Solicitações** para confirmar
+
+> A produção utiliza a receita cadastrada para baixar os ingredientes do estoque automaticamente. Para dúvidas complexas sobre configuração de receitas e produção, entre em contato com o suporte técnico.
+
+### Receitas
+**Caminho:** Produções > **Receitas** (ou Cadastros > **Receitas**)
+
+Vincula ingredientes (itens de estoque) a um produto final.
+- Ao vender o produto ou solicitar produção, o estoque dos ingredientes é baixado automaticamente
+- Útil para controle de custo de produção
 
 ### Acompanhamento de Produção
 **Caminho:** Menu Principal > **Acompanhamento** (ou via tela de produção)
@@ -61,7 +171,7 @@ Exibe os pedidos em fila organizados por impressora/setor:
 
 ### Regras de Impressão (Roteamento para Produção)
 
-**Caminho:** Configurações > **Regras de Impressão**
+**Caminho:** Config. Terminal > **Impressoras** (seção Terminal PC e Pedidos)
 
 Define qual grupo/categoria de produto vai para qual impressora de produção.
 
@@ -70,14 +180,20 @@ Exemplo:
 - Grupo "Salgados" → Impressora da Cozinha
 - Grupo "Pizzas" → Impressora da Pizzaria
 
-**Como configurar:**
-1. Acesse **Configurações > Regras de Impressão**
-2. Selecione o grupo ou categoria
-3. Associe à impressora correta
-4. Defina o número de vias (geralmente 1)
-5. Salve e teste com um pedido
-
 > Se itens estão saindo na impressora errada, revise as Regras de Impressão.
+
+---
+
+## Tela de Pedidos (KDS — Kitchen Display System)
+
+**Caminho:** Menu Principal > **Tela de Pedidos**
+
+Interface exibida na cozinha ou área de produção mostrando os pedidos em tempo real (similar aos painéis de redes de fast food):
+- Número do pedido
+- Itens a preparar
+- Mesa ou cliente
+- Tempo desde o lançamento
+- Botão para marcar como **Pronto**
 
 ---
 
@@ -90,24 +206,3 @@ Configura extras e variações dos produtos:
 - **Opções:** escolhas sem custo adicional (ex: ponto da carne)
 - **Variações:** versões do produto (ex: tamanho P, M, G)
 - **Obrigatórios:** o cliente precisa escolher para confirmar o pedido
-
----
-
-## Receitas
-
-**Caminho:** Cadastros > **Receitas**
-
-Vincula ingredientes (itens de estoque) a um produto final.
-- Ao vender o produto, o estoque dos ingredientes é baixado automaticamente
-- Útil para controle de custo de produção
-
----
-
-## Tela de Pedidos (Produção / Cozinha)
-
-Interface exibida na cozinha ou área de produção mostrando os pedidos em tempo real:
-- Número do pedido
-- Itens a preparar
-- Mesa ou cliente
-- Tempo desde o lançamento
-- Botão para marcar como **Pronto**
