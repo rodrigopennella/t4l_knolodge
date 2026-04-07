@@ -137,10 +137,11 @@ O certificado digital é obrigatório para emissão de NFC-e. Existem dois tipos
 
 ### Informações Importantes
 
-- O certificado deve ser aplicado no **computador servidor**
+- O certificado pode ser aplicado em **qualquer computador que tenha o SAG instalado**
+- Qualquer usuário consegue aplicar seguindo o passo a passo acima
 - Validade: geralmente 1 ou 3 anos — monitorar vencimento
 - Se certificado **vencido**: o cliente renova junto à contabilidade ou certificadora e fornece novo arquivo `.pfx`
-- A aplicação remota é feita pelo suporte T4L via AnyDesk (cliente envia o `.pfx` por e-mail)
+- Se o cliente tiver dificuldade após seguir os passos: acionar suporte T4L para auxílio remoto via AnyDesk
 
 ### Erros Comuns
 

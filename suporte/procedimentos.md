@@ -142,22 +142,22 @@ Passo a passo para as situações mais frequentes no atendimento.
 
 ## PROC-13: Aplicar Certificado Digital no SAG
 
-> Executado pelo técnico T4L via AnyDesk ou com o cliente acompanhando.
+> O próprio cliente consegue seguir este procedimento. Só acionar suporte se houver muita dificuldade.
 
-1. Receber o arquivo `.pfx` do cliente (via e-mail ou WhatsApp)
-2. No computador **servidor**, abrir o SAG
+1. Ter em mãos o arquivo `.pfx` (fornecido pela certificadora ou contabilidade)
+2. Abrir o SAG em qualquer computador que tenha o sistema instalado
 3. Acessar **Outros > Certificado Digital**
 4. Selecionar tipo **A1**
-5. Clicar em buscar arquivo → selecionar o `.pfx` recebido
-6. Inserir a **senha do certificado** (fornecida pelo cliente ou pela certificadora)
+5. Clicar em buscar arquivo → selecionar o `.pfx`
+6. Inserir a **senha do certificado**
 7. Clicar em **Salvar**
 8. Fechar e reabrir o SAG
-9. Testar emissão de NFC-e com uma venda de teste
+9. Testar emissão de NFC-e
 
 **Observações:**
-- Se a senha estiver errada: confirmar com o cliente ou com quem gerou o certificado
+- Se a senha estiver errada: confirmar com quem gerou o certificado (certificadora ou contabilidade)
 - Se NFC-e ainda não emitir após aplicar: verificar se as credenciais (CSC/ID Token) estão preenchidas no menu NFC-e
-- Certificado deve ser aplicado **apenas no servidor**, não nos caixas
+- Se o cliente não conseguir após seguir os passos: transferir para o suporte
 
 ---
 

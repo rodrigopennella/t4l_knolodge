@@ -219,7 +219,7 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 - **Validar licença:** Menu NFC-e > botão Validar Online
 - **Configurar CST/CFOP do produto:** Cadastros > Produtos > aba Impostos NFE/NFCE
 - **Gerar XMLs para contabilidade:** Outros > Ferramentas CFe > Arquivos XML > definir período > Compactar em arquivo único > Enviar por e-mail > Gerar
-- **Aplicar certificado digital (A1):** Outros > Certificado Digital > A1 > selecionar arquivo .pfx > inserir senha > Salvar > fechar e reabrir o SAG
+- **Aplicar certificado digital (A1):** em qualquer computador com SAG — Outros > Certificado Digital > A1 > selecionar arquivo .pfx > inserir senha > Salvar > fechar e reabrir o SAG. O próprio cliente consegue; transferir para suporte só se houver muita dificuldade.
 
 ### Relatórios
 - **Vendas:** Relatórios > Vendas (Geral, Por Caixa, Por Produto, Por Forma de Pagamento)
