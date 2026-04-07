@@ -211,6 +211,7 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 - **Cadastrar impressora:** Config. Terminal > Impressoras > Nova (+) > nome, tipo (USB/Rede), porta/IP > Testar > Salvar
 - **Regras de impressão:** Config. Terminal > Impressoras > seções Frente de Caixa / Terminal PC / Pedidos
 - **Testar impressora:** Config. Terminal > Impressoras > selecionar > Testar
+- **Impressora de etiquetas de gôndola (Argox etc.):** instalada no Windows; no SAG, gerar etiquetas em PDF via Outros > Etiquetas
 
 ### NFC-e / Fiscal
 - **Acessar configuração NFC-e:** Aba NFe na barra superior, ou Config. Terminal > NFC-e
@@ -218,6 +219,7 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 - **Validar licença:** Menu NFC-e > botão Validar Online
 - **Configurar CST/CFOP do produto:** Cadastros > Produtos > aba Impostos NFE/NFCE
 - **Gerar XMLs para contabilidade:** Outros > Ferramentas CFe > Arquivos XML > definir período > Compactar em arquivo único > Enviar por e-mail > Gerar
+- **Aplicar certificado digital (A1):** Outros > Certificado Digital > A1 > selecionar arquivo .pfx > inserir senha > Salvar > fechar e reabrir o SAG
 
 ### Relatórios
 - **Vendas:** Relatórios > Vendas (Geral, Por Caixa, Por Produto, Por Forma de Pagamento)
@@ -366,6 +368,28 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 3. Confirmar — o sistema mantém a tela aberta com o saldo restante
 4. Digitar o código da segunda forma de pagamento
 5. Inserir o valor restante e confirmar
+
+### 19. SAG pede atualização ao abrir / aviso de nova versão
+- Causa: banco de dados foi atualizado enquanto o SAG estava aberto naquela máquina
+- Solução: fechar o SAG > reabrir > fazer login > quando aparecer solicitação de atualização > clicar em **Atualizar** > aguardar concluir
+
+### 20. "Obrigatório adicionar um Grupo de Imposto" ao cadastrar produto
+- Causa: a partir da versão 25.10, todos os produtos exigem grupo de imposto
+- Solução: no cadastro do produto, acessar aba **Imposto** > selecionar o Grupo de Imposto > Salvar
+- Qual grupo usar: cliente deve consultar a **contabilidade** (depende do produto e regime tributário)
+
+### 21. Data/hora desincronizada no tablet (Sunmi, M10) após queda de energia
+- Causa: tablets Android perdem a hora após queda de energia e param de comunicar com o banco de dados
+- Solução: no tablet, acessar **Configurações > Data e hora** > corrigir para data/hora atual > fechar e abrir o app
+
+### 22. Acesso externo ao SAG não funciona ("Falha na conexão com o servidor")
+- Contexto: erro ocorre apenas em computador fora do estabelecimento; caixas locais funcionam normalmente
+- Causa: porta 3306 do modem fechou ou configuração de DDNS foi perdida
+- Solução: **ESCALAR_SUPORTE** — técnico reconfigura encaminhamento de porta no modem
+
+### 23. "Comanda inexistente" no app do celular/tablet
+- Causa: API do aplicativo não foi atualizada automaticamente junto com uma atualização do sistema
+- Solução: **ESCALAR_SUPORTE** — não há ação possível pelo cliente
 
 ---
 

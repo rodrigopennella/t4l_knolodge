@@ -119,9 +119,33 @@ Se houver divergência entre XML e relatório de vendas:
 
 ## Certificado Digital
 
-- O certificado digital (arquivo `.pfx` ou `.p12`) deve ser instalado no **computador servidor**
-- Tipo: e-CNPJ (emitido em nome da empresa)
-- Validade: geralmente 1 ou 3 anos — monitorar vencimento
-- Em caso de vencimento: adquirir novo certificado com certificadora e reinstalar
+O certificado digital é obrigatório para emissão de NFC-e. Existem dois tipos:
 
-> O SAG não armazena nem gerencia certificados digitais diretamente — a instalação é feita no sistema operacional Windows.
+| Tipo | Formato | Descrição |
+|---|---|---|
+| **A1** | Arquivo `.pfx` | Arquivo digital salvo no computador — o mais comum |
+| **A3** | Token/cartão físico | Dispositivo físico conectado por USB |
+
+### Aplicar Certificado A1 no SAG
+
+1. Acesse **Outros > Certificado Digital**
+2. Selecione o tipo **A1**
+3. Clique em buscar arquivo e selecione o arquivo `.pfx`
+4. Informe a **senha do certificado**
+5. Clique em **Salvar**
+6. **Feche e reabra o SAG** para aplicar
+
+### Informações Importantes
+
+- O certificado deve ser aplicado no **computador servidor**
+- Validade: geralmente 1 ou 3 anos — monitorar vencimento
+- Se certificado **vencido**: o cliente renova junto à contabilidade ou certificadora e fornece novo arquivo `.pfx`
+- A aplicação remota é feita pelo suporte T4L via AnyDesk (cliente envia o `.pfx` por e-mail)
+
+### Erros Comuns
+
+| Mensagem | Causa | Ação |
+|---|---|---|
+| "Certificado vencido" | Certificado expirou | Renovar com a contabilidade |
+| "Senha incorreta" | Senha do `.pfx` errada | Confirmar senha com quem gerou o certificado |
+| NFC-e não emite após aplicar | SAG não foi reiniciado | Fechar e reabrir o SAG |

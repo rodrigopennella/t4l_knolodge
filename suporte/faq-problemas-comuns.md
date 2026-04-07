@@ -262,3 +262,70 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 5. Informe o e-mail do contador
 6. Clique em **Gerar**
 7. O arquivo ZIP com os XMLs será enviado automaticamente
+
+---
+
+## 21. SAG Pede Atualização ao Abrir / Tela de Login Diferente
+
+**Sintomas:** Ao abrir o SAG e fazer login, aparece aviso pedindo para atualizar o sistema.
+
+**Causa:** O banco de dados foi atualizado (pelo suporte T4L), mas o SAG estava aberto naquela máquina durante a atualização e ainda está na versão antiga.
+
+**Solução:**
+1. Feche o SAG completamente
+2. Abra o SAG novamente
+3. Faça o login normalmente
+4. Quando aparecer a solicitação de atualização, clique em **Atualizar**
+5. Aguarde a atualização concluir
+6. O SAG abrirá normalmente na nova versão
+
+---
+
+## 22. "Obrigatório adicionar um Grupo de Imposto" ao Cadastrar Produto
+
+**Sintomas:** Ao salvar um produto, aparece mensagem de erro sobre Grupo de Imposto obrigatório.
+
+**Causa:** A partir da versão **25.10** do SAG, todos os produtos exigem um grupo de imposto configurado.
+
+**Solução:**
+1. No cadastro do produto, acesse a aba **Imposto**
+2. No campo **Grupo de Imposto**, selecione o grupo correspondente
+3. Salve o produto
+
+> **Qual grupo de imposto usar?** Depende do tipo de produto e do regime tributário do estabelecimento. Em caso de dúvida, consulte a **contabilidade** do cliente.
+
+---
+
+## 23. Data/Hora Desincronizada no Tablet Após Queda de Energia
+
+**Sintomas:** Terminal de comandas (tablet Sunmi, M10 ou similar) para de comunicar com o sistema após queda de energia. Pedidos não chegam, app trava ou não sincroniza.
+
+**Causa:** Tablets Android perdem a configuração de data e hora após queda de energia, e sem a hora correta a comunicação com o banco de dados para.
+
+**Solução:**
+1. No tablet, acesse **Configurações > Data e hora**
+2. Corrija a data e hora para os valores atuais
+3. Feche e abra o aplicativo no tablet
+4. A comunicação com o sistema voltará automaticamente
+
+---
+
+## 24. Acesso Externo ao SAG Não Funciona ("Falha na conexão com o servidor")
+
+**Sintomas:** O SAG não abre em um computador fora do estabelecimento (acesso remoto/externo), mesmo com o servidor funcionando normalmente para os outros caixas locais.
+
+**Causa:** O acesso externo ao SAG funciona via abertura da **porta 3306** no modem + DDNS gerenciado pela T4L (ou VPN). Se essa porta foi fechada, o acesso externo para de funcionar.
+
+**Solução:** Escalar para o suporte T4L — o técnico reconfigura o encaminhamento de porta (port forwarding) no modem do estabelecimento.
+
+> Esse problema não tem solução pelo lado do cliente. Acionar suporte.
+
+---
+
+## 25. "Comanda Inexistente" no App (Celular/Tablet)
+
+**Sintomas:** Ao tentar lançar produtos pelo app no celular ou tablet, aparece erro "Comanda inexistente" mesmo para comandas que existem no sistema.
+
+**Causa:** A API do aplicativo não foi atualizada automaticamente junto com uma atualização do sistema SAG. Há incompatibilidade de versão entre o app e o servidor.
+
+**Solução:** Escalar para o suporte T4L — o técnico realiza a atualização da API. Não há ação do lado do cliente.
