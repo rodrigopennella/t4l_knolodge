@@ -140,6 +140,27 @@ Passo a passo para as situações mais frequentes no atendimento.
 
 ---
 
+## PROC-13: Aplicar Certificado Digital no SAG
+
+> O próprio cliente consegue seguir este procedimento. Só acionar suporte se houver muita dificuldade.
+
+1. Ter em mãos o arquivo `.pfx` (fornecido pela certificadora ou contabilidade)
+2. Abrir o SAG em qualquer computador que tenha o sistema instalado
+3. Acessar **Outros > Certificado Digital**
+4. Selecionar tipo **A1**
+5. Clicar em buscar arquivo → selecionar o `.pfx`
+6. Inserir a **senha do certificado**
+7. Clicar em **Salvar**
+8. Fechar e reabrir o SAG
+9. Testar emissão de NFC-e
+
+**Observações:**
+- Se a senha estiver errada: confirmar com quem gerou o certificado (certificadora ou contabilidade)
+- Se NFC-e ainda não emitir após aplicar: verificar se as credenciais (CSC/ID Token) estão preenchidas no menu NFC-e
+- Se o cliente não conseguir após seguir os passos: transferir para o suporte
+
+---
+
 ## PROC-12: Cliente com Divergência no Relatório de Caixa
 
 1. Pergunte o período com divergência
