@@ -21,17 +21,22 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 
 ---
 
-## 2. Caixa Não Conecta ao Servidor / Sistema Offline
+## 2. "Erro ao Tentar Logar" / "Falha de Acesso ao Servidor" / Caixa Offline
 
-**Sintomas:** SAG não abre, tela de carregamento infinita, "sem conexão com o servidor".
+**Sintomas:** SAG não abre, tela de carregamento infinita, "sem conexão com o servidor", "erro ao tentar logar".
 
-**Solução:**
-1. Verifique fisicamente se o computador **servidor** está ligado
-2. Verifique se o modem/roteador está ligado e com internet
-3. Reinicie o roteador
-4. Aguarde 2-3 minutos e tente novamente
-5. Se o problema persistir, reinicie o servidor
-6. Verifique se todos os cabos de rede estão conectados
+**Primeiro perguntar: só esse computador ou todos estão com problema?**
+
+**Apenas um computador:**
+1. Verifique se há internet nesse computador
+2. É acesso **interno** (dentro do estabelecimento) ou **externo** (de outro local)?
+   - Se **externo**: a porta 3306 pode ter fechado no modem → acionar suporte
+   - Se **interno**: verifique se está abrindo o SAG correto (existem dois aplicativos: interno e externo — são diferentes)
+3. Reinicie o roteador (desligar 30s, religar) e aguarde 2 minutos
+4. Se persistir: acionar suporte
+
+**Todos os computadores ao mesmo tempo ("sistema parado"):**
+- Acionar suporte imediatamente — pode ser falha no banco de dados ou servidor desligado
 
 ---
 
@@ -114,27 +119,26 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 
 ---
 
-## 9. Impressora Imprimindo Muitas Vias
+## 9. Impressora Imprimindo Muitas Vias / Pedido Saindo na Impressora Errada
 
-**Sintomas:** Saindo 2 ou 3 vias quando deveria ser 1.
+**Sintomas:** Saindo 2 ou 3 vias quando deveria ser 1, ou pedido imprimindo na impressora incorreta.
 
-**Solução:**
-1. Acesse: **Configurações > Regras de Impressão**
-2. Localize o grupo/categoria com problema
-3. Altere o campo **Número de Vias** para 1
-4. Salve e teste
+**Solução:** Acionar suporte — a configuração de número de vias e regras de impressão fica em Config. Terminal, que é de acesso exclusivo dos técnicos T4L.
 
 ---
 
-## 10. Pedidos do iFood Não Chegam
+## 10. Pedidos do iFood (ou Outra Plataforma) Não Chegam no SAG
 
-**Sintomas:** Pedidos feitos no iFood não aparecem no SAG.
+**Sintomas:** Pedido feito na plataforma não aparece no SAG ou não imprime.
 
-**Solução:**
-1. Verifique se a integração com iFood está habilitada: **Configurações > Integrações > iFood**
-2. Reinicie o serviço de integração nas configurações
-3. Verifique se o servidor está com internet
-4. Se o problema persistir na plataforma iFood, contate o suporte do iFood
+**Fluxo correto de integração:**
+Plataforma envia pedido → pedido integra → aparece em **Delivery > Consulta de Pedidos** → então imprime
+
+**Diagnóstico:**
+1. Verificar em **Delivery > Consulta de Pedidos** se o pedido aparece
+2. Se **não aparece**: problema de integração → acionar suporte (configuração de integração é restrita a técnicos)
+3. Se **aparece mas não imprime**: problema de impressora → seguir procedimento de impressora
+4. Verificar também: servidor com internet e SAG aberto no servidor
 
 ---
 
@@ -288,9 +292,10 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 **Causa:** A partir da versão **25.10** do SAG, todos os produtos exigem um grupo de imposto configurado.
 
 **Solução:**
-1. No cadastro do produto, acesse a aba **Imposto**
-2. No campo **Grupo de Imposto**, selecione o grupo correspondente
-3. Salve o produto
+1. No cadastro do produto, acesse a aba **Impostos**
+2. Na seção **Grupo de Imposto**, pesquise e selecione o grupo correspondente no campo de busca
+3. Para ver ou editar o conteúdo do grupo, clique em **Editar**
+4. Salve o produto (botão **Alterar**)
 
 > **Qual grupo de imposto usar?** Depende do tipo de produto e do regime tributário do estabelecimento. Em caso de dúvida, consulte a **contabilidade** do cliente.
 
@@ -319,6 +324,51 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 **Solução:** Escalar para o suporte T4L — o técnico reconfigura o encaminhamento de porta (port forwarding) no modem do estabelecimento.
 
 > Esse problema não tem solução pelo lado do cliente. Acionar suporte.
+
+---
+
+## 28. "Cupom de Desconto Indisponível para Uso!"
+
+**Sintomas:** Mensagem de aviso ao tentar usar cupom de desconto no caixa.
+
+**Causa:** O cupom atingiu o limite de usos cadastrado ou não existe no sistema.
+
+**Solução:**
+1. Acesse **Cadastros > Cupom de Desconto**
+2. Localize o cupom utilizado
+3. Verifique se está **ativo** e se ainda há **usos disponíveis**
+4. Se necessário, aumente o limite de usos ou cadastre um novo cupom
+
+---
+
+## 26. Erro de Rejeição Fiscal na NFC-e ou NF-e (ICMS ST, CST, CFOP)
+
+**Sintomas:** Mensagens como "Rejeição: BC ICMS ST difere da somatória dos itens", "Produto sem configuração fiscal", ou outros erros da SEFAZ ao emitir nota.
+
+**Solução:**
+1. Identifique o produto que está causando o erro (normalmente a mensagem indica o item)
+2. Acesse **Cadastros > Produtos** > selecione o produto
+3. Vá até a aba **Impostos NFE/NFCE**
+4. Verifique se os campos **CST** e **CFOP** estão preenchidos corretamente
+5. Em caso de dúvida sobre os valores corretos, consulte a **contabilidade**
+6. Salve e tente emitir novamente
+
+> Se o erro persistir após verificar e corrigir os impostos, transferir para o suporte — pode envolver configuração fiscal específica da SEFAZ do estado.
+
+---
+
+## 27. Erro no Romaneio: "O Total das Faturas Não Pode ser Diferente do Total do Pedido"
+
+**Sintomas:** Ao tentar salvar ou alterar um pedido no módulo Romaneio, aparece mensagem de erro sobre divergência entre total do pedido e total das faturas.
+
+**Causa:** As faturas vinculadas ao pedido estão com valores desatualizados em relação ao total do pedido (comum após alteração de itens, descontos ou datas).
+
+**Solução:**
+1. Na tela do pedido, clique em **Gerar Faturas** novamente
+2. O sistema recalcula e atualiza os valores das faturas para bater com o total do pedido
+3. Finalize o pedido normalmente
+
+> Se o erro persistir após Gerar Faturas, transferir para o suporte.
 
 ---
 
