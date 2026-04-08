@@ -201,7 +201,7 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 ### Cadastros — Caminhos Principais
 - **Produtos:** Cadastros > Produtos | campos: Código, Descrição, Ativo, Preço, Grupo
 - **Ativar produto:** Cadastros > Produtos > selecionar > marcar campo Ativo > Salvar
-- **Impostos do produto (NFC-e):** Cadastros > Produtos > aba Impostos NFE/NFCE > CST e CFOP
+- **Impostos do produto (NFC-e):** Cadastros > Produtos > aba **Impostos** > seção Grupo de Imposto (pesquisar grupo, Editar para ver configuração) > CST e CFOP
 - **Clientes:** Cadastros > Clientes | campos: Nome, CPF/CNPJ, Telefone
 - **Usuários:** Outros > Central de Usuários > Novo > Login + Senha + Grupo de Permissão > Salvar
 - **Grupos de permissão:** Outros > Grupo de Permissões > selecionar grupo > Permissões
@@ -375,7 +375,8 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 
 ### 20. "Obrigatório adicionar um Grupo de Imposto" ao cadastrar produto
 - Causa: a partir da versão 25.10, todos os produtos exigem grupo de imposto
-- Solução: no cadastro do produto, acessar aba **Imposto** > selecionar o Grupo de Imposto > Salvar
+- Solução: no cadastro do produto, acessar aba **Impostos** > pesquisar e selecionar o grupo no campo de busca > Alterar
+- Para ver o que está configurado no grupo: clicar em **Editar**
 - Qual grupo usar: cliente deve consultar a **contabilidade** (depende do produto e regime tributário)
 
 ### 21. Data/hora desincronizada no tablet (Sunmi, M10) após queda de energia
@@ -390,6 +391,19 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 ### 23. "Comanda inexistente" no app do celular/tablet
 - Causa: API do aplicativo não foi atualizada automaticamente junto com uma atualização do sistema
 - Solução: **ESCALAR_SUPORTE** — não há ação possível pelo cliente
+
+### 24. Erro de rejeição fiscal na NFC-e ou NF-e (ICMS ST, CST, CFOP)
+- Antes de escalar: verificar o produto indicado no erro em Cadastros > Produtos > aba **Impostos** > checar CST e CFOP
+- Em dúvida sobre qual valor usar: consultar a contabilidade
+- Se persistir após corrigir: **ESCALAR_SUPORTE**
+
+### 25. Erro no romaneio: "O total das faturas não pode ser diferente do total do pedido"
+- Solução: na tela do pedido, clicar em **Gerar Faturas** novamente — recalcula e atualiza os valores
+- Se persistir: **ESCALAR_SUPORTE**
+
+### 26. SAG Printer com erro / impressões pararam após atualização
+- SAG Printer é um serviço Windows gerenciado pelos técnicos T4L
+- Solução: **ESCALAR_SUPORTE**
 
 ---
 

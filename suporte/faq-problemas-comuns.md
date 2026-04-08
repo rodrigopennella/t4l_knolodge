@@ -288,9 +288,10 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 **Causa:** A partir da versão **25.10** do SAG, todos os produtos exigem um grupo de imposto configurado.
 
 **Solução:**
-1. No cadastro do produto, acesse a aba **Imposto**
-2. No campo **Grupo de Imposto**, selecione o grupo correspondente
-3. Salve o produto
+1. No cadastro do produto, acesse a aba **Impostos**
+2. Na seção **Grupo de Imposto**, pesquise e selecione o grupo correspondente no campo de busca
+3. Para ver ou editar o conteúdo do grupo, clique em **Editar**
+4. Salve o produto (botão **Alterar**)
 
 > **Qual grupo de imposto usar?** Depende do tipo de produto e do regime tributário do estabelecimento. Em caso de dúvida, consulte a **contabilidade** do cliente.
 
@@ -319,6 +320,37 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 **Solução:** Escalar para o suporte T4L — o técnico reconfigura o encaminhamento de porta (port forwarding) no modem do estabelecimento.
 
 > Esse problema não tem solução pelo lado do cliente. Acionar suporte.
+
+---
+
+## 26. Erro de Rejeição Fiscal na NFC-e ou NF-e (ICMS ST, CST, CFOP)
+
+**Sintomas:** Mensagens como "Rejeição: BC ICMS ST difere da somatória dos itens", "Produto sem configuração fiscal", ou outros erros da SEFAZ ao emitir nota.
+
+**Solução:**
+1. Identifique o produto que está causando o erro (normalmente a mensagem indica o item)
+2. Acesse **Cadastros > Produtos** > selecione o produto
+3. Vá até a aba **Impostos NFE/NFCE**
+4. Verifique se os campos **CST** e **CFOP** estão preenchidos corretamente
+5. Em caso de dúvida sobre os valores corretos, consulte a **contabilidade**
+6. Salve e tente emitir novamente
+
+> Se o erro persistir após verificar e corrigir os impostos, transferir para o suporte — pode envolver configuração fiscal específica da SEFAZ do estado.
+
+---
+
+## 27. Erro no Romaneio: "O Total das Faturas Não Pode ser Diferente do Total do Pedido"
+
+**Sintomas:** Ao tentar salvar ou alterar um pedido no módulo Romaneio, aparece mensagem de erro sobre divergência entre total do pedido e total das faturas.
+
+**Causa:** As faturas vinculadas ao pedido estão com valores desatualizados em relação ao total do pedido (comum após alteração de itens, descontos ou datas).
+
+**Solução:**
+1. Na tela do pedido, clique em **Gerar Faturas** novamente
+2. O sistema recalcula e atualiza os valores das faturas para bater com o total do pedido
+3. Finalize o pedido normalmente
+
+> Se o erro persistir após Gerar Faturas, transferir para o suporte.
 
 ---
 
