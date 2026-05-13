@@ -177,18 +177,12 @@ O SAG possui integração com diversas plataformas de delivery:
 
 > As integrações são sempre configuradas por um técnico da T4L. Taxas de entrega e taxa de serviço também são configuráveis pela equipe técnica.
 
-### Configurar Integração (via técnico)
-1. Acesse **Configurações > Integrações** (ou Config. Global > Delivery)
-2. Selecione a plataforma desejada
-3. Informe as credenciais da integração
-4. Habilite a sincronização
-5. Pedidos passam a aparecer automaticamente no SAG
+### Configurar Integração
+> Configuração feita exclusivamente pela equipe técnica T4L. Não há menu acessível ao cliente para habilitar ou gerenciar integrações.
 
 ### Problemas com Integrações
-- Se pedidos não chegam: verifique se a integração está habilitada
-- Se pagamento não passa: verifique as configurações de pagamento
-- Reinicie o serviço de integração se necessário
-- Para problemas na plataforma do parceiro (iFood, etc.), contate o suporte da plataforma diretamente
+- Pedidos não chegam, integração caiu ou parou de funcionar → **acionar suporte técnico T4L**
+- Para problemas na própria plataforma do parceiro (iFood, 99food etc.), contate o suporte da plataforma diretamente
 
 ---
 

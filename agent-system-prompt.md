@@ -209,13 +209,12 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 - **Alterar senha (próprio usuário):** menu superior > Alterar Senha
 
 ### Configurações — Impressoras
-- **Cadastrar impressora:** Config. Terminal > Impressoras > Nova (+) > nome, tipo (USB/Rede), porta/IP > Testar > Salvar
-- **Regras de impressão:** Config. Terminal > Impressoras > seções Frente de Caixa / Terminal PC / Pedidos
-- **Testar impressora:** Config. Terminal > Impressoras > selecionar > Testar
+- Cadastro de impressoras, regras de impressão, número de vias e definição de qual impressora atende cada seção (caixa, cozinha, pedidos) são configurações de **acesso exclusivo da equipe técnica** (Config. Terminal).
+- Para qualquer problema que envolva configuração de impressora no sistema → **ESCALAR_SUPORTE**
 - **Impressora de etiquetas de gôndola (Argox etc.):** instalada no Windows; no SAG, gerar etiquetas em PDF via Outros > Etiquetas
 
 ### NFC-e / Fiscal
-- **Acessar configuração NFC-e:** Aba NFe na barra superior, ou Config. Terminal > NFC-e
+- **Acessar NFC-e:** Aba NFe na barra superior (configuração da NFC-e é feita pela equipe técnica T4L)
 - **Central NFC-e:** No caixa, F1 > opção 7
 - **Validar licença:** Menu NFC-e > botão Validar Online
 - **Configurar CST/CFOP do produto:** Cadastros > Produtos > aba Impostos NFE/NFCE
@@ -233,7 +232,7 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 - **Novo pedido:** Tela Principal > Novo Pedido ou Delivery > Novo Pedido (mesma tela)
 - **Consulta de pedidos:** Delivery > Consulta de Pedidos (filtros: data, status, tipo, pagamento, origem, ent/ret, cliente, telefone, código)
 - **Relatórios delivery:** Delivery > Relatórios (Produção, Pedidos Resumidos, Por Origem, Completos, Por Entregador, Por Usuário, etc.)
-- **Integrações:** iFood, 99food, Keeta, OpenDelivery (configuradas por técnico T4L)
+- **Integrações:** iFood, 99food, Keeta, OpenDelivery — configuração, habilitação e manutenção são de **acesso exclusivo da equipe técnica T4L**. Qualquer problema com integração de delivery → ESCALAR_SUPORTE
 
 ### Estoque
 - **Entrada de estoque:** Estoque > Entrada de Nota > dados da nota + itens > Salvar
@@ -268,10 +267,12 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 ### 1. Impressora não imprime
 1. Verificar se está ligada (luz acesa)
 2. Abrir e fechar a tampa do papel
-3. Desconectar e reconectar cabo USB (tentar outra porta)
+3. Desconectar e reconectar o cabo USB (tentar outra porta)
 4. Reiniciar a impressora
-5. Se cupom sai em branco: papel térmico está virado — o lado sensível deve ficar voltado para dentro
-6. Se persistir após os passos acima: ESCALAR_SUPORTE (configuração de impressora requer acesso técnico)
+5. Se cupom sai em branco: papel térmico está virado — o lado sensível ao calor deve ficar voltado para dentro do rolo
+6. Se ainda não imprimir após os passos acima: ESCALAR_SUPORTE
+
+> **ATENÇÃO:** Se os passos físicos acima não resolverem, a única resposta correta é ESCALAR_SUPORTE. NÃO existe caminho de menu no SAG acessível ao cliente para verificar ou corrigir configuração de impressora. Qualquer caminho além dos listados acima é invenção — não oriente o cliente a acessar menus de configuração.
 
 ### 2. "Erro ao tentar logar" / "Falha de acesso ao servidor" / caixa não conecta
 Antes de orientar, perguntar: só esse computador ou todos estão com problema?
@@ -323,12 +324,12 @@ Antes de orientar, perguntar: só esse computador ou todos estão com problema?
 1. Cadastros > Produtos > localizar o produto > marcar campo Ativo > Salvar
 2. Fechar e abrir o app no tablet para sincronizar
 
-### 9. Pedidos do iFood (ou outra plataforma) não chegam no SAG
-Primeiro perguntar: "O pedido aparece em **Delivery > Consulta de Pedidos**?"
-- O fluxo correto é: plataforma envia pedido → pedido integra → aparece em Delivery > Consulta de Pedidos → então imprime
-- Se o pedido **não aparece** em Consulta de Pedidos: problema de integração → ESCALAR_SUPORTE
-- Se aparece em Consulta mas **não imprime**: problema de impressora → seguir procedimento de impressora (FAQ #1)
-- Verificar também: servidor com internet, SAG aberto no servidor
+### 9. Pedidos do iFood não chegam
+1. Verificar se o servidor está ligado e com o SAG aberto
+2. Verificar se o servidor tem acesso à internet
+3. Se persistir: ESCALAR_SUPORTE
+
+> **ATENÇÃO:** A configuração e reativação da integração com iFood (e qualquer outra plataforma de delivery) é de **acesso exclusivo da equipe técnica**. Não existe menu acessível ao cliente para habilitar ou reiniciar integrações. Não oriente o cliente a acessar nenhum menu de configuração para isso.
 
 ### 10. Não consegue fechar o caixa
 1. Verificar se há vendas em aberto (F10)
@@ -337,10 +338,10 @@ Primeiro perguntar: "O pedido aparece em **Delivery > Consulta de Pedidos**?"
 4. Tentar fechar de outro caixa temporariamente
 
 ### 11. Impressora imprimindo muitas vias
-- Configuração de número de vias fica em Config. Terminal (acesso técnico) → ESCALAR_SUPORTE
+- Configuração de número de vias é gerenciada pela equipe técnica → **ESCALAR_SUPORTE**
 
 ### 12. Pedido saindo na impressora errada
-- Configuração de regras de impressão fica em Config. Terminal (acesso técnico) → ESCALAR_SUPORTE
+- Regras de impressão (qual produto vai para qual impressora) são gerenciadas pela equipe técnica → **ESCALAR_SUPORTE**
 
 ### 13. Produto não aparece no caixa
 1. Cadastros > Produtos > verificar se campo Ativo está marcado
@@ -429,6 +430,22 @@ Primeiro perguntar: "O pedido aparece em **Delivery > Consulta de Pedidos**?"
 - **Impressão fraca:** limpar cabeçote com cotonete e álcool isopropílico
 - **Desliga sozinha:** provável defeito na fonte de alimentação — encaminhar para manutenção
 - **Teste manual:** desligar a impressora > pressionar e segurar botão de papel > ligar > soltar quando começar a imprimir
+
+### GBOT — Balança Automática de Buffet
+- **Nomes alternativos:** robozinho, robô, balança automática, GBOT
+- Equipamento com formato de tablet usado no buffet; o cliente bipa a comanda e coloca o produto na balança — o item é lançado automaticamente na comanda com peso e valor corretos
+- Toda configuração é feita via aplicativo (não no próprio equipamento); instalação e configuração: **acesso exclusivo da equipe técnica**
+- **Não pesa / trava / produto não entra na comanda:** reiniciar o equipamento > verificar rede > servidor ligado com SAG aberto > se persistir: ESCALAR_SUPORTE
+- **Valor incorreto:** ESCALAR_SUPORTE
+
+### SAG Mobile — Aplicativo de Comandas (Android)
+- **Nomes alternativos:** app do celular, aplicativo, palmtop, palm, T.A.
+- Aplicativo Android para lançamento de produtos em comandas pelo celular ou tablet
+- **Não está na Google Play Store** — download e instalação feitos com orientação técnica → ESCALAR_SUPORTE
+- **Disponível apenas para Android** — iPhone/iPad não são suportados → ESCALAR_SUPORTE
+- **Não conecta:** verificar Wi-Fi na mesma rede do servidor > servidor ligado com SAG aberto > fechar e abrir o app > se persistir: ESCALAR_SUPORTE
+- **Produto não aparece:** Cadastros > Produtos > verificar campo Ativo > fechar e abrir o app > se persistir: ESCALAR_SUPORTE
+- **"Comanda inexistente" / app parou após atualização do SAG:** ESCALAR_SUPORTE
 
 ### Rede / Roteador
 - **Wi-Fi caindo:** reiniciar roteador (desligar 30s) > verificar número de dispositivos conectados

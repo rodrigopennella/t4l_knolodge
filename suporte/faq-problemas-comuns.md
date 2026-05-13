@@ -14,8 +14,7 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 3. Desconecte e reconecte o cabo USB
 4. Tente outra porta USB do computador
 5. Reinicie a impressora (desligue e religue)
-6. No SAG, envie um teste de impressão: **Configurações > Impressoras > Testar**
-7. Se nada funcionar, pode ser problema no hardware da impressora
+6. Se ainda não funcionar após os passos acima: acionar suporte técnico T4L
 
 > Se a impressora está imprimindo em uma posição errada (ex: café saindo na cozinha), veja [Regras de Impressão](../SAG/configuracoes.md#regras-de-impressão).
 
@@ -123,7 +122,8 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 
 **Sintomas:** Saindo 2 ou 3 vias quando deveria ser 1, ou pedido imprimindo na impressora incorreta.
 
-**Solução:** Acionar suporte — a configuração de número de vias e regras de impressão fica em Config. Terminal, que é de acesso exclusivo dos técnicos T4L.
+**Solução:**
+- Configuração de número de vias é gerenciada pela equipe técnica T4L → acionar suporte técnico
 
 ---
 
@@ -131,14 +131,13 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 
 **Sintomas:** Pedido feito na plataforma não aparece no SAG ou não imprime.
 
-**Fluxo correto de integração:**
-Plataforma envia pedido → pedido integra → aparece em **Delivery > Consulta de Pedidos** → então imprime
+**Solução:**
+1. Verifique se o servidor está ligado e com o SAG aberto
+2. Verifique se o servidor tem acesso à internet
+3. Se persistir: acionar suporte técnico T4L
+4. Se o problema estiver na plataforma iFood (pedidos não saem do app), contate o suporte do iFood
 
-**Diagnóstico:**
-1. Verificar em **Delivery > Consulta de Pedidos** se o pedido aparece
-2. Se **não aparece**: problema de integração → acionar suporte (configuração de integração é restrita a técnicos)
-3. Se **aparece mas não imprime**: problema de impressora → seguir procedimento de impressora
-4. Verificar também: servidor com internet e SAG aberto no servidor
+> Configuração e reativação da integração com iFood são de acesso exclusivo da equipe técnica. Não há menu acessível ao cliente para isso.
 
 ---
 

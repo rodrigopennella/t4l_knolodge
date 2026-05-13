@@ -97,7 +97,7 @@ Campos principais:
 
 ## Usuários e Permissões
 
-**Caminho:** Menu Principal > **Usuários** (ou Configurações > Usuários)
+**Caminho:** Outros > **Central de Usuários**
 
 ### Criar Novo Usuário
 1. Clique em **Novo**
