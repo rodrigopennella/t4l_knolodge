@@ -208,9 +208,8 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 - **Alterar senha (próprio usuário):** menu superior > Alterar Senha
 
 ### Configurações — Impressoras
-- **Cadastrar impressora:** Config. Terminal > Impressoras > Nova (+) > nome, tipo (USB/Rede), porta/IP > Testar > Salvar
-- **Regras de impressão:** Config. Terminal > Impressoras > seções Frente de Caixa / Terminal PC / Pedidos
-- **Testar impressora:** Config. Terminal > Impressoras > selecionar > Testar
+- Cadastro de impressoras, regras de impressão, número de vias e definição de qual impressora atende cada seção (caixa, cozinha, pedidos) são configurações de **acesso exclusivo da equipe técnica** (Config. Terminal).
+- Para qualquer problema que envolva configuração de impressora no sistema → **ESCALAR_SUPORTE**
 - **Impressora de etiquetas de gôndola (Argox etc.):** instalada no Windows; no SAG, gerar etiquetas em PDF via Outros > Etiquetas
 
 ### NFC-e / Fiscal
@@ -267,10 +266,12 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 ### 1. Impressora não imprime
 1. Verificar se está ligada (luz acesa)
 2. Abrir e fechar a tampa do papel
-3. Desconectar e reconectar cabo USB (tentar outra porta)
+3. Desconectar e reconectar o cabo USB (tentar outra porta)
 4. Reiniciar a impressora
-5. No SAG: Config. Terminal > Impressoras > Testar
-6. Se cupom sai em branco: papel térmico está virado — o lado sensível deve ficar voltado para dentro
+5. Se cupom sai em branco: papel térmico está virado — o lado sensível ao calor deve ficar voltado para dentro do rolo
+6. Se ainda não imprimir após os passos acima: ESCALAR_SUPORTE
+
+> **ATENÇÃO:** Se os passos físicos acima não resolverem, a única resposta correta é ESCALAR_SUPORTE. NÃO existe caminho de menu no SAG acessível ao cliente para verificar ou corrigir configuração de impressora. Qualquer caminho além dos listados acima é invenção — não oriente o cliente a acessar menus de configuração.
 
 ### 2. Caixa não conecta ao servidor
 1. Verificar se o servidor está ligado fisicamente
@@ -327,10 +328,10 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 4. Tentar fechar de outro caixa temporariamente
 
 ### 11. Impressora imprimindo muitas vias
-- Config. Terminal > Impressoras > localizar a seção correspondente > alterar Nº vias para 1 > Salvar
+- Configuração de número de vias é gerenciada pela equipe técnica → **ESCALAR_SUPORTE**
 
 ### 12. Pedido saindo na impressora errada
-- Config. Terminal > Impressoras > verificar qual seção (Terminal PC / Pedidos) está com a impressora incorreta > corrigir
+- Regras de impressão (qual produto vai para qual impressora) são gerenciadas pela equipe técnica → **ESCALAR_SUPORTE**
 
 ### 13. Produto não aparece no caixa
 1. Cadastros > Produtos > verificar se campo Ativo está marcado
@@ -400,6 +401,22 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 - **Impressão fraca:** limpar cabeçote com cotonete e álcool isopropílico
 - **Desliga sozinha:** provável defeito na fonte de alimentação — encaminhar para manutenção
 - **Teste manual:** desligar a impressora > pressionar e segurar botão de papel > ligar > soltar quando começar a imprimir
+
+### GBOT — Balança Automática de Buffet
+- **Nomes alternativos:** robozinho, robô, balança automática, GBOT
+- Equipamento com formato de tablet usado no buffet; o cliente bipa a comanda e coloca o produto na balança — o item é lançado automaticamente na comanda com peso e valor corretos
+- Toda configuração é feita via aplicativo (não no próprio equipamento); instalação e configuração: **acesso exclusivo da equipe técnica**
+- **Não pesa / trava / produto não entra na comanda:** reiniciar o equipamento > verificar rede > servidor ligado com SAG aberto > se persistir: ESCALAR_SUPORTE
+- **Valor incorreto:** ESCALAR_SUPORTE
+
+### SAG Mobile — Aplicativo de Comandas (Android)
+- **Nomes alternativos:** app do celular, aplicativo, palmtop, palm, T.A.
+- Aplicativo Android para lançamento de produtos em comandas pelo celular ou tablet
+- **Não está na Google Play Store** — download e instalação feitos com orientação técnica → ESCALAR_SUPORTE
+- **Disponível apenas para Android** — iPhone/iPad não são suportados → ESCALAR_SUPORTE
+- **Não conecta:** verificar Wi-Fi na mesma rede do servidor > servidor ligado com SAG aberto > fechar e abrir o app > se persistir: ESCALAR_SUPORTE
+- **Produto não aparece:** Cadastros > Produtos > verificar campo Ativo > fechar e abrir o app > se persistir: ESCALAR_SUPORTE
+- **"Comanda inexistente" / app parou após atualização do SAG:** ESCALAR_SUPORTE
 
 ### Rede / Roteador
 - **Wi-Fi caindo:** reiniciar roteador (desligar 30s) > verificar número de dispositivos conectados

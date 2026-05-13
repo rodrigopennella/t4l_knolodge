@@ -33,18 +33,9 @@ As impressoras podem ser conectadas de duas formas:
 
 ## Configuração no SAG
 
-**Caminho:** Configurações > **Impressoras**
+> **Acesso exclusivo da equipe técnica.** O cadastro de impressoras, regras de impressão, número de vias e vínculo de impressoras por seção (caixa, cozinha, pedidos) são realizados pela equipe T4L via Config. Terminal. O cliente não acessa essas configurações.
 
-1. Clique em **Nova**
-2. Informe o nome (ex: "Cozinha", "Caixa 1")
-3. Selecione o tipo de conexão (USB ou Rede)
-4. Informe a porta (USB) ou IP (Rede)
-5. Clique em **Testar**
-6. Salve
-
-**Regras de Impressão:**
-- **Caminho:** Configurações > **Regras de Impressão**
-- Associa grupos/categorias de produtos a impressoras específicas
+Para qualquer ajuste de configuração de impressora no SAG, acionar o suporte técnico T4L.
 
 ---
 
@@ -55,7 +46,7 @@ As impressoras podem ser conectadas de duas formas:
 2. Abra e feche a tampa do papel
 3. Desconecte e reconecte o cabo USB (tente outra porta)
 4. Reinicie a impressora
-5. No SAG, acesse Configurações > Impressoras > **Testar**
+5. Se ainda não funcionar após os passos acima: acionar suporte técnico T4L para verificar a configuração no SAG
 
 ### Impressão em branco (papel sai sem texto)
 - O papel térmico foi colocado ao contrário
@@ -73,13 +64,12 @@ As impressoras podem ser conectadas de duas formas:
 - Se persistir, a fonte precisa ser trocada
 
 ### Pedido saindo na impressora errada
-- Verifique as **Regras de Impressão** no SAG
-- O produto pode estar no grupo/categoria incorreto
-- Veja: **Configurações > Regras de Impressão**
+- As regras que definem qual produto vai para qual impressora são configuradas pela equipe técnica T4L.
+- Acionar suporte técnico para ajuste.
 
 ### Muitas vias sendo impressas
-- Acesse: **Configurações > Regras de Impressão**
-- Ajuste o campo **Número de Vias** para 1
+- O número de vias é configurado pela equipe técnica T4L.
+- Acionar suporte técnico para ajuste.
 
 ---
 
