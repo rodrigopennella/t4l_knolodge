@@ -69,7 +69,7 @@ A quantidade pode ser informada de duas formas:
 - **Depois do produto:** insira o produto, depois altere a quantidade no campo correspondente
 - **Antes do produto (formato multiplicador):** digite `quantidade*código` no campo produto (ex: `0,010*55` para 10g do produto 55)
 
-> A opção "Quantidade Antes do Produto" pode ser habilitada em **Config. Terminal > Caixa**.
+> A opção "Quantidade Antes do Produto" é habilitada pela equipe técnica T4L.
 
 ---
 
@@ -295,7 +295,7 @@ Quando o estabelecimento possui totem de auto-atendimento:
 
 ## Configurações que Afetam o Caixa
 
-As seguintes opções em **Config. Terminal > Caixa** alteram o comportamento da Frente de Caixa:
+> Todas as configurações abaixo são gerenciadas exclusivamente pela equipe técnica T4L. Esta tabela serve apenas como referência para entender comportamentos do caixa — o cliente não acessa essas configurações.
 
 | Opção | Efeito |
 |---|---|

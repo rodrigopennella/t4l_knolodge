@@ -171,8 +171,6 @@ Exibe os pedidos em fila organizados por impressora/setor:
 
 ### Regras de Impressão (Roteamento para Produção)
 
-**Caminho:** Config. Terminal > **Impressoras** (seção Terminal PC e Pedidos)
-
 Define qual grupo/categoria de produto vai para qual impressora de produção.
 
 Exemplo:
@@ -180,7 +178,7 @@ Exemplo:
 - Grupo "Salgados" → Impressora da Cozinha
 - Grupo "Pizzas" → Impressora da Pizzaria
 
-> Se itens estão saindo na impressora errada, revise as Regras de Impressão.
+> Configuração feita exclusivamente pela equipe técnica T4L. Se itens estão saindo na impressora errada, acionar suporte técnico.
 
 ---
 

@@ -213,7 +213,7 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 - **Impressora de etiquetas de gôndola (Argox etc.):** instalada no Windows; no SAG, gerar etiquetas em PDF via Outros > Etiquetas
 
 ### NFC-e / Fiscal
-- **Acessar configuração NFC-e:** Aba NFe na barra superior, ou Config. Terminal > NFC-e
+- **Acessar NFC-e:** Aba NFe na barra superior (configuração da NFC-e é feita pela equipe técnica T4L)
 - **Central NFC-e:** No caixa, F1 > opção 7
 - **Validar licença:** Menu NFC-e > botão Validar Online
 - **Configurar CST/CFOP do produto:** Cadastros > Produtos > aba Impostos NFE/NFCE
@@ -231,7 +231,7 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 - **Novo pedido:** Tela Principal > Novo Pedido ou Delivery > Novo Pedido (mesma tela)
 - **Consulta de pedidos:** Delivery > Consulta de Pedidos (filtros: data, status, tipo, pagamento, origem, ent/ret, cliente, telefone, código)
 - **Relatórios delivery:** Delivery > Relatórios (Produção, Pedidos Resumidos, Por Origem, Completos, Por Entregador, Por Usuário, etc.)
-- **Integrações:** iFood, 99food, Keeta, OpenDelivery (configuradas por técnico T4L)
+- **Integrações:** iFood, 99food, Keeta, OpenDelivery — configuração, habilitação e manutenção são de **acesso exclusivo da equipe técnica T4L**. Qualquer problema com integração de delivery → ESCALAR_SUPORTE
 
 ### Estoque
 - **Entrada de estoque:** Estoque > Entrada de Nota > dados da nota + itens > Salvar
@@ -317,9 +317,11 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 2. Fechar e abrir o app no tablet para sincronizar
 
 ### 9. Pedidos do iFood não chegam
-1. Verificar em Config. Global > Delivery se a integração está habilitada
-2. Reiniciar o serviço de integração
-3. Verificar se o servidor tem acesso à internet
+1. Verificar se o servidor está ligado e com o SAG aberto
+2. Verificar se o servidor tem acesso à internet
+3. Se persistir: ESCALAR_SUPORTE
+
+> **ATENÇÃO:** A configuração e reativação da integração com iFood (e qualquer outra plataforma de delivery) é de **acesso exclusivo da equipe técnica**. Não existe menu acessível ao cliente para habilitar ou reiniciar integrações. Não oriente o cliente a acessar nenhum menu de configuração para isso.
 
 ### 10. Não consegue fechar o caixa
 1. Verificar se há vendas em aberto (F10)

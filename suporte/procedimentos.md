@@ -10,10 +10,10 @@ Passo a passo para as situações mais frequentes no atendimento.
 2. Peça para abrir e fechar a tampa do papel
 3. Peça para desconectar o cabo USB e reconectar em **outra porta USB**
 4. Peça para reiniciar a impressora (desligar pelo cabo/botão e religar)
-5. No SAG: **Configurações > Impressoras > Testar**
-6. Se não funcionar: verificar se o cabo USB está com defeito (trocar cabo)
-7. Se ainda não funcionar: testar a impressora em outro computador para isolar o problema
-8. Problema confirmado no hardware: encaminhar para manutenção
+5. Se não funcionar: verificar se o cabo USB está com defeito (trocar cabo)
+6. Se ainda não funcionar: testar a impressora em outro computador para isolar o problema
+7. Se problema confirmado no hardware: encaminhar para manutenção
+8. Se hardware OK e ainda não imprime: **acionar suporte técnico T4L** para verificar configuração no SAG
 
 ---
 
@@ -57,7 +57,7 @@ Passo a passo para as situações mais frequentes no atendimento.
 
 ## PROC-05: Criar Novo Usuário no SAG
 
-1. Acesse: **Usuários** (ou **Configurações > Usuários**)
+1. Acesse: **Outros > Central de Usuários**
 2. Clique em **Novo**
 3. Preencha:
    - **Login:** nome de acesso (sem espaços, sem acento)
@@ -70,13 +70,15 @@ Passo a passo para as situações mais frequentes no atendimento.
 
 ## PROC-06: Reconfigurar Regra de Impressão
 
-1. Acesse: **Configurações > Regras de Impressão**
-2. Identifique o grupo/categoria com problema
-3. Selecione a impressora correta no campo correspondente
-4. Ajuste o número de vias (normalmente 1)
-5. Salve
-6. Peça ao cliente para lançar um produto daquela categoria para testar
-7. Confirme se saiu na impressora correta e com a quantidade de vias correta
+> Regras de impressão são configuradas exclusivamente pela equipe técnica T4L via Config. Terminal. O cliente não acessa essas configurações.
+
+1. Acionar acesso remoto (AnyDesk) ao servidor do cliente
+2. No SAG: Config. Terminal > Impressoras
+3. Identificar o grupo/categoria com problema
+4. Selecionar a impressora correta no campo correspondente
+5. Ajustar o número de vias (normalmente 1)
+6. Salvar
+7. Pedir ao cliente para lançar um produto daquela categoria para testar
 
 ---
 
