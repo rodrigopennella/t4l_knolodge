@@ -1,313 +1,264 @@
-# SAG — Caixa / Frente de Caixa
+# Caixa — Documentação de Uso
 
-Módulo principal de atendimento ao cliente e registro de vendas. É a tela mais utilizada do sistema.
-
----
-
-## Abertura de Caixa
-
-**Caminho:** Tela Principal > **Caixa**
-
-Ao abrir o módulo Caixa, o sistema apresenta a tela **Abrir Caixa** com:
-- Campo: **Valor de Abertura** (troco inicial)
-- Botão: **Abrir**
-
-Após a abertura, a **Frente de Caixa** é exibida.
+Guia completo da operação de caixa no SAG: abertura, venda, pagamentos, descontos, devoluções, sangria e fechamento.
 
 ---
 
-## Tela da Frente de Caixa
+## Índice
 
-A tela exibe os seguintes elementos:
+1. [Abertura do Caixa](#1-abertura-do-caixa)
+2. [Frente de Caixa](#2-frente-de-caixa)
+3. [Lançar Produtos](#3-lançar-produtos)
+4. [Aplicar Desconto](#4-aplicar-desconto)
+5. [Cancelar Item ou Venda](#5-cancelar-item-ou-venda)
+6. [Formas de Pagamento](#6-formas-de-pagamento)
+7. [Comandas em Espera](#7-comandas-em-espera)
+8. [Últimas Vendas e Reimpressão](#8-últimas-vendas-e-reimpressão)
+9. [Devolução de Venda](#9-devolução-de-venda)
+10. [Sangria e Suprimento](#10-sangria-e-suprimento)
+11. [Bloquear o Caixa](#11-bloquear-o-caixa)
+12. [Fechamento do Caixa](#12-fechamento-do-caixa)
+13. [Outras Funções](#13-outras-funções)
 
-| Elemento | Descrição |
+---
+
+## 1. Abertura do Caixa
+
+Antes de realizar qualquer venda, o operador precisa abrir o caixa para registrar o troco inicial disponível.
+
+1. Ao iniciar o sistema, a tela de abertura de caixa abre automaticamente.
+2. Informe o **Troco Inicial** — o valor em dinheiro físico que está no caixa no início do turno.
+3. Se precisar contar as cédulas, use o botão da **Calculadora de Cédulas**.
+4. Clique em **Abrir Caixa** para confirmar.
+
+---
+
+## 2. Frente de Caixa
+
+| Área | O que exibe |
 |---|---|
-| Comanda | Campo para inserir número da comanda (por digitação ou leitor de código de barras) |
-| Produto | Campo para inserir código do produto (por digitação, código de barras ou leitor) |
-| Descrição | Nome do produto inserido |
-| Valor Unitário | Preço unitário do produto |
-| Quantidade | Quantidade do produto |
-| Total do Produto | Valor total do item |
-| Lista de itens | Tabela com #, Código, Descrição, Preço, Qtd, Total, Data Hora, Usuário, Comanda |
-| Sub Total | Subtotal da venda |
-| Desconto | Valor de desconto aplicado |
-| Total da Venda | Valor final a pagar |
+| **Campo Comanda** | Entrada do número da comanda |
+| **Campo Produto** | Entrada do código ou EAN do produto |
+| **Painel esquerdo** | Nome, valor unitário, quantidade e total do item |
+| **Lista central** | Todos os itens lançados na venda atual |
+| **Barra de totais** | Subtotal, desconto e valor total |
+| **Rodapé** | Botões de função (F1 a F12) |
 
-### Barra de Atalhos (Rodapé)
-A barra inferior da Frente de Caixa exibe os atalhos disponíveis:
-F1 - Outras Funções | F3 - Iniciar Venda | F4 - Consulta de Comandas | F5 - Cancelar Item | F6 - Cancelar Venda | F7 - Pagamento de Caderneta | F8 - Consulta de Pedidos | F9 - Consulta de Produtos | F10 - Últimas Vendas | F11 - Entradas e Saídas | F12 - Finalizar Caixa | Ctrl+E - Venda em Espera | Ctrl+D - Desconto | Ctrl+- - Desconto na Venda | Ctrl+U - Última Venda | Ctrl+F - Inserir Comanda Parcial
+### Atalhos de teclado — Frente de Caixa
 
----
-
-## Realizar uma Venda
-
-### Venda Simples (sem comanda)
-
-1. Pressione **Enter** ou **F2** para iniciar a venda (sem CPF)
-   - Ou pressione **F3** para iniciar a venda com CPF (o sistema solicita o CPF primeiro)
-2. No campo **Produto**, insira o código do produto de uma das formas:
-   - Digitando o código e pressionando **Enter**
-   - Bipando o código de barras com o leitor
-   - Usando o formato quantidade antes do produto: `0,010*código` (ex: `0,500*123` para 500g do produto 123)
-3. O produto aparece na lista de itens da venda
-4. Repita o passo 2 para adicionar mais produtos
-5. Ao finalizar os itens, o sistema apresenta a tela de **Formas de Pagamento**
-6. Selecione a forma de pagamento (digitando o código numérico correspondente)
-7. Informe o valor e confirme com **Enter**
-
-### Venda com Comanda
-
-1. No campo **Comanda**, insira o número da comanda (por digitação ou bipando com leitor)
-2. No campo **Produto**, insira o código do produto
-3. Insira a quantidade (antes ou depois do produto, dependendo da configuração)
-4. Pressione **Enter**
-5. Na tela de **Formas de Pagamento**, selecione a forma e confirme
-
-### Inserção de Quantidade
-
-A quantidade pode ser informada de duas formas:
-- **Depois do produto:** insira o produto, depois altere a quantidade no campo correspondente
-- **Antes do produto (formato multiplicador):** digite `quantidade*código` no campo produto (ex: `0,010*55` para 10g do produto 55)
-
-> A opção "Quantidade Antes do Produto" é habilitada pela equipe técnica T4L.
-
----
-
-## Formas de Pagamento
-
-Ao finalizar a inserção de produtos, a tela **Formas de Pagamento** é exibida.
-
-### Como Funciona
-- As formas de pagamento são listadas com um **código numérico à esquerda** e o **nome à direita**
-- O operador **digita o código numérico** da forma desejada para selecioná-la
-- O sistema abre a tela **Realiza Pagamento** com o valor total preenchido
-- O operador pode alterar o valor (para pagamento parcial) e confirmar
-
-### Formas Disponíveis (conforme configuração do estabelecimento)
-
-| Código | Forma |
-|---|---|
-| 1 | Dinheiro |
-| 2 | Cartão Débito |
-| 3 | Cartão Crédito |
-| 4 | PIX |
-| 5 | QR Code |
-| 6 | Caderneta |
-| 7 | Desconto |
-| 13 | iFood |
-| 14 | Incentivo Parceiro |
-| 15 | Ticket |
-| 16 | No Bairro |
-
-> Os códigos e formas variam conforme o cadastro de cada estabelecimento.
-
-### Pagamento Parcial (Misto)
-Para pagar com mais de uma forma de pagamento:
-1. Selecione a primeira forma de pagamento (ex: Dinheiro)
-2. Informe um valor **menor** que o total da venda
-3. Confirme — o sistema mantém a tela de formas de pagamento aberta com o saldo restante
-4. Selecione a segunda forma de pagamento (ex: Cartão)
-5. Informe o valor restante e confirme
-
-### Tela "Realiza Pagamento"
-Exibe:
-- **Total** da venda (R$)
-- **Nome da forma** selecionada com campo de valor editável
-- **Troco** calculado automaticamente (para dinheiro)
-- Botões: **Sair** / **Salvar**
-- Atalho: **F1 - Repique**
-
-### Atalhos na Tela de Formas de Pagamento
 | Tecla | Função |
 |---|---|
-| F1 | Inserir CPF |
-| F2 | Pesquisa Cliente |
-| F3 | Inserir Observação |
-| F4 | Inserir Voucher |
-| F5 | Inserir Cupom Desconto |
-| F6 | Cadastrar |
+| **F1** | Menu completo de funções |
+| **F3** | Inicia uma nova venda |
+| **F4** | Lista de comandas em aberto |
+| **F5** | Cancela o item selecionado |
+| **F6** | Cancela a venda inteira |
+| **F7** | Pagamento de caderneta |
+| **F8** | Consulta pedidos de delivery |
+| **F9** | Consulta produtos |
+| **F10** | Exibe as últimas vendas |
+| **F11** | Sangria / Entradas e Saídas |
+| **F12** | Fecha o caixa |
 
 ---
 
-## Atalhos Completos da Frente de Caixa
+## 3. Lançar Produtos
 
-### F1 — Outras Funções
-Abre uma caixa de seleção com as seguintes opções:
+1. Pressione **F3** para iniciar uma nova venda.
+2. Escaneie o código de barras ou digite o código manualmente no campo **Produto** e pressione **Enter**.
+3. Ajuste a **Quantidade** se necessário.
+4. O produto é adicionado à lista central automaticamente.
+5. Repita para os demais produtos.
 
-| Opção | Função |
+### Lançar com comanda
+
+1. Digite o número da comanda no campo **Comanda** antes de lançar produtos.
+2. O sistema associa os itens àquela comanda.
+3. A comanda pode ser retomada depois sem perder os itens.
+
+### Observação em um item
+
+1. Após lançar o item, selecione-o na lista.
+2. Acesse **F1 → Observação do Item**.
+3. Digite a observação e confirme.
+
+---
+
+## 4. Aplicar Desconto
+
+### Desconto em um item
+
+1. Selecione o item na lista central.
+2. Pressione **F5** ou acesse **F1 → Desconto no Item**.
+3. Escolha **Valor (R$)** ou **Porcentagem (%)**, informe e confirme.
+
+### Desconto na venda inteira
+
+1. Acesse **F1 → Desconto na Venda**.
+2. Escolha valor (R$) ou porcentagem (%), informe e confirme.
+
+> Descontos podem exigir senha de autorização do gerente, dependendo da configuração.
+
+---
+
+## 5. Cancelar Item ou Venda
+
+### Cancelar um item
+
+1. Selecione o item na lista central.
+2. Pressione **F5**.
+3. Informe o motivo do cancelamento.
+4. O item é removido e o total é recalculado.
+
+### Cancelar a venda inteira
+
+1. Pressione **F6** e confirme.
+2. Todos os itens são removidos e a venda é encerrada sem registro.
+
+> O cancelamento pode exigir senha do gerente, conforme configuração.
+
+---
+
+## 6. Formas de Pagamento
+
+Após lançar todos os produtos, clique no **Total** para acessar a tela de pagamento.
+
+### Dinheiro
+
+1. Selecione **Dinheiro**.
+2. Informe o valor recebido do cliente.
+3. O sistema calcula o troco automaticamente.
+4. Confirme para finalizar.
+
+### Cartão de Débito ou Crédito
+
+1. Selecione **Débito** ou **Crédito**.
+2. O sistema aciona a maquininha (TEF) automaticamente.
+3. Siga as instruções na maquininha.
+4. Após aprovação, a venda é concluída.
+
+Para **parcelamento no crédito:** selecione o número de parcelas antes de acionar a maquininha.
+
+### PIX
+
+1. Selecione **PIX**.
+2. O sistema gera um QR Code na tela.
+3. O cliente escaneia e realiza o pagamento.
+4. A venda é encerrada automaticamente após confirmação.
+
+> O QR Code tem tempo de expiração. Se expirar, cancele e gere novamente.
+
+### Múltiplas Formas de Pagamento
+
+1. Selecione a primeira forma e informe o valor parcial.
+2. Selecione a segunda forma e informe o restante.
+3. O sistema controla a diferença e o troco automaticamente.
+
+---
+
+## 7. Comandas em Espera
+
+Quando uma venda é iniciada mas não finalizada:
+
+1. Pressione **F4** para abrir a lista de **Comandas em Espera**.
+2. Clique na comanda desejada para retomá-la.
+3. O sistema carrega todos os itens já lançados.
+
+---
+
+## 8. Últimas Vendas e Reimpressão
+
+### Consultar vendas recentes
+
+1. Pressione **F10**.
+2. Escolha quantas vendas exibir (10, 25, 50 ou 300).
+3. Marque **Todos os Caixas** para ver vendas de outros terminais.
+4. Clique duas vezes em uma venda para ver os detalhes.
+
+### Reimprimir um cupom
+
+1. Abra a venda em **Últimas Vendas**.
+2. No rodapé da tela de detalhes:
+   - **F1** — Reimprimir cupom fiscal
+   - **F2** — Reimprimir com CPF do cliente
+   - **F3** — Reimprimir cupom simples (não fiscal)
+
+---
+
+## 9. Devolução de Venda
+
+1. Acesse **F1 → Devolução** ou abra a venda original em **Últimas Vendas**.
+2. Informe a **quantidade** devolvida de cada produto.
+3. O sistema calcula o valor total a ser devolvido.
+4. Escolha como será feita a devolução:
+   - **Gerar Voucher** — cria um crédito (vale) para uso futuro
+   - **Estorno direto** — dependendo da forma de pagamento original
+5. Confirme.
+
+---
+
+## 10. Sangria e Suprimento
+
+### Sangria — Retirada de dinheiro do caixa
+
+1. Pressione **F11**.
+2. Selecione **Saída**.
+3. Informe o **Valor**, o **Motivo** e uma **Observação** se necessário.
+4. Clique em **Salvar**.
+
+### Suprimento — Adição de dinheiro ao caixa
+
+1. Pressione **F11**.
+2. Selecione **Entrada**.
+3. Informe o valor e o motivo e salve.
+
+### Pagamento direto pelo caixa
+
+Para registrar um pagamento a fornecedor feito com dinheiro do caixa:
+
+1. Pressione **F11** > aba **Pagamentos**.
+2. Informe o **Valor**, o **Fornecedor** e uma **Descrição**.
+3. Salve.
+
+---
+
+## 11. Bloquear o Caixa
+
+1. Acesse **F1 → Bloquear Caixa**.
+2. O sistema solicita confirmação por senha.
+3. O caixa fica bloqueado — nenhuma venda pode ser realizada.
+4. Para desbloquear, informe a senha do operador.
+
+---
+
+## 12. Fechamento do Caixa
+
+1. Pressione **F12**.
+2. O sistema exibe o resumo: total de vendas por forma de pagamento, entradas e saídas.
+3. Informe o **valor físico** em dinheiro no caixa (contagem real).
+4. O sistema aponta a **diferença** entre o esperado e o informado.
+5. Confirme para encerrar o turno.
+
+### Relatórios gerados no fechamento
+
+| Relatório | O que informa |
 |---|---|
-| 1 | Abrir Gaveta de Dinheiro |
-| 2 | Colocar Venda em Espera |
-| 3 | Comandas Abertas |
-| 4 | Caixa em Espera |
-| 5 | Devolução de Venda |
-| 6 | Devolução de Produto |
-| 7 | Central NFC-e (central de envio, validação e verificação de problemas com NFC-e) |
-| 8 | Central de Ajustes TEF |
-| 9 | Bloqueia Tela Caixa |
-
-### F2 / Enter — Iniciar Venda
-Inicia uma nova venda sem solicitar CPF.
-
-### F3 — Iniciar Venda com CPF
-Solicita o CPF/CNPJ do cliente antes de iniciar a venda.
-
-### F4 — Consulta de Comandas
-Abre a tela de consulta de comandas abertas para seleção.
-
-### F5 — Cancelar Item
-1. Selecione o item na lista de produtos da venda
-2. Pressione **F5**
-3. Selecione o **Motivo do Cancelamento**
-4. Confirme
-
-### F6 — Cancelar Venda
-1. Pressione **F6**
-2. Confirme o cancelamento
-3. A venda é registrada como cancelada nos relatórios
-
-### F7 — Pagamento de Caderneta
-Abre a tela de recebimento de caderneta. Permite que o cliente pague valores pendentes registrados na caderneta.
-
-> É necessário ter um caixa aberto para receber valores de caderneta.
-
-### F8 — Consulta de Pedidos
-Abre uma tela para inserir o código do pedido em aberto, para finalização no caixa.
-
-### F9 — Consulta de Produtos
-Pesquise produto por nome ou código. Exibe preço e estoque disponível.
-
-> Atenção: feche essa consulta antes de iniciar outra operação para evitar travamentos.
-
-### F10 — Últimas Vendas
-Exibe histórico de vendas recentes. Permite inserir CPF em venda já finalizada: selecione a venda > pressione **F2**.
-
-### F11 — Entradas e Saídas (Sangria)
-Função de sangria no caixa. Serve para registrar:
-- **Entrada:** valor recebido fora de venda (ex: troco recebido)
-- **Saída (Sangria):** retirada de valor do caixa
-  - Campo: **Valor**
-  - Campo: **Motivo**
-
-### F12 — Finalizar Caixa
-1. Pressione **F12**
-2. O sistema pergunta se tem certeza que deseja finalizar
-3. Se confirmado, e se habilitado no **Config. Terminal** (opção "Lançar Valores ao Finalizar Caixa") e o usuário tiver permissão, aparece a função de **lançar valores reais** para o fechamento
-4. O sistema exibe o resumo de movimentações por forma de pagamento
-5. Confira os valores e confirme o fechamento
-
-> Se o caixa não fechar por erro, verifique se há NFC-e pendente ou venda aberta.
-
-### Ctrl + D — Desconto no Item
-Aplica desconto ao item selecionado.
-
-### Ctrl + - — Desconto na Venda
-Aplica desconto ao total da venda. Tela: **Aplica Desconto** — campo para informar valor ou percentual.
-
-### Ctrl + E — Venda em Espera
-Coloca a venda atual em espera:
-- Se a venda **tem comanda vinculada**: pergunta se deseja voltar para a comanda original
-- Se **não tem comanda**: pede o número da comanda
-- A venda fica suspensa e pode ser retomada depois
-
-### Ctrl + U — Última Venda
-Exibe os detalhes da última venda realizada.
-
-### Ctrl + F — Inserir Comanda Parcial
-Permite inserir um ou mais produtos de uma comanda no caixa, sem trazer todos os itens. Útil quando parte da conta é paga por um cliente em um grupo.
-
-### Ctrl + L — Extrato Programa de Fidelidade
-Consulta o extrato de pontos do cliente no programa de fidelidade.
+| **Relatório de Fechamento** | Resumo completo do caixa do turno |
+| **Mapa de Vendas** | Vendas organizadas por produto ou grupo |
+| **Divergências** | Diferença entre o esperado e o informado |
 
 ---
 
-## Consultar Últimas Vendas
+## 13. Outras Funções (F1)
 
-- Pressione **F10** ou acesse **Últimas Vendas**
-- Exibe histórico de vendas recentes
-- Permite inserir CPF em venda já finalizada: selecione a venda > pressione **F2**
-
----
-
-## Devoluções
-
-Acessíveis via **F1 > Outras Funções**:
-- **Opção 5 — Devolução de Venda:** devolução completa de uma venda
-- **Opção 6 — Devolução de Produto:** devolução de item específico
-- Selecione a venda original para processar a devolução
-
----
-
-## Programa de Fidelidade
-
-- Pressione **Ctrl + L** para consultar extrato de pontos do cliente
-- Pontos são creditados automaticamente nas vendas conforme configuração
-
----
-
-## Caderneta (Fiado)
-
-A Caderneta é a função que permite ao cliente registrar vendas no sistema para pagamento futuro.
-
-### No Caixa
-- **F7 — Pagamento de Caderneta:** abre tela de recebimento (precisa de caixa aberto)
-- Na tela de Formas de Pagamento, a opção **6 — Caderneta** registra a venda na caderneta do cliente
-
-### Tela de Gerenciamento de Caderneta
-**Caminho:** Tela Principal > **Caderneta**
-
-Abas disponíveis:
-| Aba | Função |
+| Função | O que faz |
 |---|---|
-| **Recebimento** | Receber pagamento de caderneta (mesma função do F7 no caixa — necessita caixa aberto) |
-| **Extrato** | Extrato completo das movimentações da caderneta do cliente |
-| **Compras** | Histórico de compras realizadas na caderneta |
-| **Pagamentos** | Histórico de pagamentos efetuados |
-| **Resumo** | Resumo geral da caderneta |
-| **Canceladas** | Registros cancelados |
-
-Campos da tela de Recebimento:
-- Cliente (pesquisa)
-- Saldo Devedor
-- Data do Pagamento
-- Data de Competência
-- Valor do Pagamento
-- Pagamento do Total (checkbox)
-
----
-
-## Auto-Atendimento (Totem)
-
-Quando o estabelecimento possui totem de auto-atendimento:
-- O cliente navega pelo **Cardápio** na tela do totem
-- Seleciona produtos, acompanhamentos e personalizações
-- Finaliza com pagamento via dinheiro, cartão ou PIX
-- O pedido é enviado automaticamente para a produção
-
----
-
-## Observações de Venda
-
-- Use a opção **Observação** (F3 na tela de Formas de Pagamento) para adicionar notas à venda
-- A observação aparece no cupom/ticket de produção
-
----
-
-## Configurações que Afetam o Caixa
-
-> Todas as configurações abaixo são gerenciadas exclusivamente pela equipe técnica T4L. Esta tabela serve apenas como referência para entender comportamentos do caixa — o cliente não acessa essas configurações.
-
-| Opção | Efeito |
-|---|---|
-| Acionamento Automático da Gaveta | Abre a gaveta automaticamente ao finalizar venda |
-| Utiliza Comandas | Habilita o uso de comandas no caixa |
-| Quantidade Antes do Produto | Permite inserir quantidade no formato multiplicador (ex: 0,500*código) |
-| Utiliza Balança | Integra com balança para peso automático |
-| Inicia Venda com Enter | Enter inicia a venda (em vez de F3) |
-| Lançar Valores ao Finalizar Caixa | Exibe tela de lançamento de valores reais no fechamento |
-| Caixa Utiliza Taxa de Serviço | Habilita taxa de serviço nas vendas |
-| Comanda Apenas com Leitor | Exige leitor de código de barras para comanda |
-| Avisa Quantidade maior que 99 | Alerta quando quantidade excede 99 |
-| Avisa Sangria quando Valor é superior à X | Alerta para sangria quando o caixa acumula valor alto |
-| F4 Abre Terminal | F4 abre o Terminal de Comandas em vez da consulta |
-| Caixa Solicita Vendedor Antes de Concluir a Venda | Solicita identificação do vendedor |
+| **Abrir Gaveta** | Abre a gaveta da registradora sem realizar venda |
+| **Encerrar Operador** | Troca o operador sem fechar o caixa |
+| **Cupom Não Fiscal** | Emite comprovante sem valor fiscal (uso interno) |
+| **Promoções Aplicadas** | Exibe promoções ativas na venda atual |
+| **Observação da Venda** | Adiciona anotação geral à venda |
+| **Pagamento Parcial de Comanda** | Paga apenas alguns itens da comanda, o restante fica em aberto |
+| **Taxa de Serviço** | Exibe e ajusta a taxa de serviço da venda |
+| **Inserir CPF/CNPJ** | Associa o CPF ou CNPJ do cliente à nota fiscal |
+| **Consultar Produto** | Busca preço e estoque sem lançar na venda |

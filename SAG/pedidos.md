@@ -1,213 +1,420 @@
-# SAG — Pedidos e Delivery
+# Módulo Delivery e Pedidos — Documentação de Uso
 
-Módulo de gerenciamento de pedidos para delivery, retirada e mesas.
+Guia completo dos módulos de Pedidos e Delivery do SAG: criar pedidos, acompanhar entregas, gerenciar entregadores, configurar origens e acessar relatórios.
 
 ---
 
-## Novo Pedido
+## Índice
 
-**Caminho:** Menu Principal > **Novo Pedido** ou aba **Delivery** > **Novo Pedido**
+1. [Novo Pedido](#1-novo-pedido)
+2. [Consulta de Pedidos](#2-consulta-de-pedidos)
+3. [Visão Kanban de Pedidos](#3-visão-kanban-de-pedidos)
+4. [Últimos Pedidos do Cliente](#4-últimos-pedidos-do-cliente)
+5. [Detalhes do Pedido](#5-detalhes-do-pedido)
+6. [Mudar Status do Pedido](#6-mudar-status-do-pedido)
+7. [Mapa de Endereços](#7-mapa-de-endereços)
+8. [Entregadores](#8-entregadores)
+9. [Origens de Pedido](#9-origens-de-pedido)
+10. [Integrações com Plataformas Externas](#10-integrações-com-plataformas-externas)
+11. [Status Possíveis de um Pedido](#11-status-possíveis-de-um-pedido)
+12. [Atalhos de Teclado](#12-atalhos-de-teclado)
+13. [Relatórios de Pedidos](#13-relatórios-de-pedidos)
 
-> O atalho "Novo Pedido" em Principal e em Delivery abre a mesma tela.
+---
 
-### Tela de Pedido
+## 1. Novo Pedido
 
-**Seção Cliente (topo):**
-| Campo | Observação |
+**Pedidos → Novo Pedido**
+
+### Seção: Cliente
+
+| Campo | O que preencher |
 |---|---|
-| Telefone | Busca por telefone do cliente (com DDD) |
-| Botão Pesquisar (lupa) | Busca na base de clientes cadastrados |
-| Botão Editar (lápis) | Edita dados do cliente selecionado |
-| Cliente | Nome exibido após seleção |
+| **Telefone** | Digite o telefone para buscar o cliente — os dados são preenchidos automaticamente se já estiver cadastrado |
+| **Nome do Cliente** | Exibido automaticamente após a busca |
+| **Origem** | De onde veio o pedido: SAG, iFood, WhatsApp, telefone, balcão, etc. |
+| **Código Externo** | Código do pedido em plataforma externa (ex: número do pedido no iFood) |
+| **Tipo** | **Pedido** (padrão), **Encomenda** (data futura) ou **Orçamento** (para aprovação posterior) |
 
-**Tipo de Entrega:**
-- **Entrega:** seleciona endereço do cliente, com opção de calcular distância
-- **Retirada:** cliente retira no local
+### Seção: Entrega ou Retirada
 
-**Origem e Tipo (canto superior direito):**
-- **Origem:** SagDelivery, iFood, WhatsApp, Telefone, etc. (seleção dropdown)
-- **Tipo:** Pedido / Encomenda / Orçamento (seleção por radio button)
+**Entrega:**
+- Selecione **Entrega** e escolha o endereço do cliente.
+- O sistema calcula a distância automaticamente via Google Maps.
+- Se precisar recalcular, clique em **Recalcular Distância**.
 
-**Seção Produtos:**
-| Campo | Observação |
+**Retirada:**
+- Selecione **Retirada** — campos de endereço ficam ocultos.
+- Informe a **Data** e **Hora** combinadas para a retirada.
+- Se o cliente vai pagar um sinal antecipado, informe no campo **Sinal**.
+
+### Seção: Produtos
+
+1. Busque o **Produto** pelo nome ou código.
+2. Informe a **Quantidade** e clique em **Adicionar**.
+3. Repita para todos os produtos.
+
+Na lista de itens você pode editar, aplicar desconto ou cancelar um item já lançado.
+
+### Totais
+
+| Campo | Descrição |
 |---|---|
-| Produto | Código do produto (digitação ou leitor) |
-| Descrição | Nome do produto (preenchido automaticamente) |
-| Preço | Valor unitário |
-| Qtd | Quantidade |
-| Total | Valor total do item |
+| **Subtotal** | Soma de todos os itens sem desconto |
+| **Desconto** | Desconto aplicado ao pedido |
+| **Total** | Valor final a ser cobrado |
 
-**Lista de itens:** Tabela com #, Código, Descrição, Preço, Qtd, Total
+### Finalizar
 
-**Totais (rodapé):**
-- Subtotal
-- Desconto
-- Total (R$)
+- **Salvar** — registra o pedido com status **Em Andamento**.
 
-### Atalhos da Tela de Pedido
+> Se o cliente tiver observações cadastradas (ex: "interfone quebrado"), elas aparecem automaticamente na tela para orientar o atendente.
+
+---
+
+## 2. Consulta de Pedidos
+
+**Pedidos → Consulta de Pedidos**
+
+Painel central de acompanhamento de todos os pedidos.
+
+### Filtros disponíveis
+
+| Filtro | O que faz |
+|---|---|
+| **Filtrar Por** | Período por data do pedido ou data de retirada |
+| **De / À** | Período de busca |
+| **Status** | Em Andamento, Pronto, Em Entrega, Finalizado, Cancelado, etc. |
+| **Tipo** | Pedido, Orçamento, Encomenda ou Todos |
+| **Pagamento** | Pago, Não Pago ou Todos |
+| **Entrega/Retirada** | Apenas entregas, apenas retiradas, ou todos |
+| **Cliente** | Busca parcial pelo nome |
+| **Telefone** | Busca pelo número |
+| **Origem** | SAG, iFood, etc. |
+| **Código** | Número do pedido ou código externo |
+| **Consulta MultiLoja** | Pedidos de todas as filiais ao mesmo tempo |
+
+### Cores da lista
+
+| Cor | Situação |
+|---|---|
+| **Verde** | Pedido finalizado |
+| **Vermelho** | Pedido cancelado |
+| **Amarelo** | Pedido em entrega |
+| **Cinza** | Retirada em andamento |
+| **Branco** | Pedido em aberto / aguardando |
+
+### Ações disponíveis por pedido
+
+| Botão | O que faz |
+|---|---|
+| **Marcar como Pronto** | Pedido pronto para sair |
+| **Marcar em Entrega** | Entregador saiu |
+| **Finalizar** | Encerra o pedido como entregue e pago |
+| **Cancelar** | Cancela o pedido |
+| **Imprimir** | Imprime o pedido |
+| **Emitir Cupom** | Emite o cupom fiscal |
+| **Reimprimir Cupom** | Reimprime o cupom já emitido |
+| **Enviar E-mail** | Envia o pedido por e-mail ao cliente |
+| **Emitir NF-e** | Emite Nota Fiscal Eletrônica |
+| **Vincular Comanda** | Associa o pedido a uma comanda do caixa |
+
+### Alteração em lote
+
+1. Ative **Alteração em Lote** no menu superior.
+2. Selecione os pedidos marcando as caixas de seleção.
+3. Escolha a ação: Pronto, Em Entrega, Cancelar, Emitir cupons ou Finalizar.
+
+---
+
+## 3. Visão Kanban de Pedidos
+
+**Pedidos → Consulta Kanban**
+
+Exibe os pedidos em colunas por status. Para mudar o status, **arraste o cartão** para a coluna desejada.
+
+Colunas: **Em Andamento → Pronto → Em Entrega → Finalizado → Cancelado**
+
+---
+
+## 4. Últimos Pedidos do Cliente
+
+**Pedidos → Últimos Pedidos** *(ou F7 na tela de novo pedido)*
+
+1. Selecione o cliente e pressione **F7**.
+2. Defina o período desejado.
+3. A lista exibe todos os pedidos anteriores com data, tipo e valor total.
+4. Clique em **Refazer Pedido** para criar um novo copiando todos os itens.
+
+---
+
+## 5. Detalhes do Pedido
+
+**F4 na tela de pedidos**
+
+| Campo | O que preencher |
+|---|---|
+| **Entregador** | Entregador responsável pela entrega |
+| **Data e Hora de Retirada** | Horário previsto para entrega ou retirada |
+| **Observações** | Anotações internas sobre o pedido |
+
+---
+
+## 6. Mudar Status do Pedido
+
+Ao clicar em **Marcar em Entrega**, o sistema abre uma tela para definir como a entrega será feita.
+
+### Aba: Interno
+
+Para entregas feitas pelo próprio entregador do estabelecimento:
+
+| Campo | O que preencher |
+|---|---|
+| **Entregador** | Entregador que vai sair |
+| **Data de Retirada** | Data da saída para entrega |
+| **Entregue** | Marque quando a entrega for confirmada |
+
+### Aba: Externo
+
+Para entregas via plataformas de logística (Loggi, iFood Delivery, Uber Direct, etc.):
+
+1. Selecione a **plataforma de entrega**.
+2. Clique em **Solicitar Entregador**.
+3. Após aceite, clique em **Rastrear Entrega** para acompanhar a rota em tempo real.
+
+---
+
+## 7. Mapa de Endereços
+
+**Pedidos → Mapa**
+
+| Modo | O que exibe |
+|---|---|
+| **Mapa de Calor** | Regiões com maior concentração de pedidos |
+| **Mapa de Pedidos** | Cada pedido como um ponto no mapa |
+
+Na Consulta de Pedidos, expanda a linha do pedido para ver endereço completo, **Copiar Endereço** e **Copiar Link de Rastreio**.
+
+---
+
+## 8. Entregadores
+
+### Cadastro de Entregadores
+
+**Pedidos → Entregadores → Cadastrar**
+
+| Campo | O que preencher |
+|---|---|
+| **Nome** | Nome completo |
+| **CPF / RG / CNPJ / CNH** | Documentos |
+| **Validade da CNH** | Data de vencimento |
+| **Diária** | Valor da diária (se aplicável) |
+| **Ativo** | Marque para aparecer nas listas de seleção |
+| **Telefone / Celular / E-mail** | Contato |
+| **CEP / Endereço** | Ao digitar o CEP, o endereço é preenchido automaticamente |
+
+### Consulta de Entregadores
+
+**Pedidos → Entregadores → Consultar**
+
+- Marque **Apenas Ativos** para exibir somente entregadores disponíveis.
+- Dê **duplo clique** para abrir e editar o cadastro.
+
+---
+
+## 9. Origens de Pedido
+
+**Pedidos → Origens**
+
+As origens identificam de onde cada pedido veio (SAG, iFood, WhatsApp, telefone, balcão, etc.).
+
+### Como cadastrar uma origem
+
+| Campo | O que preencher |
+|---|---|
+| **Descrição** | Nome da origem |
+| **Cliente Padrão** | Cliente vinculado automaticamente (útil para origens sem cliente identificado) |
+| **Delivery** | Marque se aceita pedidos para entrega |
+| **Habilita Código Externo** | Marque se o pedido vem com código de plataforma externa |
+| **Baixa Automática** | Pedidos pré-pagos são finalizados automaticamente |
+| **Taxa Fixa / Taxa Porcentagem** | Taxas cobradas por pedido dessa origem |
+
+---
+
+## 10. Integrações com Plataformas Externas
+
+> **ATENÇÃO:** As integrações de delivery (iFood, 99food, Keeta, OpenDelivery, etc.) são serviços Windows que rodam no servidor. O cliente **não tem acesso, não consegue visualizar e não sabe se está configurado**. Qualquer problema com integração → ESCALAR_SUPORTE imediatamente.
+
+### Plataformas disponíveis para logística de entregadores
+
+| Plataforma | Tipo |
+|---|---|
+| **Loggi** | Solicitação + rastreamento em tempo real |
+| **iFood Delivery** | Solicitação via plataforma iFood |
+| **Uber Direct** | Entregador via Uber |
+| **BeDelivery / 99Food / Keeta / Loocal / OpenDelivery** | Plataformas regionais e abertas |
+
+---
+
+## 11. Status Possíveis de um Pedido
+
+| Status | Significado |
+|---|---|
+| **Não Confirmado** | Pedido recebido aguardando confirmação |
+| **Confirmado** | Confirmado, ainda não iniciado |
+| **Em Andamento** | Em produção / sendo preparado |
+| **Pronto** | Pronto para sair para entrega ou retirada |
+| **Em Entrega** | Entregador a caminho |
+| **Entregue** | Entrega confirmada |
+| **Faturado** | Nota fiscal emitida |
+| **Finalizado** | Entregue e pago |
+| **Cancelado** | Cancelado pelo cliente ou estabelecimento |
+
+**Fluxo normal:** Não Confirmado → Confirmado → Em Andamento → Pronto → Em Entrega → Entregue → Finalizado
+
+---
+
+## 12. Atalhos de Teclado — Novo Pedido
+
 | Tecla | Função |
 |---|---|
-| F1 | Cancela Item |
-| F2 | Consulta Produtos |
-| F3 | Cancelar Pedido |
-| F4 | Detalhes do Pedido |
-| F5 | Consulta de Pedidos |
-| F6 | Pedido Vinculado a Comanda |
-| F7 | Últimos Pedidos Realizados |
-| F10 | Inserir Pizza |
-| F11 | Finalizar na Caderneta |
-| F12 | Exibir Caixa |
-| Ctrl + D | Desconto Item |
-| Ctrl + - | Desconto no Pedido |
-| ESC | Sair |
+| **F1** | Cancela o item selecionado |
+| **F2** | Consulta de produtos |
+| **F3** | Cancela o pedido inteiro |
+| **F4** | Detalhes do pedido (entregador, observações, data) |
+| **F5** | Consulta de pedidos |
+| **F6** | Vincula o pedido a uma comanda do caixa |
+| **F7** | Últimos pedidos do cliente |
+| **F10** | Inserir pizza |
+| **F11** | Finalizar o pedido na caderneta |
+| **F12** | Exibir o caixa |
+| **Ctrl + D** | Desconto no item |
+| **Ctrl + –** | Desconto no pedido inteiro |
+| **ESC** | Sair |
 
 ---
 
-## Adicionar Produtos ao Pedido
+## 13. Relatórios de Pedidos
 
-1. Selecione o cliente e tipo de entrega
-2. No campo **Produto**, insira o código ou pesquise com F2
-3. Informe a quantidade no campo **Qtd**
-4. Pressione **Enter** para adicionar
-5. Para produtos com acompanhamentos obrigatórios, o sistema solicita a seleção antes de confirmar
+**Pedidos → Relatórios**
 
-### Produtos com Acompanhamento
-- O sistema exibe a tela de **Acompanhamentos** automaticamente
-- Tipos: opcionais, obrigatórios, adicionais pagos, variações
-
-### Pedido de Pizza
-- Pressione **F10** para inserir pizza
-- Selecione o **Tamanho**
-- Selecione os **Sabores** (1 ou mais, conforme tamanho)
-- Selecione a **Borda** (se disponível)
-- Confirme o pedido
+Os relatórios ficam organizados em abas. Cada aba tem seus próprios filtros e botão **Gerar Relatório**.
 
 ---
 
-## Consulta de Pedidos
+### Produção
 
-**Caminho:** Aba **Delivery** > **Consulta de Pedidos** ou Caixa > **F8**
+Exibe os itens que precisam ser produzidos no período, agrupando produtos de todos os pedidos.
 
-Tela completa de gerenciamento de pedidos com filtros avançados:
+**Tipos de relatório:**
 
-### Filtros Disponíveis
-| Filtro | Opções |
+| Tipo | O que exibe |
 |---|---|
-| Filtrar por | Data pedido (padrão) |
-| Período | Data inicial e final |
-| Status | Todos / Em Andamento / Finalizado / Cancelado |
-| Tipo | Todos / Pedido / Encomenda / Orçamento |
-| Pagamento | Todos / formas específicas |
-| Ent/Ret | Todos / Entrega / Retirada |
-| Cliente | Pesquisa por nome |
-| Telefone | Pesquisa por telefone |
-| Origem | Todas / SagDelivery / iFood / WhatsApp / etc. |
-| Cod | Código do pedido |
+| **Pedido Resumido** | Lista pedidos com totais, sem detalhar itens |
+| **Pedido Completo** | Cada pedido com todos os itens |
+| **Total dos Produtos** | Quantidade total de cada produto nos pedidos |
+| **Total dos Produtos com Receita** | Igual ao anterior + ficha técnica de cada produto |
 
-### Colunas da Lista
-| Coluna | Descrição |
+---
+
+### Pedidos Resumidos
+
+Lista os pedidos com informações básicas: cliente, data, valor e status.
+
+**Filtros:** Tipo de Data, Período, Status, Tipo, Cliente, Apenas Pagos, Agrupar por Cliente, Agrupar por Estabelecimento.
+
+---
+
+### Pedidos por Origem
+
+Analisa quantos pedidos e qual o valor gerado por cada canal de venda.
+
+**Filtros:** Tipo de Data, Período, Status, Origem, Cliente, Apenas Pagos, Agrupar por Dia, Gerar Gráfico.
+
+---
+
+### Pedidos Completos
+
+Exibe o detalhamento completo: dados do cliente, endereço, itens, valores e formas de pagamento.
+
+**Filtros:** Tipo de Data, Período, Status, Tipo, Cliente, Entregador, Apenas Pagos.
+
+---
+
+### Pedidos por Entregador
+
+Exibe quantas entregas cada entregador realizou e o custo total. Usado para calcular o pagamento dos motoboys.
+
+| Opção de cálculo | Como funciona |
 |---|---|
-| CÓDIGO | Número do pedido (com ícone de origem, ex: WhatsApp) |
-| CLIENTE | Nome do cliente |
-| DATA | Data e hora do pedido |
-| STATUS | Em Andamento / Finalizado / Cancelado |
-| TEL | Telefone do cliente |
-| TOTAL | Valor total (R$) |
-| TIPO | Pedido / Encomenda / Orçamento |
-
-### Ações por Pedido (ícones à direita)
-Cada pedido exibe ícones de ação:
-- Ícone de moto/entregador — associar entregador
-- Ícone de impressora — reimprimir pedido
-- Ícone de check verde — marcar como finalizado
-- Ícone de WhatsApp — enviar mensagem ao cliente
-- Outros ícones de gerenciamento
+| **Taxa de Entrega** | Usa o valor de frete cobrado em cada pedido |
+| **Valor por Entrega** | Define um valor fixo por entrega realizada |
 
 ---
 
-## Módulo Delivery
+### Pedidos por Usuário
 
-**Caminho:** Aba **Delivery** na barra superior
+Mostra quantos pedidos cada operador registrou no período, com os valores correspondentes.
 
-O módulo Delivery concentra as funcionalidades específicas de delivery:
-- **Novo Pedido** — mesma tela acessível em Principal
-- **Consulta de Pedidos** — gerenciamento completo com filtros
-- **Relatórios** — relatórios específicos de delivery
+**Filtros:** Tipo de Data, Período, Usuário, Apenas Pagos, Incluir Orçamentos.
 
-### Relatórios de Delivery
-**Caminho:** Delivery > **Relatórios**
+---
 
-| Relatório | Descrição |
+### Consulta de Vendas
+
+Busca vendas associadas a pedidos com filtros detalhados: Período, Produto, Comanda, Valor da Venda, Tipo.
+
+---
+
+### Produtos por Pedido
+
+Exibe quais produtos foram mais pedidos, com quantidades e valores.
+
+**Agrupamentos:** Por Origem, Por Cliente ou Por Produto.
+
+---
+
+### Resumo de Pedidos
+
+Exibe um resumo quantitativo agrupado por intervalo de tempo.
+
+**Agrupamentos por tempo:** Por Dia, Por Hora (identifica picos), Por Mês, Sem Agrupamento.
+
+---
+
+### Histórico dos Pedidos
+
+Exibe o histórico completo de alterações de um pedido específico — quem alterou, o que foi alterado e quando.
+
+1. Informe o **Código do Pedido**.
+2. Defina o **Período** se quiser restringir.
+3. Clique em **Gerar Relatório**.
+
+---
+
+### Taxas por Origem
+
+Analisa as taxas cobradas e custos gerados por cada origem de pedido. Útil para calcular a margem real por canal.
+
+**Filtros:** Período, Origem, Agrupar, Incluir Meios de Pagamento.
+
+---
+
+### Exportar Dados
+
+Exporta os pedidos do período em arquivo para uso em planilhas ou sistemas de BI.
+
+| Opção | O que exporta |
 |---|---|
-| Produção | Relatório de produção dos pedidos |
-| Pedidos Resumidos | Resumo de pedidos por período |
-| Pedidos Por Origem | Agrupado por canal (iFood, WhatsApp, balcão, etc.) |
-| Pedidos Completos | Detalhamento completo de cada pedido |
-| Pedidos Por Entregador | Performance por entregador |
-| Pedidos Por Usuário | Pedidos lançados por operador |
-| Consulta de Vendas | Vendas originadas de pedidos |
-| Produtos por Pedido | Detalhamento de produtos em cada pedido |
-| Resumo de Pedidos | Totais consolidados |
-| Histórico dos Pedidos | Histórico completo de alterações |
-| Taxas por Origem | Taxas de entrega por canal |
-| Exportar Dados | Exportação de dados para planilha |
-| Pedidos Alterados | Pedidos que sofreram alterações |
+| **Pedidos Detalhados** | Cada item de cada pedido em linhas separadas |
+| **Pedidos Resumidos** | Um registro por pedido, sem detalhar itens |
 
-### Filtros dos Relatórios
-- Tipo de Data (Pedido)
-- Formato (Pedido Resumido, etc.)
-- Agrupar por grupo / subgrupo
-- Período
-- Grupo / SubGrupo
-- Status
-- Cliente
-- Tipo
-- Origem
+**Exportar Multiloja** — exporta dados de todas as filiais em um único arquivo.
 
 ---
 
-## Integrações de Delivery
+### Pedidos Alterados
 
-O SAG possui integração com diversas plataformas de delivery:
-- **iFood**
-- **99food**
-- **Keeta**
-- **OpenDelivery**
-- Entre outras
+Lista todos os pedidos modificados após o lançamento inicial: o que foi alterado, por quem e quando.
 
-> As integrações são sempre configuradas por um técnico da T4L. Taxas de entrega e taxa de serviço também são configuráveis pela equipe técnica.
-
-### Configurar Integração
-> Configuração feita exclusivamente pela equipe técnica T4L. Não há menu acessível ao cliente para habilitar ou gerenciar integrações.
-
-### Problemas com Integrações
-- Pedidos não chegam, integração caiu ou parou de funcionar → **acionar suporte técnico T4L**
-- Para problemas na própria plataforma do parceiro (iFood, 99food etc.), contate o suporte da plataforma diretamente
-
----
-
-## Romaneio de Entregas
-
-**Caminho:** Menu Principal > **Romaneio**
-
-Módulo voltado para fábricas e operações de distribuição. Tem estrutura semelhante ao delivery, mas focado em:
-- Emissão de NF-e para entregas
-- Geração de boletos
-- Geração de faturas
-- Organização de rotas de entrega
-
----
-
-## Caderneta nos Pedidos
-
-- Na tela de Novo Pedido, pressione **F11** para finalizar na caderneta
-- O valor do pedido fica registrado para pagamento futuro
-- Consulta e recebimento: via **Caderneta** no menu Principal ou **F7** no caixa
-
----
-
-## Programa de Fidelidade (Pedidos)
-
-- Pontos são acumulados automaticamente nas vendas
-- Consulta: Caixa > **Ctrl + L**
-- Resgate de pontos: disponível na finalização do pedido conforme configuração
+**Filtros:** Tipo de Data, Período, Status, Tipo, Origem, Cliente, Usuário, Código do Pedido.
