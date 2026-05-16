@@ -2,6 +2,10 @@
 
 Guia de suporte para infraestrutura de rede em estabelecimentos de food service.
 
+> **RESPONSABILIDADE T4L:** Na maioria dos estabelecimentos atendidos, a T4L Tecnologia fornece e gerencia os equipamentos de rede — modem, roteador, switches e cabeamento. O suporte deve orientar os passos básicos de verificação e, se não resolver, escalar internamente.
+>
+> **Exceção:** se o estabelecimento estiver completamente sem internet (nem celular conecta), o problema é com o provedor — orientar o cliente a ligar para a operadora.
+
 ---
 
 ## Arquitetura de Rede Típica
@@ -94,6 +98,8 @@ Usado quando há mais dispositivos com fio do que portas no roteador.
 - Porta com defeito: tente outra porta no switch
 - Switch sobreaquecendo: verifique ventilação
 - Sem luz indicadora em uma porta: cabo com defeito ou dispositivo desligado
+
+> O switch é gerenciado pela T4L — qualquer problema deve ser escalado para o suporte.
 
 ---
 

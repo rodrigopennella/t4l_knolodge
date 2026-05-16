@@ -131,13 +131,15 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 
 **Sintomas:** Pedido feito na plataforma não aparece no SAG ou não imprime.
 
-**Solução:**
-1. Verifique se o servidor está ligado e com o SAG aberto
-2. Verifique se o servidor tem acesso à internet
-3. Se persistir: acionar suporte técnico T4L
-4. Se o problema estiver na plataforma iFood (pedidos não saem do app), contate o suporte do iFood
+> **IMPORTANTE:** A integração de delivery (iFood, 99food, Keeta, OpenDelivery) é um **serviço Windows** que roda no servidor. O cliente não tem acesso, não consegue visualizar e não sabe se está configurado. **Não existe nenhuma tela ou menu no SAG acessível ao cliente para verificar ou reiniciar a integração.** Não pergunte ao cliente sobre configurações de integração.
 
-> Configuração e reativação da integração com iFood são de acesso exclusivo da equipe técnica. Não há menu acessível ao cliente para isso.
+**O único pré-requisito que o cliente pode confirmar:**
+1. O servidor está ligado?
+2. O SAG está aberto no servidor?
+3. O servidor tem acesso à internet?
+
+- Se qualquer um dos três estiver com problema: resolver isso primeiro
+- Se os três estiverem ok e os pedidos ainda não chegam: acionar suporte T4L imediatamente
 
 ---
 
@@ -196,11 +198,14 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 **Sintomas:** Conexão cai com frequência, tablets ficam offline.
 
 **Solução:**
-1. Reinicie o roteador (desligue da tomada, aguarde 30s, religue)
-2. Verifique se o servidor tem IP fixo na rede (importante para estabilidade)
-3. Se muitos dispositivos na rede: considere um roteador com maior capacidade
-4. Para dispositivos críticos (caixa principal): use cabo de rede ao invés de Wi-Fi
-5. Se problema persistir, contate o provedor de internet
+1. Verificar se há internet no estabelecimento (testar abrindo um site no celular)
+   - **Sem internet em nenhum dispositivo:** problema com o provedor — orientar o cliente a ligar para a operadora
+   - **Com internet:** prosseguir
+2. Verificar se as luzes do roteador estão normais (luz vermelha ou apagada indica problema)
+3. Verificar se os cabos de rede estão bem conectados (no servidor, nos caixas e no roteador/switch)
+4. Reiniciar o roteador (desligue da tomada, aguarde 30s, religue) e aguardar 2 minutos
+5. Para dispositivos críticos (caixa principal): usar cabo de rede ao invés de Wi-Fi
+6. Se o problema persistir após os passos acima: acionar suporte T4L
 
 ---
 

@@ -19,13 +19,22 @@ Passo a passo para as situações mais frequentes no atendimento.
 
 ## PROC-02: Caixa Sem Conexão ao Servidor
 
+> A T4L gerencia modem, roteador, switches e cabeamento na maioria dos estabelecimentos. Orientar os passos básicos abaixo e, se não resolver, escalar para o suporte.
+
 1. Pergunte: o computador servidor está ligado? (verifique fisicamente)
-2. O modem/roteador está com as luzes normais?
-3. Peça para reiniciar o roteador (desligar da tomada, aguardar 30s, religar)
-4. Aguarde 2 minutos e teste novamente
-5. Se não resolver: reinicie o servidor
-6. Aguarde 3-5 minutos e teste
-7. Se ainda sem conexão: verifique se caixa e servidor estão na mesma rede
+2. Há internet no estabelecimento? (testar abrindo um site no celular)
+   - **Sem internet em nenhum dispositivo:** orientar o cliente a ligar para a operadora
+   - **Com internet:** prosseguir
+3. É acesso interno ou externo ao estabelecimento?
+   - Se **externo** (fora do estabelecimento): ESCALAR_SUPORTE (porta 3306 ou DDNS)
+   - Se **interno:** prosseguir
+4. Só esse computador ou todos estão sem conexão?
+   - **Todos:** ESCALAR_SUPORTE imediatamente (pode ser banco de dados ou servidor)
+   - **Só um:** prosseguir
+5. Verificar se o roteador/modem está com as luzes normais
+6. Verificar se o cabo de rede está bem conectado nas duas pontas (no caixa e no roteador/switch)
+7. Reiniciar o roteador (desligar da tomada, aguardar 30s, religar) e aguardar 2 minutos
+8. Se não resolver: ESCALAR_SUPORTE
 
 ---
 
