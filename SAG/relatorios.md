@@ -6,9 +6,12 @@ Módulo de geração de relatórios gerenciais e fiscais. Total de relatórios d
 
 ## Como Acessar
 
-Acesse a **Aba Relatórios** no SAG. Selecione o módulo desejado no menu lateral, defina os filtros (período, caixa, produto, etc.) e clique em **Gerar Relatório**.
+A maioria dos relatórios fica na **Aba Relatórios** do SAG. Selecione o módulo no menu lateral, defina os filtros e clique em **Gerar Relatório**.
 
-> Relatórios de Pedidos ficam em **Pedidos → Relatórios**, não na Aba Relatórios.
+> **Atenção:** Os módulos Financeiro, Estoque e Pedidos possuem aba própria no SAG — os relatórios desses módulos ficam dentro da respectiva aba, não na Aba Relatórios.
+> - **Financeiro:** Aba Financeiro → Relatórios → (nome do relatório)
+> - **Estoque:** Aba Estoque → Relatórios → (nome do relatório)
+> - **Pedidos/Delivery:** Aba Pedidos → Relatórios → (nome do relatório)
 
 ---
 
@@ -68,24 +71,24 @@ Acesse a **Aba Relatórios** no SAG. Selecione o módulo desejado no menu latera
 
 ## Módulo: Estoque
 
-**Caminho base:** Relatórios → **Estoque**
+**Caminho base:** Aba Estoque → **Relatórios**
 
 | Relatório | Caminho | Descrição |
 |---|---|---|
-| **Estoque Mínimo** | Relatórios → Estoque → Estoque Mínimo | Produtos abaixo do nível mínimo configurado. Filtrável por grupo, departamento e local |
-| **Estoque Máximo** | Relatórios → Estoque → Estoque Máximo | Produtos acima do nível máximo configurado (excesso em estoque) |
-| **Estoque Consolidado** | Relatórios → Estoque → Estoque Consolidado | Saldo atual de todos os produtos, agrupável por grupo, local ou departamento |
-| **Histórico do Produto** | Relatórios → Estoque → Histórico do Produto | Movimentação completa de um produto específico (entradas e saídas) |
-| **Nível de Estoque** | Relatórios → Estoque → Nível de Estoque | Estoque atual comparado com limites mínimo e máximo cadastrados |
-| **Saída de Estoque** | Relatórios → Estoque → Saída de Estoque | Todas as saídas do período: vendas, perdas, transferências, com data e responsável |
-| **Entrada de Estoque** | Relatórios → Estoque → Entrada de Estoque | Todas as entradas do período: compras, devoluções, com fornecedor e quantidade |
-| **Transferência de Estoque** | Relatórios → Estoque → Transferência de Estoque | Transferências entre locais ou unidades: origem, destino, produto e data |
-| **Inventário Estoque** | Relatórios → Estoque → Inventário Estoque | Ficha de inventário com campos em branco para contagem física |
-| **Movimento de Estoque** | Relatórios → Estoque → Movimento de Estoque | Todas as movimentações do período com saldo inicial, lançamentos e saldo final |
-| **Multiloja - Estq. Consolidado** | Relatórios → Estoque → Multiloja - Estq. Consolidado | Saldo de estoque consolidado de todas as unidades da rede |
-| **Lote - Validade** | Relatórios → Estoque → Lote - Validade | Produtos controlados por lote com datas de validade (PVPS) |
-| **Perda por Faturamento** | Relatórios → Estoque → Perda por Faturamento | Perdas registradas no período em relação ao faturamento gerado |
-| **Ajuste de Estoque** | Relatórios → Estoque → Ajuste de Estoque | Ajustes manuais de saldo: produto, quantidade, usuário responsável e motivo |
+| **Estoque Mínimo** | Estoque → Relatórios → Estoque Mínimo | Produtos abaixo do nível mínimo configurado. Filtrável por grupo, departamento e local |
+| **Estoque Máximo** | Estoque → Relatórios → Estoque Máximo | Produtos acima do nível máximo configurado (excesso em estoque) |
+| **Estoque Consolidado** | Estoque → Relatórios → Estoque Consolidado | Saldo atual de todos os produtos, agrupável por grupo, local ou departamento |
+| **Histórico do Produto** | Estoque → Relatórios → Histórico do Produto | Movimentação completa de um produto específico (entradas e saídas) |
+| **Nível de Estoque** | Estoque → Relatórios → Nível de Estoque | Estoque atual comparado com limites mínimo e máximo cadastrados |
+| **Saída de Estoque** | Estoque → Relatórios → Saída de Estoque | Todas as saídas do período: vendas, perdas, transferências, com data e responsável |
+| **Entrada de Estoque** | Estoque → Relatórios → Entrada de Estoque | Todas as entradas do período: compras, devoluções, com fornecedor e quantidade |
+| **Transferência de Estoque** | Estoque → Relatórios → Transferência de Estoque | Transferências entre locais ou unidades: origem, destino, produto e data |
+| **Inventário Estoque** | Estoque → Relatórios → Inventário Estoque | Ficha de inventário com campos em branco para contagem física |
+| **Movimento de Estoque** | Estoque → Relatórios → Movimento de Estoque | Todas as movimentações do período com saldo inicial, lançamentos e saldo final |
+| **Multiloja - Estq. Consolidado** | Estoque → Relatórios → Multiloja - Estq. Consolidado | Saldo de estoque consolidado de todas as unidades da rede |
+| **Lote - Validade** | Estoque → Relatórios → Lote - Validade | Produtos controlados por lote com datas de validade (PVPS) |
+| **Perda por Faturamento** | Estoque → Relatórios → Perda por Faturamento | Perdas registradas no período em relação ao faturamento gerado |
+| **Ajuste de Estoque** | Estoque → Relatórios → Ajuste de Estoque | Ajustes manuais de saldo: produto, quantidade, usuário responsável e motivo |
 
 ---
 
@@ -101,18 +104,18 @@ Acesse a **Aba Relatórios** no SAG. Selecione o módulo desejado no menu latera
 
 ## Módulo: Financeiro
 
-**Caminho base:** Relatórios → **Financeiro**
+**Caminho base:** Aba Financeiro → **Relatórios**
 
 | Relatório | Caminho | Descrição |
 |---|---|---|
-| **Contas a Pagar** | Relatórios → Financeiro → Contas a Pagar | Compromissos a pagar, filtrável por favorecido, categoria, conta, situação e tipo de data |
-| **Acréscimos e Descontos - Pagos** | Relatórios → Financeiro → Acréscimos e Descontos - Pagos | Juros, multas e descontos aplicados nas quitações de contas a pagar |
-| **Contas a Receber** | Relatórios → Financeiro → Contas a Receber | Títulos a receber por credor, categoria e conta, com filtros de situação e data |
-| **Acréscimos e Descontos - Recebidos** | Relatórios → Financeiro → Acréscimos e Descontos - Recebidos | Acréscimos e descontos aplicados nos recebimentos de contas a receber |
-| **Extrato** | Relatórios → Financeiro → Extrato | Extrato de conta bancária ou caixa com saldo progressivo |
-| **Fluxo de Caixa** | Relatórios → Financeiro → Fluxo de Caixa | Entradas e saídas financeiras com saldo diário e acumulado |
-| **DRE** | Relatórios → Financeiro → DRE | Demonstração de Resultado do Exercício: receitas, custos e apuração de lucro/prejuízo |
-| **Contas a Pagar Por Grupo Fornecedor** | Relatórios → Financeiro → Contas a Pagar Por Grupo Fornecedor | Contas a pagar agrupadas por categoria de fornecedor |
+| **Contas a Pagar** | Financeiro → Relatórios → Contas a Pagar | Compromissos a pagar, filtrável por favorecido, categoria, conta, situação e tipo de data |
+| **Acréscimos e Descontos - Pagos** | Financeiro → Relatórios → Acréscimos e Descontos - Pagos | Juros, multas e descontos aplicados nas quitações de contas a pagar |
+| **Contas a Receber** | Financeiro → Relatórios → Contas a Receber | Títulos a receber por credor, categoria e conta, com filtros de situação e data |
+| **Acréscimos e Descontos - Recebidos** | Financeiro → Relatórios → Acréscimos e Descontos - Recebidos | Acréscimos e descontos aplicados nos recebimentos de contas a receber |
+| **Extrato** | Financeiro → Relatórios → Extrato | Extrato de conta bancária ou caixa com saldo progressivo |
+| **Fluxo de Caixa** | Financeiro → Relatórios → Fluxo de Caixa | Entradas e saídas financeiras com saldo diário e acumulado |
+| **DRE** | Financeiro → Relatórios → DRE | Demonstração de Resultado do Exercício: receitas, custos e apuração de lucro/prejuízo |
+| **Contas a Pagar Por Grupo Fornecedor** | Financeiro → Relatórios → Contas a Pagar Por Grupo Fornecedor | Contas a pagar agrupadas por categoria de fornecedor |
 
 ---
 
@@ -191,7 +194,7 @@ Acesse a **Aba Relatórios** no SAG. Selecione o módulo desejado no menu latera
 
 ## Módulo: Pedidos
 
-> **Atenção:** estes relatórios ficam em **Pedidos → Relatórios**, não no menu principal de Relatórios.
+> **Atenção:** estes relatórios ficam na **Aba Pedidos → Relatórios**, não na Aba Relatórios.
 
 | Relatório | Caminho | Descrição |
 |---|---|---|
