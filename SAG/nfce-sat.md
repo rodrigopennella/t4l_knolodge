@@ -48,21 +48,43 @@ de cupom ao consumidor final.
 
 ---
 
-## XML — Envio e Consulta
+## XML — Exportar e Baixar
 
-### Enviar XMLs por E-mail
-1. Acesse: **Outros > Ferramentas CFe > Arquivos XML**
-2. Defina o período
-3. Marque **Compactar em arquivo único**
-4. Marque **Enviar por e-mail**
-5. Informe os e-mails destinatários
-6. Clique em **Gerar**
+### XML em lote por período — envio mensal para contabilidade
 
-### Validar XML com Relatório
-Se houver divergência entre XML e relatório de vendas:
-1. Compare o relatório de vendas do SAG com o arquivo XML gerado
-2. Se necessário, reimporte o XML pela opção correspondente no menu
-3. Consulte o suporte se a divergência persistir
+**Caminho:** Outros > **Exportar XML**
+
+1. Informe o **período** (Início e Término)
+2. Selecione os tipos a incluir: **NFC-e**, **NF-e**
+3. Marque as opções desejadas:
+   - **Incluir Canceladas**
+   - **Incluir Relatório**
+   - **Incluir Inutilizadas**
+   - **Incluir DANFE**
+4. Para enviar por e-mail: marque **Enviar arquivos por email** e informe o endereço
+5. Clique em **Gerar** — o arquivo é gerado no computador ou enviado por e-mail
+
+> Use este caminho para enviar os XMLs mensais à contabilidade.
+
+---
+
+### XML individual de NF-e
+
+**Caminho:** NFe > **Gerenciar**
+
+1. Localize a nota na lista
+2. Na linha da nota com status **Autorizada**, clique no **segundo botão** (ícone XML)
+3. O arquivo é baixado no computador
+
+---
+
+### XML individual de NFC-e
+
+**Caminho:** Relatórios > **Consultas** > **Vendas**
+
+1. Localize a venda na lista
+2. Clique no botão **XML** na linha da venda
+3. O arquivo é baixado no computador
 
 ---
 
