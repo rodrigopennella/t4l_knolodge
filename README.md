@@ -41,6 +41,7 @@ Base de conhecimento para suporte técnico a estabelecimentos de food service (p
 | [Produto — Aba Imposto](SAG/produto-aba-impostos.md) | Grupo de Imposto por estabelecimento, botões e IA fiscal |
 | [Grupo de Imposto](SAG/grupo-de-imposto.md) | Cadastro, campos tributários, aplicação em lote |
 | [Grupos de Permissão](SAG/grupos-permissoes.md) | Permissões por setor, criação de grupos, perfis sugeridos |
+| [Programa de Fidelidade](SAG/fidelidade.md) | Configuração, acúmulo de pontos, resgate, extrato e relatório |
 
 ### Suporte
 | Documento | Conteúdo |
