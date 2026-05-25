@@ -86,18 +86,35 @@ Antes de realizar qualquer venda, o operador precisa abrir o caixa para registra
 
 ## 4. Aplicar Desconto
 
-### Desconto em um item
+### Desconto em um item — Ctrl + D
 
-1. Selecione o item na lista central.
-2. Pressione **F5** ou acesse **F1 → Desconto no Item**.
-3. Escolha **Valor (R$)** ou **Porcentagem (%)**, informe e confirme.
+1. Pressione **Ctrl + D**
+2. Se houver um item pré-selecionado na lista, o desconto é aplicado diretamente a ele
+3. Se nenhum item estiver selecionado, o sistema pede o **índice do item** — número exibido na coluna **#** à esquerda da lista
+4. Escolha o tipo: **Porcentagem (%)** ou **Preço de Venda (R$)**
+5. Informe o valor e confirme
 
-### Desconto na venda inteira
+> Também funciona no **Terminal de Comandas** e no **Delivery** para desconto em item.
 
-1. Acesse **F1 → Desconto na Venda**.
-2. Escolha valor (R$) ou porcentagem (%), informe e confirme.
+---
 
-> Descontos podem exigir senha de autorização do gerente, dependendo da configuração.
+### Desconto na venda inteira — Ctrl + -
+
+1. Pressione **Ctrl + -** durante a venda
+2. Escolha o tipo: **Porcentagem (%)** ou **Preço de Venda (R$)**
+3. Informe o valor e confirme
+
+> Para que o desconto na venda funcione, é necessário que a espécie **Desconto** esteja cadastrada nas formas de pagamento. Sem ela, o **Ctrl + -** não funciona.
+
+---
+
+### Desconto pela tela de pagamento
+
+Na tela de formas de pagamento, se a espécie **Desconto** estiver cadastrada, basta clicar sobre ela para aplicar o desconto na venda — funciona da mesma forma que o **Ctrl + -**.
+
+---
+
+> Descontos podem exigir permissão configurada no Grupo de Permissões do usuário.
 
 ---
 
