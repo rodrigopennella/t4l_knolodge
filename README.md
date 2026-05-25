@@ -53,4 +53,5 @@ Base de conhecimento para suporte técnico a estabelecimentos de food service (p
 | Documento | Conteúdo |
 |---|---|
 | [Impressoras Térmicas](equipamentos/impressoras-termicas.md) | Configuração, manutenção, solução de problemas |
+| [Impressoras de Gôndola / Etiqueta](equipamentos/impressoras-gondola.md) | Argox, L42 — etiquetas de prateleira via Outros → Etiquetas |
 | [Rede e Roteadores](equipamentos/rede-roteadores.md) | Wi-Fi, switches, conectividade |
