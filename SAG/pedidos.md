@@ -245,6 +245,8 @@ As origens identificam de onde cada pedido veio (SAG, iFood, WhatsApp, telefone,
 
 > **ATENÇÃO:** As integrações de delivery (iFood, 99food, Keeta, OpenDelivery, etc.) são serviços Windows que rodam no servidor. O cliente **não tem acesso, não consegue visualizar e não sabe se está configurado**. Qualquer problema com integração → ESCALAR_SUPORTE imediatamente.
 
+> **Código PDV:** Nas plataformas de integração (iFood, etc.), o campo chamado **"Código PDV"** corresponde ao **código do produto cadastrado no SAG** (Cadastros > Produtos > campo Código).
+
 ### Plataformas disponíveis para logística de entregadores
 
 | Plataforma | Tipo |
