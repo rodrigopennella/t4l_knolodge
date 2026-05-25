@@ -6,11 +6,9 @@ Módulo de geração de relatórios gerenciais e fiscais. Total de relatórios d
 
 ## Como Acessar
 
-**Caminho principal:** Menu Principal > **Relatórios**
+Acesse a **Aba Relatórios** no SAG. Selecione o módulo desejado no menu lateral, defina os filtros (período, caixa, produto, etc.) e clique em **Gerar Relatório**.
 
-Selecione o módulo desejado no menu lateral, defina os filtros (período, caixa, produto, etc.) e clique em **Gerar Relatório**.
-
-> Relatórios de Pedidos ficam em **Pedidos → Relatórios**, não no menu principal de Relatórios.
+> Relatórios de Pedidos ficam em **Pedidos → Relatórios**, não na Aba Relatórios.
 
 ---
 
