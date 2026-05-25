@@ -36,6 +36,7 @@ Base de conhecimento para suporte técnico a estabelecimentos de food service (p
 | [Produção e Comandas](SAG/producao-comandas.md) | Comandas, mesas, produção |
 | [Relatórios](SAG/relatorios.md) | Vendas, cancelamentos, comissões |
 | [Configurações](SAG/configuracoes.md) | Impressoras, usuários, permissões, integrações |
+| [Grupos de Permissão](SAG/grupos-permissoes.md) | Permissões por setor, criação de grupos, perfis sugeridos |
 
 ### Suporte
 | Documento | Conteúdo |

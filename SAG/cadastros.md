@@ -108,11 +108,14 @@ Campos principais:
 4. Clique em **Salvar**
 
 ### Grupos de Permissão
-**Caminho:** Usuários > **Grupos**
+**Caminho:** Outros > **Grupo de Permissões**
 
 - Cada grupo define quais módulos e ações o usuário pode realizar
 - Exemplos de grupos: Administrador, Caixa, Gerente, Suporte
-- Para alterar permissões: selecione o grupo > **Permissões** > marque/desmarque as funcionalidades
+- Para alterar permissões: selecione o grupo > marque/desmarque as funcionalidades por aba de setor
+- Alterações no grupo aplicam-se **imediatamente** a todos os usuários vinculados, sem necessidade de relogar
+
+> Para o detalhamento completo de cada permissão disponível, consulte [Grupos de Permissão](grupos-permissoes.md).
 
 ### Alterar Senha
 - O próprio usuário pode alterar: menu superior > **Alterar Senha**

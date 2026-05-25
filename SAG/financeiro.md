@@ -311,7 +311,7 @@ Cadastre e gerencie as formas de pagamento disponíveis (dinheiro, cartão, PIX,
 
 ### 9.4 Período Contábil
 
-**Financeiro → Período Contábil**
+**Financeiro → Extrato → Opções → Período Contábil**
 
 Define uma data de bloqueio: nenhum lançamento poderá ser inserido com data anterior à configurada aqui. Protege o histórico financeiro já encerrado de alterações acidentais.
 
