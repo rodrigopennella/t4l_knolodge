@@ -15,23 +15,6 @@ Módulo fiscal para emissão de documentos eletrônicos ao consumidor final.
 
 ---
 
-## NFC-e — Configuração Inicial
-
-**Caminho:** Menu Principal > **NFC-e**
-
-Para que a NFC-e funcione, é necessário:
-1. **Credenciais geradas** pela contabilidade (junto à SEFAZ do estado)
-2. **Certificado Digital** instalado no computador servidor
-3. Configuração das credenciais no SAG
-
-### Verificar Configuração
-1. Acesse **NFC-e** no menu principal
-2. Verifique se os dados de credencial estão preenchidos
-3. Se aparecer botão **Validar Online**, clique nele para sincronizar a licença
-4. Feche e abra o SAG novamente após configurar
-
----
-
 ## NFC-e — Emissão na Venda
 
 A NFC-e é emitida automaticamente ao finalizar a venda, desde que:
@@ -43,13 +26,9 @@ A NFC-e é emitida automaticamente ao finalizar a venda, desde que:
 
 ## NFC-e — Problemas Frequentes
 
-### "Sem configuração NFC-e"
-- Verifique se as credenciais foram geradas com a contabilidade
-- Verifique se o certificado digital está instalado
-- Acesse NFC-e no SAG e preencha os dados
-
 ### Erro ao emitir — produto sem configuração fiscal
-- Acesse: **Cadastros > Produtos** > selecione o produto > aba **Impostos NFE/NFCE**
+- Acesse: **Cadastros > Produtos** > selecione o produto > aba **Imposto**
+- Verifique se o produto tem um **Grupo de Imposto** vinculado — sem ele, a emissão não funciona
 - Verifique e corrija o **CST** e o **CFOP** (consulte a contabilidade)
 
 ### NFC-e não emite mas venda passa
