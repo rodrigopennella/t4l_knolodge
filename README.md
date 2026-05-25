@@ -38,6 +38,8 @@ Base de conhecimento para suporte técnico a estabelecimentos de food service (p
 | [Produção e Comandas](SAG/producao-comandas.md) | Comandas, mesas, produção |
 | [Relatórios](SAG/relatorios.md) | Vendas, cancelamentos, comissões |
 | [Configurações](SAG/configuracoes.md) | Impressoras, usuários, permissões, integrações |
+| [Produto — Aba Imposto](SAG/produto-aba-impostos.md) | Grupo de Imposto por estabelecimento, botões e IA fiscal |
+| [Grupo de Imposto](SAG/grupo-de-imposto.md) | Cadastro, campos tributários, aplicação em lote |
 | [Grupos de Permissão](SAG/grupos-permissoes.md) | Permissões por setor, criação de grupos, perfis sugeridos |
 
 ### Suporte

@@ -29,7 +29,7 @@ A NFC-e é emitida automaticamente ao finalizar a venda, desde que:
 ### Erro ao emitir — produto sem configuração fiscal
 - Acesse: **Cadastros > Produtos** > selecione o produto > aba **Imposto**
 - Verifique se o produto tem um **Grupo de Imposto** vinculado — sem ele, a emissão não funciona
-- Verifique e corrija o **CST** e o **CFOP** (consulte a contabilidade)
+- O CST e o CFOP são definidos dentro do **Grupo de Imposto** vinculado ao produto — consulte a contabilidade para ajustar
 
 ### NFC-e não emite mas venda passa
 - Verifique se NFC-e está habilitado no caixa específico

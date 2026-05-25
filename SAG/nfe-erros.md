@@ -177,7 +177,7 @@ Uma nota rejeitada pode ser corrigida e reenviada. Localize a nota no Gerenciado
 **"CFOP inválido para a operação"** ou **"CFOP não permitido para o destino informado"**
 
 - **O que significa:** o código CFOP do produto não corresponde ao tipo de operação ou ao destino da nota.
-- **Como corrigir:** abra o editor do produto e selecione o CFOP correto conforme a operação (venda interna, venda interestadual, devolução, etc.). Em caso de dúvida, consulte seu contador.
+- **Como corrigir:** o CFOP é definido dentro do **Grupo de Imposto** vinculado ao produto. Acesse **Cadastros > Produtos** > selecione o produto > aba **Imposto** > clique em 🔄 para editar o Grupo de Imposto e corrija o CFOP. Em caso de dúvida, consulte seu contador.
 
 ---
 

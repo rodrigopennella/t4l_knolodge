@@ -49,15 +49,16 @@ Módulo para gerenciamento de clientes, fornecedores, produtos, usuários e dema
 | Grupo / Categoria | Classificação para impressão e relatórios |
 | Estoque Mínimo | Alerta de reposição |
 
-### Aba: Impostos NFE/NFCE
-| Campo | Observação |
-|---|---|
-| CST | Classificação Tributária (obrigatório para emissão fiscal) |
-| CFOP | Código Fiscal de Operações (consultar contabilidade) |
-| ICMS | Alíquota |
-| PIS / COFINS | Alíquotas |
+### Aba: Imposto
 
-> Produtos com CST ou CFOP incorretos não emitem NFC-e. Consulte a contabilidade para os valores corretos.
+Define a configuração tributária do produto por estabelecimento. Não há campos diretos de CST ou CFOP — toda a tributação é gerenciada por **Grupos de Imposto**.
+
+- Cada estabelecimento pode ter um grupo de imposto diferente para o mesmo produto
+- O sistema exibe apenas grupos compatíveis com o regime tributário de cada loja
+- Sem um Grupo de Imposto vinculado, o produto não emite NFC-e ou NF-e
+
+> Para detalhes sobre esta aba e seus botões, consulte [Produto — Aba Imposto](produto-aba-impostos.md).
+> Para criar ou editar grupos, consulte [Grupo de Imposto](grupo-de-imposto.md).
 
 ### Cadastro de Pizza
 **Caminho:** Cadastros > **Pizzas**
