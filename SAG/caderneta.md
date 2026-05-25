@@ -167,3 +167,16 @@ Cada cliente tem um limite de crédito individual, configurado em **Cadastros �
 | Cliente próximo do limite | Sistema exibe aviso, mas permite o lançamento |
 | Cliente sem limite disponível | Sistema bloqueia o lançamento |
 | Cliente bloqueado pelo gerente | Sistema bloqueia independente do limite |
+
+---
+
+## 5. Bloquear / Desativar um Cliente da Caderneta
+
+Todo cliente de caderneta é antes um cliente cadastrado no sistema. Para bloquear um cliente (impedi-lo de fazer novas compras na caderneta), desative-o no cadastro:
+
+1. Acesse **Cadastros → Clientes**.
+2. Localize e selecione o cliente desejado.
+3. No **canto superior direito** da tela, desmarque o flag **Ativo**.
+4. Clique em **Salvar**.
+
+O cliente ficará inativo no sistema e não poderá realizar novas compras na caderneta. Para reativar, repita o processo marcando o flag **Ativo** novamente.
