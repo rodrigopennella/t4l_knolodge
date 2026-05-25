@@ -105,6 +105,14 @@ Para testar a impressora independente do SAG:
 
 ---
 
+## Manutenção Física — Escopo T4L
+
+Dificuldades com a parte física da impressora (troca de papel, troca de ribbon, limpeza de cabeçote, travamento de papel, etc.) **fazem parte do escopo de suporte da T4L** — não orientar o cliente a consultar o fabricante ou manual por conta própria.
+
+> Para manutenção física da impressora → **ESCALAR_SUPORTE** para atendimento remoto via AnyDesk ou visita técnica.
+
+---
+
 ## Quando Encaminhar para Manutenção
 
 - Cabeçote com risco ou dano físico

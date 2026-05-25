@@ -37,6 +37,14 @@ As impressoras de etiqueta podem ser conectadas via:
 
 ---
 
+## Manutenção de Hardware
+
+Qualquer dúvida ou dificuldade com a parte física da impressora (troca de ribbon, troca de rolo, limpeza de cabeçote, travamento de papel, etc.) **faz parte do escopo de suporte da T4L** — não orientar o cliente a consultar o fabricante ou manual por conta própria.
+
+> Para manutenção física da impressora → **ESCALAR_SUPORTE** para atendimento remoto via AnyDesk ou visita técnica.
+
+---
+
 ## Problemas Frequentes
 
 ### Etiqueta não imprime ou sai em branco
