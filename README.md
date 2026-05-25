@@ -32,7 +32,9 @@ Base de conhecimento para suporte técnico a estabelecimentos de food service (p
 | [Financeiro](SAG/financeiro.md) | Contas a pagar/receber, extrato, faturas |
 | [Estoque](SAG/estoque.md) | Entradas, ajustes, inventário, pedidos de compra |
 | [Pedidos / Delivery](SAG/pedidos.md) | Pedidos, delivery, iFood |
-| [NFC-e / SAT / NF-e](SAG/nfce-sat.md) | Emissão fiscal, certificado digital, XML |
+| [NFC-e](SAG/nfce-sat.md) | NFC-e, certificado digital, SAT descontinuado |
+| [NF-e — Emissão](SAG/nfe-emissao.md) | Passo a passo completo de emissão de NF-e |
+| [NF-e — Erros e Soluções](SAG/nfe-erros.md) | Rejeições, erros da SEFAZ, problemas de conexão |
 | [Produção e Comandas](SAG/producao-comandas.md) | Comandas, mesas, produção |
 | [Relatórios](SAG/relatorios.md) | Vendas, cancelamentos, comissões |
 | [Configurações](SAG/configuracoes.md) | Impressoras, usuários, permissões, integrações |

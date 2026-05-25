@@ -1,6 +1,6 @@
-# SAG — NFC-e, SAT e NF-e
+# SAG — NFC-e
 
-Módulo fiscal para emissão de documentos eletrônicos.
+Módulo fiscal para emissão de documentos eletrônicos ao consumidor final.
 
 ---
 
@@ -8,8 +8,7 @@ Módulo fiscal para emissão de documentos eletrônicos.
 
 | Sigla | Nome | Uso |
 |---|---|---|
-| NFC-e | Nota Fiscal de Consumidor Eletrônica | Emitida diretamente pelo SAG na venda ao consumidor |
-| SAT / CF-e | Sistema Autenticador e Transmissor / Cupom Fiscal Eletrônico | Equipamento homologado que emite CF-e (usado em SP) |
+| NFC-e | Nota Fiscal de Consumidor Eletrônica | Emitida diretamente pelo SAG na venda ao consumidor final |
 | NF-e | Nota Fiscal Eletrônica | Para vendas entre empresas (B2B) |
 | XML | Arquivo eletrônico | Representação digital do documento fiscal |
 | Certificado Digital | Arquivo de autenticação | Obrigatório para emissão de NFC-e |
@@ -59,43 +58,14 @@ A NFC-e é emitida automaticamente ao finalizar a venda, desde que:
 
 ---
 
-## SAT / CF-e (São Paulo)
+## SAT / CF-e — Descontinuado
 
-O SAT é um equipamento físico conectado ao computador. O SAG envia as informações e o SAT emite o CF-e.
+O SAT (Sistema Autenticador e Transmissor) foi descontinuado em 2025.
+Estabelecimentos que utilizavam SAT para emissão de cupom fiscal devem
+migrar para **NFC-e**, que passa a ser o único modelo aceito para emissão
+de cupom ao consumidor final.
 
-**Verificar se SAT está funcionando:**
-1. Verifique se o equipamento SAT está ligado e com luz indicadora ativa
-2. No SAG, acesse **Ferramentas** > **SAT** para testar comunicação
-3. Se não responder, verifique a conexão USB
-
-### Gerar Arquivos XML do SAT
-1. Acesse: **Outros > Ferramentas CFe > Arquivos XML**
-2. Configure as opções:
-   - **Gerar CF-e Cancelados:** marque se necessário
-   - **Compactar em arquivo único:** recomendado
-   - **Enviar por e-mail:** informe os destinatários
-3. Clique em **Gerar**
-
----
-
-## NF-e — Emissão
-
-**Caminho:** Menu Principal > **NF-e**
-
-Usado para emitir nota fiscal em compras/vendas entre empresas.
-
-### Campos Principais
-- **Destinatário:** CNPJ, Razão Social
-- **Produtos:** código, quantidade, valor, CFOP, CST, ICMS, IPI
-- **Transporte:** transportadora, volumes
-- **Pagamento:** forma e valor
-
-### Processo
-1. Acesse **NF-e**
-2. Preencha os dados do destinatário
-3. Adicione os produtos com dados fiscais corretos
-4. Clique em **Transmitir** para enviar à SEFAZ
-5. Após aprovação, o XML e DANFE ficam disponíveis para download/envio
+> Dúvidas sobre a migração: entrar em contato com o suporte T4L.
 
 ---
 
@@ -150,3 +120,12 @@ O certificado digital é obrigatório para emissão de NFC-e. Existem dois tipos
 | "Certificado vencido" | Certificado expirou | Renovar com a contabilidade |
 | "Senha incorreta" | Senha do `.pfx` errada | Confirmar senha com quem gerou o certificado |
 | NFC-e não emite após aplicar | SAG não foi reiniciado | Fechar e reabrir o SAG |
+
+---
+
+## NF-e
+
+Para emissão de nota fiscal eletrônica entre empresas (B2B), consulte os guias específicos:
+
+- [Guia de Emissão Passo a Passo](nfe-emissao.md)
+- [Erros, Rejeições e Soluções](nfe-erros.md)
