@@ -66,9 +66,20 @@ Define a configuração tributária do produto por estabelecimento. Não há cam
 - Cadastro de **Sabores** com preços por tamanho
 - Cadastro de **Acompanhamentos** (bordas, extras)
 
-### Importação de Produtos
-- Possível importar via planilha Excel
-- **Caminho:** Cadastros > Produtos > **Importar**
+### Importar / Exportar Produtos (Excel)
+
+**Caminho:** Cadastros > Produtos > **Opções** > **Importar/Exportar Excel**
+
+| Opção | O que faz |
+|---|---|
+| **Exportar Excel Produtos** | Gera uma planilha com todos os produtos cadastrados (código, descrição, preço, etc.) |
+| **Importar Excel Produtos** | Atualiza ou cria produtos em massa a partir de uma planilha preenchida |
+
+> Use a exportação para obter a planilha de produtos atualizada — útil para enviar à contabilidade, auditar o cadastro ou preparar uma importação em lote.
+
+#### Atenção ao importar
+
+Na tela de importação, o sistema exibe checkboxes para selecionar quais campos serão atualizados (Descrição, Preço, Cod. Barras, NCM, Grupo de Imposto, Estoque, etc.). **Selecione apenas os campos que foram realmente alterados na planilha.** Marcar campos desnecessários pode sobrescrever dados corretos já cadastrados no sistema.
 
 ---
 
