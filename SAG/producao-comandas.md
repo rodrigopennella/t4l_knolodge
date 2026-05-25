@@ -4,15 +4,17 @@ Módulos de gerenciamento de mesas, comandas e controle de produção.
 
 ---
 
-## Comandas
+## O que é uma Comanda
 
-### O que é uma Comanda
 Registro numérico no qual produtos são lançados. Pode ser denominada como **mesa**, **comanda**, ou ambos, dependendo da configuração do estabelecimento.
 
-### Acessar a Tela de Comandas
+---
+
+## Comandas — Visualização e Controle
+
 **Caminho:** Menu Principal > **Comandas**
 
-Abre a tela **Consulta de Comandas** com a lista de todas as comandas e seus status.
+Tela para **visualizar e controlar** todas as comandas do sistema (bloquear, desbloquear, limpar, adicionar). Não é utilizada para lançar produtos.
 
 ### Status das Comandas
 
@@ -51,11 +53,11 @@ Para criar comandas no sistema:
 
 ---
 
-## Terminal de Comandas
+## Terminal de Comandas — Lançamento de Produtos
 
 **Caminho:** Menu Principal > **Terminal de Comandas**
 
-Interface dedicada para lançamento de produtos em comandas. Otimizada para garçons ou atendentes lançarem pedidos diretamente nas mesas, via tablet ou computador na área de atendimento.
+Interface para **lançar produtos em comandas**. Utilizada por garçons ou atendentes para registrar pedidos diretamente nas mesas ou pontos de atendimento.
 
 ### Fluxo de Uso
 1. Insira o **Operador** (código de login do atendente)
