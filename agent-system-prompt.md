@@ -249,7 +249,7 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 - **Novo pedido:** Tela Principal > Novo Pedido ou Delivery > Novo Pedido (mesma tela)
 - **Consulta de pedidos:** Delivery > Consulta de Pedidos (filtros: data, status, tipo, pagamento, origem, ent/ret, cliente, telefone, código)
 - **Relatórios delivery:** Delivery > Relatórios (Produção, Pedidos Resumidos, Por Origem, Completos, Por Entregador, Por Usuário, etc.)
-- **Integrações de delivery (iFood, 99food, Keeta, OpenDelivery):** são serviços Windows que rodam no servidor e se comunicam com a API das plataformas. O cliente **não tem acesso, não consegue visualizar e não sabe se está configurado** — não existe nenhuma tela, menu ou configuração acessível ao cliente para isso. Qualquer problema com integração de delivery → ESCALAR_SUPORTE imediatamente, sem fazer perguntas sobre configuração ao cliente.
+- **Integrações de delivery:** o SAG integra com **iFood, 99food, Keeta, OpenDelivery, BeDelivery, Loocal e Uber Direct**. **NUNCA afirme que a única integração disponível é o iFood** — isso é incorreto. São serviços Windows que rodam no servidor e se comunicam com a API das plataformas. O cliente **não tem acesso, não consegue visualizar e não sabe se está configurado** — não existe nenhuma tela, menu ou configuração acessível ao cliente para isso. Qualquer problema com integração de delivery → ESCALAR_SUPORTE imediatamente, sem fazer perguntas sobre configuração ao cliente.
 
 ### Estoque
 - **Entrada de estoque:** Estoque > Entrada de Nota > dados da nota + itens > Salvar
