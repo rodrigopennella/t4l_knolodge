@@ -1,122 +1,244 @@
 # SAG — Relatórios
 
-Módulo de geração de relatórios gerenciais e fiscais.
+Módulo de geração de relatórios gerenciais e fiscais. Total de relatórios disponíveis: 91.
 
 ---
 
 ## Como Acessar
 
-**Caminho:** Menu Principal > **Relatórios**
+A maioria dos relatórios fica na **Aba Relatórios** do SAG. Selecione o módulo no menu lateral, defina os filtros e clique em **Gerar Relatório**.
 
-Selecione a categoria de relatório desejada, defina os filtros (período, caixa, produto, etc.) e clique em **Gerar**.
-
----
-
-## Relatórios de Vendas
-
-| Relatório | Descrição |
-|---|---|
-| Vendas Geral | Totais de vendas no período |
-| Vendas por Caixa | Detalhamento por terminal de caixa |
-| Vendas por Produto | Quais produtos venderam e quanto |
-| Vendas por Grupo | Agrupado por categoria de produto |
-| Vendas por Hora | Distribuição de vendas ao longo do dia |
-| Vendas por Vendedor | Performance por atendente |
-| Vendas por Forma de Pagamento | Totais por dinheiro, cartão, PIX, etc. |
-
-**Filtros comuns:**
-- Data inicial e data final
-- Caixa específico
-- Turno
-- Produto ou grupo
+> **Atenção:** Os módulos Financeiro, Estoque e Pedidos possuem aba própria no SAG — os relatórios desses módulos ficam dentro da respectiva aba, não na Aba Relatórios.
+> - **Financeiro:** Aba Financeiro → Relatórios → (nome do relatório)
+> - **Estoque:** Aba Estoque → Relatórios → (nome do relatório)
+> - **Pedidos/Delivery:** Aba Pedidos → Relatórios → (nome do relatório)
 
 ---
 
-## Relatórios de Cancelamentos
+## Módulo: Faturamento
 
-**Caminho:** Relatórios > **Itens Cancelados**
+**Caminho base:** Relatórios → **Faturamento**
 
-- Lista todos os cancelamentos no período
-- Campos: data, item, valor, operador, motivo
-- Útil para auditoria e controle de perdas
-
----
-
-## Relatório de Fechamento de Caixa
-
-**Caminho:** Relatórios > **Fechamento de Caixa**
-
-Exibe o resumo de cada fechamento:
-- Valor de abertura
-- Entradas e saídas
-- Total por forma de pagamento
-- Diferença (sobra/falta)
-- Operador responsável
-
----
-
-## Relatório de Comissões
-
-**Caminho:** Relatórios > **Comissões** (ou Financeiro > Comissões)
-
-Lista as comissões calculadas por vendedor no período.
+| Relatório | Caminho | Descrição |
+|---|---|---|
+| **Faturamento Geral** | Relatórios → Faturamento → Geral | Total faturado no período, agrupável por Ano/Mês/Dia/Hora. Suporta gráfico de linha |
+| **Faturamento Por Dia/Hora** | Relatórios → Faturamento → Por Dia/Hora | Faturamento distribuído por dia e horário (detalhado ou resumido) |
+| **Faturamento Por Espécies** | Relatórios → Faturamento → Por Espécies | Faturamento por forma de pagamento (dinheiro, cartão, PIX, voucher etc.) |
+| **Faturamento Por Turno** | Relatórios → Faturamento → Por Turno | Faturamento por turnos configuráveis com horário de início, término e virada |
+| **Faturamento Por Tipo de Venda** | Relatórios → Faturamento → Por Tipo | Agrupa por tipo de operação (Venda, NF-e, Pedido), agrupável por Ano/Mês/Dia/Hora |
+| **Faturamento Por Usuário** | Relatórios → Faturamento → Por Usuário | Total faturado por operador de caixa, com gráfico comparativo |
+| **Faturamento Por Caixa** | Relatórios → Faturamento → Por Caixa | Total faturado por terminal (PDV) no período |
+| **Faturamento Por Tipo de Pedido** | Relatórios → Faturamento → Por Tipo de Pedido | Por modalidade (mesa, balcão, delivery etc.), agrupável por Ano/Mês/Dia/Hora |
+| **Faturamento Comparativo** | Relatórios → Faturamento → Comparativo | Compara dois períodos distintos com gráfico de barras |
+| **Faturamento Consolidado** | Relatórios → Faturamento → Consolidado | Visão consolidada e totalizadora do período, sem subdivisões |
+| **Faturamento Por Projeção** | Relatórios → Faturamento → Por Projeção | Projeta faturamento futuro com base em histórico de referência |
+| **Faturamento Multi-Loja** | Relatórios → Faturamento → Multi-Loja | Consolida faturamento de todas as unidades da rede |
+| **Faturamento Comparativo Multi-Loja** | Relatórios → Faturamento → Comparativo Multi-Loja | Compara duas unidades em dois períodos distintos |
 
 ---
 
-## Relatórios Fiscais
+## Módulo: Vendas
 
-| Relatório | Descrição |
-|---|---|
-| Cupons Emitidos | Lista de CF-e / NFC-e emitidos |
-| Cupons Cancelados | Documentos fiscais cancelados |
-| Relatório SAT | Totais do SAT no período |
-| Relatório NFC-e | Totais de notas fiscais emitidas |
+**Caminho base:** Relatórios → **Vendas**
 
----
+**Opções de Total:** Bruto ou Líquido (selecionável na parte inferior da tela)
 
-## Consulta de Vendas (Cupom a Cupom)
-
-**Caminho:** Relatórios > **Consultas** (ou Caixa > F10)
-
-- Localiza uma venda específica pelo número, data ou CPF
-- Exibe todos os itens e forma de pagamento
-- Útil para verificar divergências
-
----
-
-## Relatório de Estoque
-
-**Caminho:** Relatórios > **Estoque** (ou Estoque > Consultas)
-
-- Posição atual do estoque
-- Movimentações (entradas e saídas) no período
-- Produtos abaixo do estoque mínimo
-
----
-
-## Relatório de Clientes
-
-**Caminho:** Relatórios > **Clientes**
-
-- Lista de clientes cadastrados
-- Histórico de compras por cliente
-- Saldo de caderneta (crédito)
+| Relatório | Caminho | Descrição |
+|---|---|---|
+| **Estatísticas** | Relatórios → Vendas → Estatísticas | Ticket médio, total de pedidos, média de itens por venda e métricas gerais |
+| **Curva ABC - Itens** | Relatórios → Vendas → Curva ABC - Itens | Classifica produtos em A/B/C por participação no faturamento ou quantidade. Filtrável por grupo, subgrupo e origem |
+| **Curva ABC - Grupos** | Relatórios → Vendas → Curva ABC - Grupos | Aplica análise ABC no nível de grupos e subgrupos de produtos |
+| **CMV por Produto** | Relatórios → Vendas → CMV por Produto | Custo da Mercadoria Vendida por produto: custo, preço de venda, quantidade, % CMV |
+| **Comparativo de Períodos** | Relatórios → Vendas → Comparativo de Períodos | Compara vendas de produtos entre dois intervalos distintos (variação absoluta e %) |
+| **Comparativo de Produtos** | Relatórios → Vendas → Comparativo de Produtos | Compara desempenho de produtos entre dois períodos (quantidade e valor) |
+| **Desconto de Venda** | Relatórios → Vendas → Desconto de Venda | Lista descontos concedidos: usuário, valor original, desconto e percentual |
+| **Produtos Mais Vendidos** | Relatórios → Vendas → Produtos Mais Vendidos | Ranking dos produtos com maior volume — por quantidade ou por valor |
+| **Vendas por Produto** | Relatórios → Vendas → Vendas por Produto | Quantidade vendida e valor total por produto. Filtrável por grupo, subgrupo e funcionário |
+| **Vendas por Vendedor e Comandas** | Relatórios → Vendas → Vendas por Vendedor e Comandas | Vendas por garçom/atendente vinculadas às comandas, com total por comanda |
+| **Vendas por Caixa** | Relatórios → Vendas → Vendas por Caixa | Totais e formas de pagamento por terminal de caixa |
+| **Vendas por Grupo** | Relatórios → Vendas → Vendas por Grupo | Totais por grupo de produtos com participação no total de vendas |
+| **Vendas por Produtos e Funcionário** | Relatórios → Vendas → Vendas por Produtos e Funcionário | Quais itens cada operador vendeu, em que quantidade e por qual valor |
+| **Vendas por Espécie** | Relatórios → Vendas → Vendas por Espécie | Valores por forma de pagamento (dinheiro, débito, crédito, PIX, cheque etc.) |
+| **Vendas por Turno** | Relatórios → Vendas → Vendas por Turno | Vendas em turnos configuráveis, compara produtividade entre turnos |
+| **Vendas por Semana** | Relatórios → Vendas → Vendas por Semana | Distribuição por dia da semana — identifica dias de maior e menor movimento |
+| **Vendas por Cliente** | Relatórios → Vendas → Vendas por Cliente | Histórico de compras por cliente: total consumido, visitas, ticket médio |
+| **Vendas - Multiloja** | Relatórios → Vendas → Vendas - Multiloja | Consolida venda de produtos entre todas as unidades, comparando por loja |
+| **Pesquisa de Vendas** | Relatórios → Vendas → Pesquisa de Vendas | Consulta avançada por data, cliente, usuário, valor ou produto |
+| **Taxa de Serviço** | Relatórios → Vendas → Taxa de Serviço | Valores de taxa de serviço (gorjeta) por usuário, turno ou dia |
+| **Vendas por Funcionário** | Relatórios → Vendas por Funcionário | Total vendido por funcionário/atendente — analítico ou resumido |
 
 ---
 
-## Dicas para Fechamento / Auditoria
+## Módulo: Estoque
 
-Ao verificar divergências entre XML e relatório:
-1. Gere o **Relatório de Cupons Emitidos** para o período
-2. Compare com o arquivo XML gerado em **Ferramentas CFe > Arquivos XML**
-3. Se houver diferença de CNPJ, filtre por estabelecimento separadamente
-4. Para apuração fiscal, utilize os relatórios de SAT e NFC-e separadamente
+**Caminho base:** Aba Estoque → **Relatórios**
+
+| Relatório | Caminho | Descrição |
+|---|---|---|
+| **Estoque Mínimo** | Estoque → Relatórios → Estoque Mínimo | Produtos abaixo do nível mínimo configurado. Filtrável por grupo, departamento e local |
+| **Estoque Máximo** | Estoque → Relatórios → Estoque Máximo | Produtos acima do nível máximo configurado (excesso em estoque) |
+| **Estoque Consolidado** | Estoque → Relatórios → Estoque Consolidado | Saldo atual de todos os produtos, agrupável por grupo, local ou departamento |
+| **Histórico do Produto** | Estoque → Relatórios → Histórico do Produto | Movimentação completa de um produto específico (entradas e saídas) |
+| **Nível de Estoque** | Estoque → Relatórios → Nível de Estoque | Estoque atual comparado com limites mínimo e máximo cadastrados |
+| **Saída de Estoque** | Estoque → Relatórios → Saída de Estoque | Todas as saídas do período: vendas, perdas, transferências, com data e responsável |
+| **Entrada de Estoque** | Estoque → Relatórios → Entrada de Estoque | Todas as entradas do período: compras, devoluções, com fornecedor e quantidade |
+| **Transferência de Estoque** | Estoque → Relatórios → Transferência de Estoque | Transferências entre locais ou unidades: origem, destino, produto e data |
+| **Inventário Estoque** | Estoque → Relatórios → Inventário Estoque | Ficha de inventário com campos em branco para contagem física |
+| **Movimento de Estoque** | Estoque → Relatórios → Movimento de Estoque | Todas as movimentações do período com saldo inicial, lançamentos e saldo final |
+| **Multiloja - Estq. Consolidado** | Estoque → Relatórios → Multiloja - Estq. Consolidado | Saldo de estoque consolidado de todas as unidades da rede |
+| **Lote - Validade** | Estoque → Relatórios → Lote - Validade | Produtos controlados por lote com datas de validade (PVPS) |
+| **Perda por Faturamento** | Estoque → Relatórios → Perda por Faturamento | Perdas registradas no período em relação ao faturamento gerado |
+| **Ajuste de Estoque** | Estoque → Relatórios → Ajuste de Estoque | Ajustes manuais de saldo: produto, quantidade, usuário responsável e motivo |
+
+---
+
+## Módulo: Fechamentos de Caixa
+
+| Relatório | Caminho | Descrição |
+|---|---|---|
+| **Fechamento de Caixa** | Relatórios → Fechamentos de Caixa → (selecionar fechamento) | Relatório completo de um fechamento: totais por forma de pagamento, sangrias, suprimentos e resultado líquido |
+| **Divergências de Fechamento** | Relatórios → Divergências de Fechamentos de Caixa | Diferença entre valor calculado pelo sistema e valor informado pelo operador no fechamento |
+| **Sangrias** | Relatórios → Sangrias | Todas as retiradas de dinheiro dos caixas: data, horário, usuário, valor e justificativa |
+
+---
+
+## Módulo: Financeiro
+
+**Caminho base:** Aba Financeiro → **Relatórios**
+
+| Relatório | Caminho | Descrição |
+|---|---|---|
+| **Contas a Pagar** | Financeiro → Relatórios → Contas a Pagar | Compromissos a pagar, filtrável por favorecido, categoria, conta, situação e tipo de data |
+| **Acréscimos e Descontos - Pagos** | Financeiro → Relatórios → Acréscimos e Descontos - Pagos | Juros, multas e descontos aplicados nas quitações de contas a pagar |
+| **Contas a Receber** | Financeiro → Relatórios → Contas a Receber | Títulos a receber por credor, categoria e conta, com filtros de situação e data |
+| **Acréscimos e Descontos - Recebidos** | Financeiro → Relatórios → Acréscimos e Descontos - Recebidos | Acréscimos e descontos aplicados nos recebimentos de contas a receber |
+| **Extrato** | Financeiro → Relatórios → Extrato | Extrato de conta bancária ou caixa com saldo progressivo |
+| **Fluxo de Caixa** | Financeiro → Relatórios → Fluxo de Caixa | Entradas e saídas financeiras com saldo diário e acumulado |
+| **DRE** | Financeiro → Relatórios → DRE | Demonstração de Resultado do Exercício: receitas, custos e apuração de lucro/prejuízo |
+| **Contas a Pagar Por Grupo Fornecedor** | Financeiro → Relatórios → Contas a Pagar Por Grupo Fornecedor | Contas a pagar agrupadas por categoria de fornecedor |
+
+---
+
+## Módulo: Lucro e Mark-Up
+
+**Caminho base:** Relatórios → **Lucro e MarkUp**
+
+| Relatório | Caminho | Descrição |
+|---|---|---|
+| **Lucro** | Relatórios → Lucro e MarkUp → Lucro | Lucro bruto: receita de vendas vs. custo dos produtos. Filtrável por grupo/subgrupo |
+| **MarkUp** | Relatórios → Lucro e MarkUp → MarkUp | Índice de mark-up por produto ou grupo. Filtrável por faixa de mark-up |
+| **Lucro Por Fornecedor** | Relatórios → Lucro e MarkUp → Fornecedor | Lucro gerado pelos produtos de cada fornecedor (rentabilidade por parceiro) |
+
+---
+
+## Módulo: Notas Fiscais
+
+**Caminho base:** Relatórios → **Notas Fiscais**
+
+| Relatório | Caminho | Descrição |
+|---|---|---|
+| **Cupons / Notas Emitidas - Geral** | Relatórios → Notas Fiscais → Geral | Lista NFC-e e NF-e emitidas: número, data, valor e situação. Filtrável por tipo |
+| **Impostos das Notas Emitidas** | Relatórios → Notas Fiscais → Impostos | Valores de ICMS, PIS, COFINS etc. destacados nas notas do período |
+| **Itens Por Nota** | Relatórios → Notas Fiscais → Produtos | Produtos incluídos em cada nota/cupom: quantidade, valor unitário, total e tributação |
+| **NFCe Inutilizadas** | Relatórios → Notas Fiscais → Inutilizadas | Números de NFC-e inutilizados perante a SEFAZ com motivo de cada inutilização |
+| **Notas / Cupons Cancelados** | Relatórios → Notas Fiscais → Canceladas | Documentos fiscais cancelados: data, número, valor, tipo e motivo |
+| **Notas Recebidas** | Relatórios → Notas Fiscais → Recebidas | Notas fiscais de entrada de fornecedores: data, fornecedor, valor e impostos |
+| **CFOP** | Relatórios → Notas Fiscais → CFOP | Operações fiscais agrupadas por CFOP (entrada/saída) — para declarações fiscais |
+| **Cupons em Contingência** | Relatórios → Notas Fiscais → Contingência | Documentos emitidos em modo contingência (sem conexão SEFAZ) e status de transmissão |
+
+---
+
+## Módulo: Listagem
+
+**Caminho base:** Relatórios → **Listagem**
+
+| Relatório | Caminho | Descrição |
+|---|---|---|
+| **Listagem de Produtos** | Relatórios → Listagem → Produto | Produtos cadastrados, filtrável por nome/código, grupo, subgrupo e situação (ativo/inativo) |
+| **Listagem de Usuários** | Relatórios → Listagem → Usuário | Usuários cadastrados, filtrável por perfil (Usuário/Administrador) e situação |
+| **Listagem de Funcionários** | Relatórios → Listagem → Funcionário | Funcionários cadastrados, com filtro de ativos. Exibe nome, cargo e contato |
+
+---
+
+## Módulo: Funcionários / Comissões
+
+| Relatório | Caminho | Descrição |
+|---|---|---|
+| **Comissões de Funcionários** | Relatórios → Comissões de Funcionários | Comissões devidas por funcionário com base nas vendas. Analítico ou sintético. Permite informar percentual de desconto |
+
+---
+
+## Módulo: Produção
+
+| Relatório | Caminho | Descrição |
+|---|---|---|
+| **Produção** | Relatórios → Produção | Itens enviados à produção (cozinha, bar etc.): produtos, quantidades, horários e status. Filtrável por grupo, status, origem e tipo de pedido |
+
+---
+
+## Módulo: Itens Cancelados
+
+| Relatório | Caminho | Descrição |
+|---|---|---|
+| **Itens Cancelados** | Relatórios → Itens Cancelados | Itens cancelados em vendas ou pedidos: data, horário, usuário, produto, quantidade e valor. Filtrável por usuário |
+
+---
+
+## Módulo: Comandas Abertas
+
+| Relatório | Caminho | Descrição |
+|---|---|---|
+| **Comandas Abertas** | Relatórios → Comandas Abertas | Comandas/mesas ainda em aberto: número, valor consumido e tempo decorrido desde a abertura |
+
+---
+
+## Módulo: Pedidos
+
+> **Atenção:** estes relatórios ficam na **Aba Pedidos → Relatórios**, não na Aba Relatórios.
+
+| Relatório | Caminho | Descrição |
+|---|---|---|
+| **Produção (Pedidos)** | Pedidos → Relatórios → Produção | Itens enviados à produção a partir de pedidos. Filtrável por tipo de data, grupo, status, origem e tipo |
+| **Pedidos Resumidos** | Pedidos → Relatórios → Pedidos Resumidos | Totais de cada pedido sem detalhamento de itens (visão rápida) |
+| **Pedidos Por Origem** | Pedidos → Relatórios → Pedidos Por Origem | Pedidos por canal de origem (iFood, SAG, WhatsApp, telefone, balcão etc.) |
+| **Pedidos Completos** | Pedidos → Relatórios → Pedidos Completos | Detalhamento completo: itens, valores, status, pagamento e dados do cliente |
+| **Pedidos Por Entregador** | Pedidos → Relatórios → Pedidos Por Entregador | Entregas por motoboy/entregador: quantidade e valor total das entregas |
+| **Pedidos Por Usuário** | Pedidos → Relatórios → Pedidos Por Usuário | Pedidos registrados por cada operador/atendente |
+| **Consulta de Vendas (Pedidos)** | Pedidos → Relatórios → Consulta de Vendas | Vendas originadas de pedidos, filtrável por data, cliente, usuário e produto |
+| **Produtos Por Pedido** | Pedidos → Relatórios → Produtos por Pedido | Produtos consumidos em cada pedido: quantidade, valor unitário e total |
+| **Resumo de Pedidos** | Pedidos → Relatórios → Resumo de Pedidos | Painel com indicadores: total de pedidos, valor total, ticket médio, pedidos por hora |
+| **Histórico dos Pedidos** | Pedidos → Relatórios → Histórico dos Pedidos | Histórico cronológico com status de cada pedido (aberto, fechado, cancelado) |
+| **Taxas Por Origem** | Pedidos → Relatórios → Taxas por Origem | Taxas cobradas (entrega, serviço) segmentadas por canal de origem |
+| **Pedidos Alterados** | Pedidos → Relatórios → Pedidos Alterados | Pedidos que sofreram modificações: o que foi alterado, quem alterou e quando |
+
+---
+
+## Módulo: Outros
+
+**Caminho base:** Relatórios → **Outros**
+
+| Relatório | Caminho | Descrição |
+|---|---|---|
+| **Prévias Impressas** | Relatórios → Outros → Prévias Impressas | Histórico de prévias entregues aos clientes antes do fechamento: data, comanda e valor |
+| **Previsão de Recebimentos** | Relatórios → Outros → Previsão de Recebimentos | Recebimentos futuros de cartão de crédito por bandeira e data de liquidação |
+| **Histórico de Alteração de Preço** | Relatórios → Outros → Histórico de Alteração de Preço | Todas as alterações de preço de venda: valor anterior, novo, data e usuário |
+| **Histórico de Alteração de Custo** | Relatórios → Outros → Histórico de Alteração de Custo | Todas as alterações de preço de custo: custo anterior, novo, data e usuário |
+| **Idade do Produto** | Relatórios → Outros → Idade do Produto | Tempo sem movimentação por produto (identifica produtos parados ou obsoletos) |
+| **Transações TEF** | Relatórios → Outros → Transações TEF | Transações de cartão via TEF: bandeira, modalidade, NSU e valor |
+| **Cancelamentos TEF** | Relatórios → Outros → Cancelamentos TEF | Cancelamentos de transações TEF: NSU, bandeira, data e valor cancelado |
+| **Transferência Itens Comanda** | Relatórios → Outros → Transferência Itens Comanda | Itens movidos entre comandas/mesas: produto, quantidade, origem, destino e usuário |
+| **Produto por Fornecedor** | Relatórios → Outros → Produto por Fornecedor | Produtos vinculados a cada fornecedor: código, descrição e preço de custo |
+| **Análise de Venda** | Relatórios → Outros → Análise de Venda | Vendas por canal de origem (venda direta, delivery etc.), filtrável por grupo e insumos |
+| **Cupons Utilizados** | Relatórios → Outros → Cupons Utilizados | Cupons de desconto utilizados: código, desconto concedido, venda e validade |
+| **Programa de Fidelidade** | Relatórios → Outros → Programa de Fidelidade | Extrato de pontos dos clientes: acumulados, resgatados e saldo atual |
+| **Vouchers** | Relatórios → Outros → Vouchers | Vouchers gerados/utilizados: código, valor, data de geração, validade e status |
+| **Cartão de Acesso** | Relatórios → Cartão de Acesso | Cartão de acesso do cliente com código de barras/QR Code para controle de entrada |
 
 ---
 
 ## Relatórios Personalizados
 
-**Relatórios → Personalizar**
+**Caminho:** Relatórios → **Personalizar**
 
 Permite criar relatórios totalmente sob medida, combinando informações de diferentes partes do sistema — vendas, clientes, produtos, pedidos — sem depender de um relatório pronto. Os relatórios criados ficam salvos e podem ser reutilizados, editados ou removidos.
 

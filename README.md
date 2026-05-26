@@ -32,10 +32,16 @@ Base de conhecimento para suporte técnico a estabelecimentos de food service (p
 | [Financeiro](SAG/financeiro.md) | Contas a pagar/receber, extrato, faturas |
 | [Estoque](SAG/estoque.md) | Entradas, ajustes, inventário, pedidos de compra |
 | [Pedidos / Delivery](SAG/pedidos.md) | Pedidos, delivery, iFood |
-| [NFC-e / SAT / NF-e](SAG/nfce-sat.md) | Emissão fiscal, certificado digital, XML |
+| [NFC-e](SAG/nfce-sat.md) | NFC-e, certificado digital, SAT descontinuado |
+| [NF-e — Emissão](SAG/nfe-emissao.md) | Passo a passo completo de emissão de NF-e |
+| [NF-e — Erros e Soluções](SAG/nfe-erros.md) | Rejeições, erros da SEFAZ, problemas de conexão |
 | [Produção e Comandas](SAG/producao-comandas.md) | Comandas, mesas, produção |
 | [Relatórios](SAG/relatorios.md) | Vendas, cancelamentos, comissões |
 | [Configurações](SAG/configuracoes.md) | Impressoras, usuários, permissões, integrações |
+| [Produto — Aba Imposto](SAG/produto-aba-impostos.md) | Grupo de Imposto por estabelecimento, botões e IA fiscal |
+| [Grupo de Imposto](SAG/grupo-de-imposto.md) | Cadastro, campos tributários, aplicação em lote |
+| [Grupos de Permissão](SAG/grupos-permissoes.md) | Permissões por setor, criação de grupos, perfis sugeridos |
+| [Programa de Fidelidade](SAG/fidelidade.md) | Configuração, acúmulo de pontos, resgate, extrato e relatório |
 
 ### Suporte
 | Documento | Conteúdo |
@@ -48,4 +54,5 @@ Base de conhecimento para suporte técnico a estabelecimentos de food service (p
 | Documento | Conteúdo |
 |---|---|
 | [Impressoras Térmicas](equipamentos/impressoras-termicas.md) | Configuração, manutenção, solução de problemas |
+| [Impressoras de Gôndola / Etiqueta](equipamentos/impressoras-gondola.md) | Argox, L42 — etiquetas de prateleira via Outros → Etiquetas |
 | [Rede e Roteadores](equipamentos/rede-roteadores.md) | Wi-Fi, switches, conectividade |

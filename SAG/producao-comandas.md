@@ -4,48 +4,60 @@ Módulos de gerenciamento de mesas, comandas e controle de produção.
 
 ---
 
-## Comandas
+## O que é uma Comanda
 
-### O que é uma Comanda
-Registro de pedido vinculado a uma mesa ou cliente. Itens são lançados na comanda e pagos ao final.
-
-### Abrir Comanda
-**Caminho:** Caixa > **F4** (Consulta de Comandas)
-
-1. Pressione **F4** para consultar comandas abertas
-2. Para nova comanda: selecione **Nova Comanda**
-3. Informe o número da mesa ou o nome do cliente
-4. Lance os produtos na comanda
-
-### Lançar Itens na Comanda
-1. Com a comanda aberta, adicione produtos normalmente
-2. Cada lançamento é associado à comanda
-3. Múltiplos atendentes podem lançar na mesma comanda
-
-### Inserir Comanda Parcial
-- Pressione **Ctrl + F** para inserir itens de uma comanda no caixa parcialmente
-- Útil quando parte da conta é paga por um cliente em um grupo
-
-### Comandas em Espera
-- Comanda que ainda não teve o pagamento iniciado
-- Aparecem na tela de **Comandas em Espera**
-- Podem ser retomadas a qualquer momento
-
-### Fechar Comanda (Pagamento)
-1. Acesse a comanda via **F4**
-2. Selecione a comanda desejada
-3. Revise os itens lançados
-4. Pressione **F12** ou **Finalizar**
-5. Escolha a forma de pagamento
-6. Confirme o pagamento — comanda é fechada
+Registro numérico no qual produtos são lançados. Pode ser denominada como **mesa**, **comanda**, ou ambos, dependendo da configuração do estabelecimento.
 
 ---
 
-## Terminal de Comandas
+## Comandas — Visualização e Controle
+
+**Caminho:** Menu Principal > **Comandas**
+
+Tela para **visualizar e controlar** todas as comandas do sistema (bloquear, desbloquear, limpar, adicionar). Não é utilizada para lançar produtos.
+
+### Status das Comandas
+
+| Status | Significado |
+|---|---|
+| **Fechada** | Comanda não está aberta em nenhum terminal. Pode ter itens lançados. |
+| **Aberta** | Comanda está aberta em algum terminal no momento. |
+| **Bloqueada** | Comanda bloqueada — não pode receber lançamentos. |
+
+### Adicionar Novas Comandas
+Para criar comandas no sistema:
+
+1. Acesse **Menu Principal > Comandas**
+2. Pressione **F6 — Adicionar Comandas**
+3. Informe a quantidade ou intervalo de comandas a criar
+4. Confirme
+
+> Se o estabelecimento utiliza **catraca** ou **comandas com RFID**, não orientar pelo passo a passo acima — transferir ao suporte T4L para melhor orientação.
+
+### Atalhos da Tela de Comandas
+
+| Tecla | Função |
+|---|---|
+| F2 | Limpar Comanda (remove todos os itens) |
+| F3 | Bloquear Comanda (individual) |
+| F4 | Desbloquear Comanda (individual) |
+| F5 | Liberar Comanda |
+| F6 | Adicionar Comandas (criar novas) |
+| F7 | Excluir Comandas |
+| F8 | Bloquear Comandas (em lote) |
+| F9 | Desbloquear Comandas (em lote) |
+
+Ícones por comanda na lista:
+- **Lixeira** — limpa os itens da comanda
+- **Cadeado** — bloquear/desbloquear
+
+---
+
+## Terminal de Comandas — Lançamento de Produtos
 
 **Caminho:** Menu Principal > **Terminal de Comandas**
 
-Interface dedicada para lançamento de produtos em comandas. Otimizada para garçons ou atendentes lançarem pedidos diretamente nas mesas, via tablet ou computador na área de atendimento.
+Interface para **lançar produtos em comandas**. Utilizada por garçons ou atendentes para registrar pedidos diretamente nas mesas ou pontos de atendimento.
 
 ### Fluxo de Uso
 1. Insira o **Operador** (código de login do atendente)
@@ -75,54 +87,6 @@ A tela exibe:
 | Ctrl + D | Desconto no Item |
 | Ctrl + - | Desconto na Comanda |
 | Back | Cancela Item Selecionado |
-
----
-
-## Tela de Comandas (Gestão)
-
-**Caminho:** Menu Principal > **Comandas**
-
-Tela para visualização e gestão de todas as comandas do sistema. Exibe:
-
-### Painel Esquerdo — Lista de Comandas
-| Coluna | Descrição |
-|---|---|
-| CMD | Número da comanda |
-| STATUS | Fechada / Aberta / Bloqueada |
-| ÚLTIMO USO | Data e hora do último lançamento |
-| TOTAL | Valor total da comanda |
-
-Filtros:
-- Tipo: Ambas / Abertas / Fechadas
-- Checkbox: Em Uso
-- Campo de pesquisa por número de comanda
-
-### Painel Direito — Detalhes da Comanda
-Ao selecionar uma comanda, exibe os itens:
-| Coluna | Descrição |
-|---|---|
-| CÓDIGO | Código do produto |
-| DESCRIÇÃO | Nome do produto |
-| QUANTIDADE | Qtd lançada |
-| TOTAL | Valor total do item |
-| DATA E HORA | Momento do lançamento |
-| OPERADOR | Quem lançou o item |
-
-### Atalhos da Tela de Comandas
-| Tecla | Função |
-|---|---|
-| F2 | Limpar Comanda (remove todos os itens) |
-| F3 | Bloquear Comanda (individual) |
-| F4 | Desbloquear Comanda (individual) |
-| F5 | Liberar Comanda |
-| F6 | Adicionar Comandas (criar novas comandas) |
-| F7 | Excluir Comandas |
-| F8 | Bloquear Comandas (em lote) |
-| F9 | Desbloquear Comandas (em lote) |
-
-Ícones por comanda:
-- Ícone de lixeira: excluir
-- Ícone de cadeado: bloquear/desbloquear
 
 ---
 

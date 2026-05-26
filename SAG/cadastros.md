@@ -49,15 +49,16 @@ Módulo para gerenciamento de clientes, fornecedores, produtos, usuários e dema
 | Grupo / Categoria | Classificação para impressão e relatórios |
 | Estoque Mínimo | Alerta de reposição |
 
-### Aba: Impostos NFE/NFCE
-| Campo | Observação |
-|---|---|
-| CST | Classificação Tributária (obrigatório para emissão fiscal) |
-| CFOP | Código Fiscal de Operações (consultar contabilidade) |
-| ICMS | Alíquota |
-| PIS / COFINS | Alíquotas |
+### Aba: Imposto
 
-> Produtos com CST ou CFOP incorretos não emitem NFC-e. Consulte a contabilidade para os valores corretos.
+Define a configuração tributária do produto por estabelecimento. Não há campos diretos de CST ou CFOP — toda a tributação é gerenciada por **Grupos de Imposto**.
+
+- Cada estabelecimento pode ter um grupo de imposto diferente para o mesmo produto
+- O sistema exibe apenas grupos compatíveis com o regime tributário de cada loja
+- Sem um Grupo de Imposto vinculado, o produto não emite NFC-e ou NF-e
+
+> Para detalhes sobre esta aba e seus botões, consulte [Produto — Aba Imposto](produto-aba-impostos.md).
+> Para criar ou editar grupos, consulte [Grupo de Imposto](grupo-de-imposto.md).
 
 ### Cadastro de Pizza
 **Caminho:** Cadastros > **Pizzas**
@@ -65,9 +66,20 @@ Módulo para gerenciamento de clientes, fornecedores, produtos, usuários e dema
 - Cadastro de **Sabores** com preços por tamanho
 - Cadastro de **Acompanhamentos** (bordas, extras)
 
-### Importação de Produtos
-- Possível importar via planilha Excel
-- **Caminho:** Cadastros > Produtos > **Importar**
+### Importar / Exportar Produtos (Excel)
+
+**Caminho:** Cadastros > Produtos > **Opções** > **Importar/Exportar Excel**
+
+| Opção | O que faz |
+|---|---|
+| **Exportar Excel Produtos** | Gera uma planilha com todos os produtos cadastrados (código, descrição, preço, etc.) |
+| **Importar Excel Produtos** | Atualiza ou cria produtos em massa a partir de uma planilha preenchida |
+
+> Use a exportação para obter a planilha de produtos atualizada — útil para enviar à contabilidade, auditar o cadastro ou preparar uma importação em lote.
+
+#### Atenção ao importar
+
+Na tela de importação, o sistema exibe checkboxes para selecionar quais campos serão atualizados (Descrição, Preço, Cod. Barras, NCM, Grupo de Imposto, Estoque, etc.). **Selecione apenas os campos que foram realmente alterados na planilha.** Marcar campos desnecessários pode sobrescrever dados corretos já cadastrados no sistema.
 
 ---
 
@@ -108,11 +120,14 @@ Campos principais:
 4. Clique em **Salvar**
 
 ### Grupos de Permissão
-**Caminho:** Usuários > **Grupos**
+**Caminho:** Outros > **Grupo de Permissões**
 
 - Cada grupo define quais módulos e ações o usuário pode realizar
 - Exemplos de grupos: Administrador, Caixa, Gerente, Suporte
-- Para alterar permissões: selecione o grupo > **Permissões** > marque/desmarque as funcionalidades
+- Para alterar permissões: selecione o grupo > marque/desmarque as funcionalidades por aba de setor
+- Alterações no grupo aplicam-se **imediatamente** a todos os usuários vinculados, sem necessidade de relogar
+
+> Para o detalhamento completo de cada permissão disponível, consulte [Grupos de Permissão](grupos-permissoes.md).
 
 ### Alterar Senha
 - O próprio usuário pode alterar: menu superior > **Alterar Senha**

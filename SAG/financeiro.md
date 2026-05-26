@@ -23,6 +23,8 @@ Guia completo das funcionalidades do módulo Financeiro do SAG. Aqui você encon
 
 **Financeiro → Contas a Pagar** ou **Financeiro → Contas a Receber**
 
+> **Importante:** Estas telas servem **exclusivamente para lançar novas contas**. Para **consultar, localizar ou verificar** lançamentos existentes — incluindo baixas em aberto — utilize o **Extrato** (seção 2).
+
 Esta é a tela principal de lançamento financeiro. Utilize-a para registrar qualquer conta que o estabelecimento precisa pagar (fornecedor, aluguel, energia, etc.) ou receber (de clientes, contratos, etc.).
 
 ### Como lançar uma conta
@@ -65,6 +67,8 @@ Use esta aba quando a conta se repete ao longo do tempo, como aluguel, mensalida
 ## 2. Extrato Financeiro
 
 **Financeiro → Extrato**
+
+> **Use o Extrato para consultar lançamentos.** Sempre que o cliente quiser localizar, verificar ou gerenciar entradas/saídas — baixas em aberto, vencidas, efetivadas — o caminho correto é aqui, não em Contas a Pagar/Receber.
 
 O extrato é o painel central do financeiro. Aqui você visualiza, filtra e gerencia todas as contas lançadas — tanto a pagar quanto a receber — em um único lugar.
 
@@ -311,7 +315,7 @@ Cadastre e gerencie as formas de pagamento disponíveis (dinheiro, cartão, PIX,
 
 ### 9.4 Período Contábil
 
-**Financeiro → Período Contábil**
+**Financeiro → Extrato → Opções → Período Contábil**
 
 Define uma data de bloqueio: nenhum lançamento poderá ser inserido com data anterior à configurada aqui. Protege o histórico financeiro já encerrado de alterações acidentais.
 

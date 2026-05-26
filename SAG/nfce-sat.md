@@ -1,6 +1,6 @@
-# SAG — NFC-e, SAT e NF-e
+# SAG — NFC-e
 
-Módulo fiscal para emissão de documentos eletrônicos.
+Módulo fiscal para emissão de documentos eletrônicos ao consumidor final.
 
 ---
 
@@ -8,28 +8,10 @@ Módulo fiscal para emissão de documentos eletrônicos.
 
 | Sigla | Nome | Uso |
 |---|---|---|
-| NFC-e | Nota Fiscal de Consumidor Eletrônica | Emitida diretamente pelo SAG na venda ao consumidor |
-| SAT / CF-e | Sistema Autenticador e Transmissor / Cupom Fiscal Eletrônico | Equipamento homologado que emite CF-e (usado em SP) |
+| NFC-e | Nota Fiscal de Consumidor Eletrônica | Emitida diretamente pelo SAG na venda ao consumidor final |
 | NF-e | Nota Fiscal Eletrônica | Para vendas entre empresas (B2B) |
 | XML | Arquivo eletrônico | Representação digital do documento fiscal |
 | Certificado Digital | Arquivo de autenticação | Obrigatório para emissão de NFC-e |
-
----
-
-## NFC-e — Configuração Inicial
-
-**Caminho:** Menu Principal > **NFC-e**
-
-Para que a NFC-e funcione, é necessário:
-1. **Credenciais geradas** pela contabilidade (junto à SEFAZ do estado)
-2. **Certificado Digital** instalado no computador servidor
-3. Configuração das credenciais no SAG
-
-### Verificar Configuração
-1. Acesse **NFC-e** no menu principal
-2. Verifique se os dados de credencial estão preenchidos
-3. Se aparecer botão **Validar Online**, clique nele para sincronizar a licença
-4. Feche e abra o SAG novamente após configurar
 
 ---
 
@@ -44,14 +26,10 @@ A NFC-e é emitida automaticamente ao finalizar a venda, desde que:
 
 ## NFC-e — Problemas Frequentes
 
-### "Sem configuração NFC-e"
-- Verifique se as credenciais foram geradas com a contabilidade
-- Verifique se o certificado digital está instalado
-- Acesse NFC-e no SAG e preencha os dados
-
 ### Erro ao emitir — produto sem configuração fiscal
-- Acesse: **Cadastros > Produtos** > selecione o produto > aba **Impostos NFE/NFCE**
-- Verifique e corrija o **CST** e o **CFOP** (consulte a contabilidade)
+- Acesse: **Cadastros > Produtos** > selecione o produto > aba **Imposto**
+- Verifique se o produto tem um **Grupo de Imposto** vinculado — sem ele, a emissão não funciona
+- O CST e o CFOP são definidos dentro do **Grupo de Imposto** vinculado ao produto — consulte a contabilidade para ajustar
 
 ### NFC-e não emite mas venda passa
 - Verifique se NFC-e está habilitado no caixa específico
@@ -59,61 +37,54 @@ A NFC-e é emitida automaticamente ao finalizar a venda, desde que:
 
 ---
 
-## SAT / CF-e (São Paulo)
+## SAT / CF-e — Descontinuado
 
-O SAT é um equipamento físico conectado ao computador. O SAG envia as informações e o SAT emite o CF-e.
+O SAT (Sistema Autenticador e Transmissor) foi descontinuado em 2025.
+Estabelecimentos que utilizavam SAT para emissão de cupom fiscal devem
+migrar para **NFC-e**, que passa a ser o único modelo aceito para emissão
+de cupom ao consumidor final.
 
-**Verificar se SAT está funcionando:**
-1. Verifique se o equipamento SAT está ligado e com luz indicadora ativa
-2. No SAG, acesse **Ferramentas** > **SAT** para testar comunicação
-3. Se não responder, verifique a conexão USB
-
-### Gerar Arquivos XML do SAT
-1. Acesse: **Outros > Ferramentas CFe > Arquivos XML**
-2. Configure as opções:
-   - **Gerar CF-e Cancelados:** marque se necessário
-   - **Compactar em arquivo único:** recomendado
-   - **Enviar por e-mail:** informe os destinatários
-3. Clique em **Gerar**
+> Dúvidas sobre a migração: entrar em contato com o suporte T4L.
 
 ---
 
-## NF-e — Emissão
+## XML — Exportar e Baixar
 
-**Caminho:** Menu Principal > **NF-e**
+### XML em lote por período — envio mensal para contabilidade
 
-Usado para emitir nota fiscal em compras/vendas entre empresas.
+**Caminho:** Outros > **Exportar XML**
 
-### Campos Principais
-- **Destinatário:** CNPJ, Razão Social
-- **Produtos:** código, quantidade, valor, CFOP, CST, ICMS, IPI
-- **Transporte:** transportadora, volumes
-- **Pagamento:** forma e valor
+1. Informe o **período** (Início e Término)
+2. Selecione os tipos a incluir: **NFC-e**, **NF-e**
+3. Marque as opções desejadas:
+   - **Incluir Canceladas**
+   - **Incluir Relatório**
+   - **Incluir Inutilizadas**
+   - **Incluir DANFE**
+4. Para enviar por e-mail: marque **Enviar arquivos por email** e informe o endereço
+5. Clique em **Gerar** — o arquivo é gerado no computador ou enviado por e-mail
 
-### Processo
-1. Acesse **NF-e**
-2. Preencha os dados do destinatário
-3. Adicione os produtos com dados fiscais corretos
-4. Clique em **Transmitir** para enviar à SEFAZ
-5. Após aprovação, o XML e DANFE ficam disponíveis para download/envio
+> Use este caminho para enviar os XMLs mensais à contabilidade.
 
 ---
 
-## XML — Envio e Consulta
+### XML individual de NF-e
 
-### Enviar XMLs por E-mail
-1. Acesse: **Outros > Ferramentas CFe > Arquivos XML**
-2. Defina o período
-3. Marque **Compactar em arquivo único**
-4. Marque **Enviar por e-mail**
-5. Informe os e-mails destinatários
-6. Clique em **Gerar**
+**Caminho:** NFe > **Gerenciar**
 
-### Validar XML com Relatório
-Se houver divergência entre XML e relatório de vendas:
-1. Compare o relatório de vendas do SAG com o arquivo XML gerado
-2. Se necessário, reimporte o XML pela opção correspondente no menu
-3. Consulte o suporte se a divergência persistir
+1. Localize a nota na lista
+2. Na linha da nota com status **Autorizada**, clique no **segundo botão** (ícone XML)
+3. O arquivo é baixado no computador
+
+---
+
+### XML individual de NFC-e
+
+**Caminho:** Relatórios > **Consultas** > **Vendas**
+
+1. Localize a venda na lista
+2. Clique no botão **XML** na linha da venda
+3. O arquivo é baixado no computador
 
 ---
 
@@ -150,3 +121,12 @@ O certificado digital é obrigatório para emissão de NFC-e. Existem dois tipos
 | "Certificado vencido" | Certificado expirou | Renovar com a contabilidade |
 | "Senha incorreta" | Senha do `.pfx` errada | Confirmar senha com quem gerou o certificado |
 | NFC-e não emite após aplicar | SAG não foi reiniciado | Fechar e reabrir o SAG |
+
+---
+
+## NF-e
+
+Para emissão de nota fiscal eletrônica entre empresas (B2B), consulte os guias específicos:
+
+- [Guia de Emissão Passo a Passo](nfe-emissao.md)
+- [Erros, Rejeições e Soluções](nfe-erros.md)
