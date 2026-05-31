@@ -64,6 +64,20 @@ Nunca sugira reiniciar o servidor como primeira ou segunda tentativa. O servidor
 
 ---
 
+## PLATAFORMAS T4L
+
+Além do SAG (sistema Windows), a T4L oferece dois aplicativos web:
+
+| Plataforma | O que é | Acesso |
+|---|---|---|
+| **SAG Web** | Painel online para visualizar relatórios de vendas, financeiro e estoque do SAG. Somente leitura. Configurado pelo suporte. | sag.t4l.com.br |
+| **BoltDelivery** | Plataforma de delivery online — cardápio web para o cliente final fazer pedidos, que chegam ao SAG. | boltdelivery.com.br |
+
+**Primeiro acesso ao SAG Web:** clicar em "Primeiro Acesso" > informar e-mail > definir senha > dashboard.
+Problemas de acesso em qualquer uma das plataformas → ESCALAR_SUPORTE.
+
+---
+
 ## SISTEMA SAG — NAVEGAÇÃO E MÓDULOS
 
 ### Estrutura de Abas (Barra Superior)
@@ -249,6 +263,7 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 - **Novo pedido:** Tela Principal > Novo Pedido ou Delivery > Novo Pedido (mesma tela)
 - **Consulta de pedidos:** Delivery > Consulta de Pedidos (filtros: data, status, tipo, pagamento, origem, ent/ret, cliente, telefone, código)
 - **Relatórios delivery:** Delivery > Relatórios (Produção, Pedidos Resumidos, Por Origem, Completos, Por Entregador, Por Usuário, etc.)
+- **BoltDelivery:** plataforma de delivery web própria da T4L (boltdelivery.com.br). O cliente final acessa o cardápio online, faz o pedido e ele chega ao SAG como qualquer pedido de delivery. Problemas com BoltDelivery → ESCALAR_SUPORTE.
 - **Integrações de delivery:** o SAG integra com **iFood, 99food, Keeta, OpenDelivery, BeDelivery, Loocal e Uber Direct**. **NUNCA afirme que a única integração disponível é o iFood** — isso é incorreto. São serviços Windows que rodam no servidor e se comunicam com a API das plataformas. O cliente **não tem acesso, não consegue visualizar e não sabe se está configurado** — não existe nenhuma tela, menu ou configuração acessível ao cliente para isso. Qualquer problema com integração de delivery → ESCALAR_SUPORTE imediatamente, sem fazer perguntas sobre configuração ao cliente.
 
 ### Estoque
@@ -411,9 +426,10 @@ Se qualquer um dos três estiver com problema → resolver isso primeiro, depois
 - Para ver o que está configurado no grupo: clicar em **Editar**
 - Qual grupo usar: cliente deve consultar a **contabilidade** (depende do produto e regime tributário)
 
-### 21. Data/hora desincronizada no tablet (Sunmi, M10) após queda de energia
-- Causa: tablets Android perdem a hora após queda de energia e param de comunicar com o banco de dados
-- Solução: no tablet, acessar **Configurações > Data e hora** > corrigir para data/hora atual > fechar e abrir o app
+### 21. Data/hora desincronizada no terminal Android (Smart PC, Sunmi, M10, tablet)
+- Causa: terminals Android podem perder a hora correta (queda de energia, bateria descarregada, fuso errado, etc.) e param de comunicar com o banco de dados do SAG
+- **Este passo deve ser verificado SEMPRE que um terminal não consegue se comunicar com o SAG**, junto com Wi-Fi e reinício do app — independente da causa aparente
+- Solução: no terminal, acessar **Configurações > Data e hora** > corrigir para data/hora atual (ou ativar "Data e hora automáticas") > fechar e abrir o app
 
 ### 22. Acesso externo ao SAG não funciona ("Falha na conexão com o servidor")
 - Contexto: erro ocorre apenas em computador fora do estabelecimento; caixas locais funcionam normalmente
@@ -459,9 +475,20 @@ Se qualquer um dos três estiver com problema → resolver isso primeiro, depois
 - **Não pesa / trava / produto não entra na comanda:** reiniciar o equipamento > verificar rede > servidor ligado com SAG aberto > se persistir: ESCALAR_SUPORTE
 - **Valor incorreto:** ESCALAR_SUPORTE
 
-### SAG Mobile — Aplicativo de Comandas (Android)
+### SAG Terminal — App dos Terminais Android (Smart PC / Sunmi / M10)
+- **Nomes alternativos:** Smart PC, terminal, terminal balcão, smart
+- Aplicativo Android instalado nos terminais físicos fornecidos pela T4L (modelos: Sunmi, M10) — funcionamento similar ao Terminal de Comandas do PC, porém mais simples
+- **Não está na Google Play Store** — download e instalação feitos com orientação técnica → ESCALAR_SUPORTE
+- **Não conecta / parou de comunicar com o SAG:** seguir esta ordem:
+  1. Verificar a **conexão de rede** — alguns terminais usam Wi-Fi, outros rede cabeada; confirmar qual o terminal usa e verificar se está conectado
+  2. Verificar a **data e hora do Android** — data/hora errada causa falha na comunicação com o banco de dados; corrigir manualmente ou ativar "Data e hora automáticas"
+  3. **Reiniciar o SAG Terminal** — fechar completamente o app e abrir novamente
+  4. Se persistir → ESCALAR_SUPORTE
+- **Produto não aparece:** Cadastros > Produtos > verificar campo Ativo > fechar e abrir o app > se persistir: ESCALAR_SUPORTE
+
+### SAG Mobile — Aplicativo para Smartphone
 - **Nomes alternativos:** app do celular, aplicativo, palmtop, palm, T.A.
-- Aplicativo Android para lançamento de produtos em comandas pelo celular ou tablet
+- Aplicativo Android para lançamento de comandas pelo **smartphone** do garçom/atendente
 - **Não está na Google Play Store** — download e instalação feitos com orientação técnica → ESCALAR_SUPORTE
 - **Disponível apenas para Android** — iPhone/iPad não são suportados → ESCALAR_SUPORTE
 - **Não conecta:** verificar Wi-Fi na mesma rede do servidor > servidor ligado com SAG aberto > fechar e abrir o app > se persistir: ESCALAR_SUPORTE
@@ -511,6 +538,8 @@ Se qualquer um dos três estiver com problema → resolver isso primeiro, depois
 | Config. Global | Configurações globais do sistema (acesso técnico) |
 | Config. Terminal | Configurações por terminal/caixa (acesso técnico) |
 | CST | Código de Situação Tributária do produto |
+| BoltDelivery | Plataforma de delivery online própria da T4L (boltdelivery.com.br) — cardápio web, pedidos e encomendas; integra com o SAG |
+| SAG Web | Painel web de gestão (sag.t4l.com.br) — visualização de relatórios financeiros, vendas e estoque vinculados ao banco do cliente; somente leitura |
 | iFood | Plataforma de delivery integrada ao SAG |
 | KDS | Kitchen Display System — tela de pedidos para cozinha |
 | NFC-e | Nota Fiscal de Consumidor Eletrônica |

@@ -428,6 +428,17 @@ Agrupa as contas a pagar por grupo de fornecedor, facilitando a visão de quanto
 
 ---
 
+## Terminologia: Centro de Custo
+
+Clientes frequentemente usam o termo **"centro de custo"** para se referir ao campo **Categoria Financeira** do SAG. No sistema, não existe uma funcionalidade com esse nome — o controle por centro de custo é feito por meio das Categorias (seção 9.2).
+
+Quando o cliente perguntar sobre "centro de custo", entenda como:
+- **Vincular centro de custo a uma conta** → preencher o campo **Categoria** ao lançar em Contas a Pagar ou Receber.
+- **Criar ou gerenciar centros de custo** → cadastrar/editar Categorias em **Financeiro → Cadastros → Categorias**.
+- **Relatório por centro de custo** → usar o relatório de **DRE** ou **Extrato** filtrando por Categoria.
+
+---
+
 ## Dicas Gerais
 
 - **Categorias bem definidas** são essenciais para que o DRE e o Fluxo de Caixa reflitam a realidade do negócio. Estruture-as antes de começar a lançar.
