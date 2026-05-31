@@ -232,7 +232,6 @@ A maioria dos relatórios fica na **Aba Relatórios** do SAG. Selecione o módul
 | **Cupons Utilizados** | Relatórios → Outros → Cupons Utilizados | Cupons de desconto utilizados: código, desconto concedido, venda e validade |
 | **Programa de Fidelidade** | Relatórios → Outros → Programa de Fidelidade | Extrato de pontos dos clientes: acumulados, resgatados e saldo atual |
 | **Vouchers** | Relatórios → Outros → Vouchers | Vouchers gerados/utilizados: código, valor, data de geração, validade e status |
-| **Cartão de Acesso** | Relatórios → Cartão de Acesso | Cartão de acesso do cliente com código de barras/QR Code para controle de entrada |
 
 ---
 

@@ -316,6 +316,24 @@ SISTEMA SAG
 
 ---
 
+## Licença e Validação de Serial
+
+O SAG é licenciado mensalmente. Normalmente a renovação é automática (feita online pelo próprio sistema). Quando por algum motivo a licença não é renovada automaticamente, o sistema exibe a **tela de Validar Serial** ao iniciar.
+
+### Tela de Validar Serial
+
+Aparece quando a licença está próxima do vencimento ou não foi renovada. Contém três botões:
+
+| Botão | O que faz |
+|---|---|
+| **Validar Online** | Busca e aplica a serial atualizada pela internet. Use este botão primeiro — resolve na maioria dos casos. |
+| **Gerenciador de Seriais** | Abre uma tela com as informações do equipamento. Se o computador não tiver internet, o cliente entra em contato com o suporte T4L e informa esses dados para receber uma serial manual para digitar. |
+| **Continuar** | Permite avançar sem renovar. Disponível enquanto faltam mais de 1 dia para o vencimento. Quando resta 1 dia, exibe uma contagem regressiva de 30 segundos antes de liberar o acesso. |
+
+> **Fluxo recomendado:** Tentar **Validar Online** primeiro. Se não funcionar (sem internet ou outro problema), acionar o suporte T4L e usar o **Gerenciador de Seriais** para renovar manualmente.
+
+---
+
 ## Arquitetura Geral
 
 - **Servidor:** computador central que hospeda o banco de dados. Todos os caixas e tablets se conectam a ele.

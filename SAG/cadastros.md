@@ -133,6 +133,18 @@ Campos principais:
 - O próprio usuário pode alterar: menu superior > **Alterar Senha**
 - Administrador pode redefinir: Usuários > selecione o usuário > altere a senha
 
+### Cartão de Acesso (código de barras)
+
+**Caminho:** Outros > **Cartão de Acesso**
+
+Gera um cartão em PDF com o logo da loja e um código de barras vinculado ao usuário. O cartão pode ser bipado nos caixas para autorizar operações que exigem confirmação de gerente (como cancelamentos), sem precisar digitar senha.
+
+**Como gerar:**
+1. Acesse **Outros → Cartão de Acesso**
+2. Selecione o usuário desejado
+3. Informe a **senha de login** desse usuário para confirmar
+4. O sistema gera um PDF com o cartão pronto para impressão
+
 ---
 
 ## Cadastro de Promoções
