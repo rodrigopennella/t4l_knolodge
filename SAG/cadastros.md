@@ -66,7 +66,23 @@ Define a configuração tributária do produto por estabelecimento. Não há cam
 - Cadastro de **Sabores** com preços por tamanho
 - Cadastro de **Acompanhamentos** (bordas, extras)
 
-### Importar / Exportar Produtos (Excel)
+### Menu Opções — Cadastros > Produtos
+
+**Caminho:** Cadastros > Produtos > **Opções**
+
+O botão "Opções" na tela de produtos oferece as seguintes funcionalidades:
+
+| Opção | O que faz |
+|---|---|
+| **Importar/Exportar Excel** | Importa ou exporta a lista de produtos em planilha |
+| **Histórico do Produto** | Exibe o histórico de alterações do produto selecionado |
+| **Alterar Colunas** | Permite escolher quais colunas são exibidas na listagem de produtos |
+| **Ocultar Inativos** | Oculta da lista os produtos com flag "Ativo" desmarcada |
+| **Ocultar Matéria Prima** | Oculta da lista os produtos cadastrados como matéria prima |
+
+> **Para ver produtos inativos:** acesse Cadastros > Produtos > Opções e verifique se "Ocultar Inativos" está ativado. Se estiver, desative para que os inativos apareçam na listagem. Por padrão, todos os produtos (ativos e inativos) aparecem na lista.
+
+#### Importar / Exportar Excel
 
 **Caminho:** Cadastros > Produtos > **Opções** > **Importar/Exportar Excel**
 

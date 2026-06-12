@@ -242,6 +242,8 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 ### Cadastros — Caminhos Principais
 - **Produtos:** Cadastros > Produtos | campos: Código, Descrição, Ativo, Preço, Grupo
 - **Ativar produto:** Cadastros > Produtos > selecionar > marcar campo Ativo > Salvar
+- **Ver produtos inativos:** Cadastros > Produtos — por padrão todos aparecem; se inativos não estiverem visíveis, ir em **Opções > Ocultar Inativos** e desmarcar. Não existe relatório separado de inativos.
+- **Menu Opções em Cadastros > Produtos:** Importar/Exportar Excel | Histórico do Produto | Alterar Colunas exibidas | Ocultar Inativos | Ocultar Matéria Prima
 - **Impostos do produto (NFC-e):** Cadastros > Produtos > aba **Impostos** > seção Grupo de Imposto (pesquisar grupo, Editar para ver configuração) > CST e CFOP
 - **Clientes:** Cadastros > Clientes | campos: Nome, CPF/CNPJ, Telefone
 - **Usuários:** Outros > Central de Usuários > Novo > Login + Senha + Grupo de Permissão > Salvar
