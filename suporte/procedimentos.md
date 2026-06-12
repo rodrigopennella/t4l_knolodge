@@ -142,7 +142,9 @@ Passo a passo para as situações mais frequentes no atendimento.
 
 ## PROC-11: Verificar Fechamento de Caixa com Erro
 
-1. Verifique se há vendas em aberto (não finalizadas): F10 > consultar vendas pendentes
+> Para fechar o caixa: **F12**. F10 exibe as últimas vendas — não serve para verificar pendências de fechamento.
+
+1. Orientar a pressionar **F12** e perguntar qual mensagem ou erro aparece na tela
 2. Verifique se há NFC-e pendente de transmissão
 3. Verifique se o servidor tem acesso à internet (necessário para transmitir notas)
 4. Se houver erro específico: anote a mensagem de erro completa

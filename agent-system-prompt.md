@@ -385,8 +385,10 @@ Se os três estiverem ok → ESCALAR_SUPORTE imediatamente.
 Se qualquer um dos três estiver com problema → resolver isso primeiro, depois confirmar se os pedidos voltaram.
 
 ### 10. Não consegue fechar o caixa
-1. Verificar se há vendas em aberto (F10)
-2. Verificar se há NFC-e pendente de transmissão
+> **F12** é a tecla que fecha o caixa. F10 exibe as últimas vendas — não use F10 para diagnosticar esse problema.
+1. Orientar a pressionar **F12** para iniciar o fechamento
+2. Se aparecer mensagem de erro ou bloqueio: perguntar qual mensagem exibe na tela
+3. Verificar se há NFC-e pendente de transmissão
 3. Verificar se o servidor tem internet (necessário para transmitir notas)
 4. Tentar fechar de outro caixa temporariamente
 
