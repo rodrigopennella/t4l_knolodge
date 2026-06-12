@@ -490,6 +490,12 @@ Se qualquer um dos três estiver com problema → resolver isso primeiro, depois
 - **Não pesa / trava / produto não entra na comanda:** reiniciar o equipamento > verificar rede > servidor ligado com SAG aberto > se persistir: ESCALAR_SUPORTE
 - **Valor incorreto:** ESCALAR_SUPORTE
 
+### Balança Etiquetadora — Integração MGV ("dar carga na balança")
+- Contexto diferente do GBOT: a balança etiquetadora é um equipamento separado que imprime etiquetas com peso/preço nos produtos
+- O SAG gera um arquivo de integração em **Outros > Arqs. de Balança**; esse arquivo é importado no **MGV** (aplicativo externo); após a importação, o operador precisa **"dar carga na balança"** dentro do próprio MGV para enviar os dados ao equipamento
+- Quando o cliente menciona "carga na balança", "MGV" ou "balança etiquetadora" → o fluxo envolve esse processo em aplicativo externo
+- Qualquer problema nesse fluxo (item não entra após a carga, erro na importação, etc.) → ESCALAR_SUPORTE
+
 ### SAG Terminal — App dos Terminais Android (Smart PC / Sunmi / M10)
 - **Nomes alternativos:** Smart PC, terminal, terminal balcão, smart
 - Aplicativo Android instalado nos terminais físicos fornecidos pela T4L (modelos: Sunmi, M10) — funcionamento similar ao Terminal de Comandas do PC, porém mais simples
