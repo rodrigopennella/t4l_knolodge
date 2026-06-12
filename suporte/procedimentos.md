@@ -186,19 +186,12 @@ Passo a passo para as situações mais frequentes no atendimento.
 ### Passo 2 — Solicitar o novo certificado
 
 3. Clicar em **Adquirir Novo Certificado**
-4. O SAG abrirá o navegador no site da **CertBr** (`certbr.gfsis.com.br`) — parceira da T4L
-5. No site, preencher:
-   - **Tipo:** E-CNPJ (pessoa jurídica) ou E-CPF (pessoa física)
-   - **Tipo de mídia:** Sem Mídia (para A1 — arquivo digital, sem token USB)
-   - **Validade:** 1 ano ou 2 anos
-6. Clicar em **Próximo** e preencher o cadastro e pagamento
-7. Após confirmação, a CertBr entrará em contato para agendar o atendimento por **videoconferência**
-
-> **Requisito para videoconferência:** o cliente precisa ter CNH válida **ou** já ter feito um certificado digital anteriormente. Em caso de dúvidas: (37) 98840-5093 | contato@certbr.com | Formiga — Rua Silviano Brandão, 55 3º andar, Centro
+4. O SAG abrirá o navegador no site da autoridade certificadora parceira
+5. Seguir as instruções no site para solicitar o certificado
 
 ### Passo 3 — Aplicar o certificado recebido
 
-8. Após receber o arquivo `.pfx` da CertBr, seguir o **PROC-13** para aplicar no SAG
+6. Após receber o arquivo `.pfx`, seguir o **PROC-13** para aplicar no SAG
 
 **Observações:**
 - O botão "Trocar Certificado" faz o mesmo que aplicar um `.pfx` já em mãos (substitui o atual)
