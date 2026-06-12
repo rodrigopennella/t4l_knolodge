@@ -491,10 +491,10 @@ Se qualquer um dos três estiver com problema → resolver isso primeiro, depois
 - **Valor incorreto:** ESCALAR_SUPORTE
 
 ### Balança Etiquetadora — Integração MGV ("dar carga na balança")
-- Contexto diferente do GBOT: a balança etiquetadora é um equipamento separado que imprime etiquetas com peso/preço nos produtos
-- O SAG gera um arquivo de integração em **Outros > Arqs. de Balança**; esse arquivo é importado no **MGV** (aplicativo externo); após a importação, o operador precisa **"dar carga na balança"** dentro do próprio MGV para enviar os dados ao equipamento
-- Quando o cliente menciona "carga na balança", "MGV" ou "balança etiquetadora" → o fluxo envolve esse processo em aplicativo externo
-- Qualquer problema nesse fluxo (item não entra após a carga, erro na importação, etc.) → ESCALAR_SUPORTE
+- Contexto diferente do GBOT: a balança etiquetadora pesa e imprime etiquetas nos produtos (peso, preço, validade, código de barras)
+- O SAG gera arquivos de exportação em **Outros > Arqs. de Balança**; modelos suportados: **Toledo** (`itensmgv`, `txitens`, `txinfo`) e **Filizola** (`cadtxt`)
+- Esses arquivos são importados no **MGV** (aplicativo externo); após a importação, o operador **"dá carga na balança"** dentro do MGV para enviar os dados ao equipamento
+- O MGV é externo ao SAG — qualquer dúvida sobre o processo de importação ou configuração no MGV → ESCALAR_SUPORTE
 
 ### SAG Terminal — App dos Terminais Android (Smart PC / Sunmi / M10)
 - **Nomes alternativos:** Smart PC, terminal, terminal balcão, smart
