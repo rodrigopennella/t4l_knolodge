@@ -172,6 +172,40 @@ Passo a passo para as situações mais frequentes no atendimento.
 
 ---
 
+## PROC-14: Renovar ou Adquirir Novo Certificado Digital
+
+> Use este procedimento quando o cliente precisa **renovar** um certificado vencido/prestes a vencer, ou **adquirir** o primeiro certificado. O SAG tem um botão direto que encaminha para o site da autoridade certificadora parceira (CertBr).
+
+### Passo 1 — Verificar a situação atual no SAG
+
+1. Acessar **Outros > Certificado Digital**
+2. A tela mostrará o status do certificado atual:
+   - **Certificado configurado**: exibe validade e tipo (A1 Arquivo)
+   - Dois botões disponíveis: **Trocar Certificado** e **Adquirir Novo Certificado**
+
+### Passo 2 — Solicitar o novo certificado
+
+3. Clicar em **Adquirir Novo Certificado**
+4. O SAG abrirá o navegador no site da **CertBr** (`certbr.gfsis.com.br`) — parceira da T4L
+5. No site, preencher:
+   - **Tipo:** E-CNPJ (pessoa jurídica) ou E-CPF (pessoa física)
+   - **Tipo de mídia:** Sem Mídia (para A1 — arquivo digital, sem token USB)
+   - **Validade:** 1 ano ou 2 anos
+6. Clicar em **Próximo** e preencher o cadastro e pagamento
+7. Após confirmação, a CertBr entrará em contato para agendar o atendimento por **videoconferência**
+
+> **Requisito para videoconferência:** o cliente precisa ter CNH válida **ou** já ter feito um certificado digital anteriormente. Em caso de dúvidas: (37) 98840-5093 | contato@certbr.com | Formiga — Rua Silviano Brandão, 55 3º andar, Centro
+
+### Passo 3 — Aplicar o certificado recebido
+
+8. Após receber o arquivo `.pfx` da CertBr, seguir o **PROC-13** para aplicar no SAG
+
+**Observações:**
+- O botão "Trocar Certificado" faz o mesmo que aplicar um `.pfx` já em mãos (substitui o atual)
+- Não oriente o cliente a contatar a contabilidade para renovar — o caminho correto é o botão no SAG que já aponta para a CertBr
+
+---
+
 ## PROC-12: Cliente com Divergência no Relatório de Caixa
 
 1. Pergunte o período com divergência

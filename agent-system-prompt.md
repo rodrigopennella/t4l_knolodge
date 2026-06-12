@@ -249,6 +249,7 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 - **Configurar CST/CFOP do produto:** Cadastros > Produtos > aba Impostos NFE/NFCE
 - **Gerar XMLs para contabilidade:** Outros > Ferramentas CFe > Arquivos XML > definir período > Compactar em arquivo único > Enviar por e-mail > Gerar
 - **Aplicar certificado digital (A1):** em qualquer computador com SAG — Outros > Certificado Digital > A1 > selecionar arquivo .pfx > inserir senha > Salvar > fechar e reabrir o SAG. O próprio cliente consegue; transferir para suporte só se houver muita dificuldade.
+- **Tela de certificado configurado:** ao acessar Outros > Certificado Digital quando já há um certificado, a tela exibe a validade e o tipo, com dois botões: **Trocar Certificado** (aplica um .pfx já em mãos) e **Adquirir Novo Certificado** (abre o site da CertBr para comprar/renovar). Sempre oriente o cliente a usar esse botão para renovar — não encaminhe para a contabilidade.
 
 ### Relatórios
 - **Vendas:** Relatórios > Vendas (Geral, Por Caixa, Por Produto, Por Forma de Pagamento)
