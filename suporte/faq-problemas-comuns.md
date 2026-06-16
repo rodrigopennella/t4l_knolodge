@@ -383,3 +383,19 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 **Causa:** A API do aplicativo não foi atualizada automaticamente junto com uma atualização do sistema SAG. Há incompatibilidade de versão entre o app e o servidor.
 
 **Solução:** Escalar para o suporte T4L — o técnico realiza a atualização da API. Não há ação do lado do cliente.
+
+---
+
+## 29. "Não Consigo Alterar o Preço da Pizza" (campo Preço de Venda bloqueado)
+
+**Sintomas:** Operador tenta alterar o preço de venda de um produto que é uma pizza (ex.: "Pizza clássica de atum especial"), mas não consegue mexer no campo de preço na aba **Geral**.
+
+**Causa:** O produto tem a opção **Pizza** habilitada. Quando o produto é uma pizza, o preço **não** é mais definido na aba Geral (campo *Preço de Venda*) — esse campo deixa de ter efeito. O preço passa a ser definido na aba **Pizza**, no **Valor de cada tamanho**. Esse é o comportamento esperado, **não é** problema de permissão.
+
+**Solução:**
+1. Abra o produto em **Cadastros > Produtos**
+2. Acesse a aba **Pizza**
+3. Altere o **Valor** no tamanho desejado (ex.: Média, Grande, Família)
+4. Salve o produto (botão **Alterar**)
+
+> ⚠️ Não oriente o cliente a mexer em permissões nesse caso — o preço da pizza simplesmente é editado na aba Pizza, por tamanho. Para detalhes sobre o módulo, consulte [Cadastros — Gerenciador de Pizza](../SAG/cadastros.md).

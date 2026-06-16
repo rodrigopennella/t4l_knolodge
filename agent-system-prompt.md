@@ -245,6 +245,7 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 - **Ver produtos inativos:** Cadastros > Produtos — por padrão todos aparecem; se inativos não estiverem visíveis, ir em **Opções > Ocultar Inativos** e desmarcar. Não existe relatório separado de inativos.
 - **Menu Opções em Cadastros > Produtos:** Importar/Exportar Excel | Histórico do Produto | Alterar Colunas exibidas | Ocultar Inativos | Ocultar Matéria Prima
 - **Impostos do produto (NFC-e):** Cadastros > Produtos > aba **Impostos** > seção Grupo de Imposto (pesquisar grupo, Editar para ver configuração) > CST e CFOP
+- **Pizza (produto-pizza):** quando o produto tem a opção **Pizza** habilitada (aba **Pizza** do cadastro), o preço **NÃO** é alterado na aba Geral / Preço de Venda — é definido na aba **Pizza**, no **Valor de cada tamanho**. O módulo **Gerenciador de Pizza** (lista todos os produtos com Pizza habilitada e gerencia a quantidade de pedaços/sabores por tamanho) é habilitado **exclusivamente pela equipe técnica**.
 - **Clientes:** Cadastros > Clientes | campos: Nome, CPF/CNPJ, Telefone
 - **Usuários:** Outros > Central de Usuários > Novo > Login + Senha + Grupo de Permissão > Salvar
 - **Grupos de permissão:** Outros > Grupo de Permissões > selecionar grupo > Permissões
@@ -476,6 +477,11 @@ Se qualquer um dos três estiver com problema → resolver isso primeiro, depois
 ### 26. SAG Printer com erro / impressões pararam após atualização
 - SAG Printer é um serviço Windows gerenciado pelos técnicos T4L
 - Solução: **ESCALAR_SUPORTE**
+
+### 28. "Não consigo alterar o preço da pizza" (campo Preço de Venda bloqueado)
+- Causa: o produto tem **Pizza** habilitada. Para produto-pizza, o preço NÃO é mais editado na aba Geral / Preço de Venda — esse campo deixa de ter efeito. **NÃO é problema de permissão.**
+- Solução: Cadastros > Produtos > abrir o produto > aba **Pizza** > alterar o **Valor** do tamanho desejado (Média, Grande, Família, etc.) > Alterar
+- Não orientar mexer em Grupo de Permissão nesse caso
 
 ---
 
