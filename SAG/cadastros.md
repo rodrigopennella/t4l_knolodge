@@ -66,7 +66,46 @@ Define a configuração tributária do produto por estabelecimento. Não há cam
 - Cadastro de **Sabores** com preços por tamanho
 - Cadastro de **Acompanhamentos** (bordas, extras)
 
-### Importar / Exportar Produtos (Excel)
+#### Aba Pizza no Cadastro do Produto
+
+A configuração da pizza em si é feita **no cadastro do produto**, na aba **Pizza**.
+
+> ⚠️ A aba **Pizza** só funciona quando o módulo **Gerenciador de Pizza** está habilitado. Esse módulo é liberado **exclusivamente pela equipe técnica T4L**. Se a aba Pizza não estiver disponível ou não tiver efeito, acionar o suporte técnico.
+
+Na aba Pizza do produto:
+- Marque **Produto Pizza** (Habilita Pizza) para que o produto passe a ser tratado como pizza
+- Com a opção ativa, são exibidos os **tamanhos** cadastrados (ex.: Média, Grande, Família), cada um com seu campo **Valor**
+- O preço de cada tamanho é definido nesses campos
+
+> 🍕 **Regra importante — onde alterar o preço da pizza:**
+> Quando o produto tem **Pizza habilitada**, o preço **NÃO** é mais alterado na aba **Geral** (campo *Preço de Venda*) — esse campo deixa de ter efeito sobre a pizza. O preço passa a ser definido na aba **Pizza**, no **Valor de cada tamanho**.
+> Se o operador "não consegue mexer no preço" de um produto-pizza pela aba Geral, esse é o comportamento esperado: oriente a alterar o preço pelos tamanhos na aba Pizza. **Não é** problema de permissão.
+
+#### Gerenciador de Pizza
+
+**O que é:** módulo que gerencia a **quantidade de sabores (pedaços)** das pizzas.
+
+- Lista **todos os produtos** que têm o campo **Pizza** habilitado
+- Em **Tamanhos**, é possível **cadastrar e alterar a quantidade de "pedaços"** (sabores) de cada tamanho de pizza
+- Módulo habilitado **exclusivamente pela equipe técnica T4L**
+
+### Menu Opções — Cadastros > Produtos
+
+**Caminho:** Cadastros > Produtos > **Opções**
+
+O botão "Opções" na tela de produtos oferece as seguintes funcionalidades:
+
+| Opção | O que faz |
+|---|---|
+| **Importar/Exportar Excel** | Importa ou exporta a lista de produtos em planilha |
+| **Histórico do Produto** | Exibe o histórico de alterações do produto selecionado |
+| **Alterar Colunas** | Permite escolher quais colunas são exibidas na listagem de produtos |
+| **Ocultar Inativos** | Oculta da lista os produtos com flag "Ativo" desmarcada |
+| **Ocultar Matéria Prima** | Oculta da lista os produtos cadastrados como matéria prima |
+
+> **Para ver produtos inativos:** acesse Cadastros > Produtos > Opções e verifique se "Ocultar Inativos" está ativado. Se estiver, desative para que os inativos apareçam na listagem. Por padrão, todos os produtos (ativos e inativos) aparecem na lista.
+
+#### Importar / Exportar Excel
 
 **Caminho:** Cadastros > Produtos > **Opções** > **Importar/Exportar Excel**
 

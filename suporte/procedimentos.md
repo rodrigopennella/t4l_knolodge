@@ -142,7 +142,9 @@ Passo a passo para as situações mais frequentes no atendimento.
 
 ## PROC-11: Verificar Fechamento de Caixa com Erro
 
-1. Verifique se há vendas em aberto (não finalizadas): F10 > consultar vendas pendentes
+> Para fechar o caixa: **F12**. F10 exibe as últimas vendas — não serve para verificar pendências de fechamento.
+
+1. Orientar a pressionar **F12** e perguntar qual mensagem ou erro aparece na tela
 2. Verifique se há NFC-e pendente de transmissão
 3. Verifique se o servidor tem acesso à internet (necessário para transmitir notas)
 4. Se houver erro específico: anote a mensagem de erro completa
@@ -169,6 +171,33 @@ Passo a passo para as situações mais frequentes no atendimento.
 - Se a senha estiver errada: confirmar com quem gerou o certificado (certificadora ou contabilidade)
 - Se NFC-e ainda não emitir após aplicar: verificar se as credenciais (CSC/ID Token) estão preenchidas no menu NFC-e
 - Se o cliente não conseguir após seguir os passos: transferir para o suporte
+
+---
+
+## PROC-14: Renovar ou Adquirir Novo Certificado Digital
+
+> Use este procedimento quando o cliente precisa **renovar** um certificado vencido/prestes a vencer, ou **adquirir** o primeiro certificado. O SAG tem um botão direto que encaminha para o site da autoridade certificadora parceira (CertBr).
+
+### Passo 1 — Verificar a situação atual no SAG
+
+1. Acessar **Outros > Certificado Digital**
+2. A tela mostrará o status do certificado atual:
+   - **Certificado configurado**: exibe validade e tipo (A1 Arquivo)
+   - Dois botões disponíveis: **Trocar Certificado** e **Adquirir Novo Certificado**
+
+### Passo 2 — Solicitar o novo certificado
+
+3. Clicar em **Adquirir Novo Certificado**
+4. O SAG abrirá o navegador no site da autoridade certificadora parceira
+5. Seguir as instruções no site para solicitar o certificado
+
+### Passo 3 — Aplicar o certificado recebido
+
+6. Após receber o arquivo `.pfx`, seguir o **PROC-13** para aplicar no SAG
+
+**Observações:**
+- O botão "Trocar Certificado" faz o mesmo que aplicar um `.pfx` já em mãos (substitui o atual)
+- Não oriente o cliente a contatar a contabilidade para renovar — o caminho correto é o botão no SAG que já aponta para a CertBr
 
 ---
 

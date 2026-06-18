@@ -181,7 +181,7 @@ Funcionalidades de configuração e administração:
 | **Central de Usuários** | Gerenciamento de usuários do sistema |
 | **Ferramentas** | Ferramentas de manutenção e diagnóstico |
 | **Grupo de Permissões** | Configuração de grupos de permissão |
-| **Arqs. da Balança** | Arquivos de integração com balança |
+| **Arqs. da Balança** | Gera arquivo de integração com a balança etiquetadora (MGV). Após gerar, o cliente importa no MGV e dá "carga na balança" para enviar os dados ao equipamento |
 | **Etiquetas** | Configuração e impressão de etiquetas |
 | **Impressoras Remotas** | Gerenciamento de impressoras em rede |
 | **Dados Cadastrais** | Dados do estabelecimento |
