@@ -2,6 +2,10 @@
 
 Baseado em 6 meses de histórico de atendimentos de suporte.
 
+> **Diagnostique primeiro.** Antes de seguir qualquer checklist, descubra a **mensagem de erro exata** — pergunte ou peça uma foto da tela (o suporte consegue analisar a imagem):
+> *"Aparece alguma mensagem na tela? Me diz o que está escrito ou me manda uma foto."*
+> Quando a mensagem já aponta a causa (ex.: "Falha na comunicação com a API", "Comanda inexistente"), vá direto ao caso correspondente — não percorra os passos genéricos antes dele.
+
 ---
 
 ## 1. Impressora Não Imprime
@@ -383,6 +387,21 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 **Causa:** A API do aplicativo não foi atualizada automaticamente junto com uma atualização do sistema SAG. Há incompatibilidade de versão entre o app e o servidor.
 
 **Solução:** Escalar para o suporte T4L — o técnico realiza a atualização da API. Não há ação do lado do cliente.
+
+---
+
+## 30. "Falha na Comunicação com a API" no App (Celular/Tablet/Terminal)
+
+**Sintomas:** Faixa vermelha "Falha na comunicação com a API" ao logar ou usar o SAG Mobile / SAG Terminal.
+
+**Causa:** A API que o app usa é um serviço simples no **IIS do servidor**, que mantém os arquivos de comunicação do SAG Mobile. A mensagem aparece quando essa API não está respondendo. O cliente **não tem acesso** a esse serviço e não consegue reiniciá-lo.
+
+**Importante:** Esse erro é do **lado do servidor**, não da conexão local do dispositivo. Não fique pedindo para o cliente checar cabo ou Wi-Fi repetidamente.
+
+**Solução:**
+1. Confirme que o servidor está ligado e com o SAG aberto
+2. Confirme que o dispositivo está na mesma rede do servidor
+3. Se as duas condições estiverem ok e o erro continuar: **acionar suporte T4L**
 
 ---
 

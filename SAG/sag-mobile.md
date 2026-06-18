@@ -48,7 +48,27 @@ O SAG Mobile é a versão mobile do terminal de comandas do SAG. Garçons e aten
 
 ## Problemas Frequentes
 
-### Aplicativo não conecta / "Falha na conexão"
+> **Diagnostique primeiro.** Antes de qualquer checklist, pergunte qual a mensagem na tela — ou peça uma foto:
+> *"Aparece alguma mensagem na tela? Se puder, me diz o que está escrito ou me manda uma foto."*
+> O suporte consegue analisar a foto e identificar o erro na hora. Mensagem específica = causa específica: vá direto ao caso correspondente abaixo, sem percorrer passos genéricos.
+
+### Triagem por mensagem
+
+| Mensagem na tela | Causa | Ação |
+|---|---|---|
+| "Falha na comunicação com a API" | API (serviço IIS) no servidor não responde | Confirmar servidor ligado + SAG aberto + mesma rede → se persistir, escalar |
+| "Comanda inexistente" | API do app desatualizada vs. servidor | Escalar — sem ação do cliente |
+| "Falha na conexão" (genérica, sem detalhe) | Conexão local do dispositivo | Checklist abaixo |
+
+### "Falha na comunicação com a API"
+- A API do app é um serviço simples no **IIS do servidor**, que mantém os arquivos de comunicação do SAG Mobile. A mensagem aparece quando essa API não responde.
+- O cliente **não tem acesso** a esse serviço e não consegue reiniciá-lo.
+- Esse erro é do **lado do servidor** — não fique pedindo para checar cabo/Wi-Fi repetidamente.
+1. Confirmar que o servidor está ligado e com o SAG aberto
+2. Confirmar que o dispositivo está na mesma rede do servidor
+3. Se as duas condições estiverem ok e o erro continuar: **ESCALAR_SUPORTE**
+
+### Aplicativo não conecta / "Falha na conexão" (sem mensagem específica)
 1. Verificar se o Wi-Fi do celular está ligado e conectado à mesma rede do servidor
 2. Verificar se o servidor está ligado e com o SAG aberto
 3. Fechar o app e abrir novamente
